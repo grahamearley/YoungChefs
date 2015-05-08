@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZk-c6-imi">
+                                <rect key="frame" x="76" y="65" width="449" height="469"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gh0-C5-HrA">
+                                <rect key="frame" x="88" y="78" width="424" height="444"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gh0-C5-HrA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="H8k-bn-KEG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TZk-c6-imi" secondAttribute="bottom" constant="66" id="N12-Il-XF5"/>
+                            <constraint firstItem="TZk-c6-imi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="dF6-Gn-ZkF"/>
+                            <constraint firstItem="Gh0-C5-HrA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fPK-Lf-Cn4"/>
+                            <constraint firstItem="Gh0-C5-HrA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="iEu-vJ-FnM"/>
+                            <constraint firstItem="TZk-c6-imi" firstAttribute="centerX" secondItem="Gh0-C5-HrA" secondAttribute="centerX" id="nCv-qv-dlI"/>
+                            <constraint firstItem="Gh0-C5-HrA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tCw-Ar-L6L"/>
+                            <constraint firstItem="TZk-c6-imi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="veS-nk-g7G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="Gh0-C5-HrA" id="xBa-lt-ygj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

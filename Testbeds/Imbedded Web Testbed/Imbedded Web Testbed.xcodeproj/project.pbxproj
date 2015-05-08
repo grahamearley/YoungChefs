@@ -82,6 +82,7 @@
 				CB20B6201AFD076A000FE355 /* Main.storyboard */,
 				CB20B6231AFD076A000FE355 /* Images.xcassets */,
 				CB20B6251AFD076A000FE355 /* LaunchScreen.xib */,
+				CBB962811AFD5A13001D8366 /* webRes */,
 				CB20B61A1AFD076A000FE355 /* Supporting Files */,
 			);
 			path = "Imbedded Web Testbed";
@@ -110,6 +111,13 @@
 				CB20B6311AFD076A000FE355 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBB962811AFD5A13001D8366 /* webRes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = webRes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +422,7 @@
 				CB20B6381AFD076A000FE355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB20B6391AFD076A000FE355 /* Build configuration list for PBXNativeTarget "Imbedded Web TestbedTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +431,7 @@
 				CB20B63B1AFD076A000FE355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
