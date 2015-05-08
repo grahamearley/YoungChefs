@@ -13,6 +13,10 @@
 		CB20B6241AFD076A000FE355 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB20B6231AFD076A000FE355 /* Images.xcassets */; };
 		CB20B6271AFD076A000FE355 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB20B6251AFD076A000FE355 /* LaunchScreen.xib */; };
 		CB20B6331AFD076A000FE355 /* Imbedded_Web_TestbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B6321AFD076A000FE355 /* Imbedded_Web_TestbedTests.swift */; };
+		CB89FA191AFD6C85007E2847 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA181AFD6C85007E2847 /* example.html */; };
+		CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1A1AFD6C8F007E2847 /* example.css */; };
+		CB89FA1D1AFD6CA2007E2847 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1C1AFD6CA2007E2847 /* example.js */; };
+		CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		CB20B62C1AFD076A000FE355 /* Imbedded Web TestbedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Imbedded Web TestbedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB20B6311AFD076A000FE355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB20B6321AFD076A000FE355 /* Imbedded_Web_TestbedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imbedded_Web_TestbedTests.swift; sourceTree = "<group>"; };
+		CB89FA181AFD6C85007E2847 /* example.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
+		CB89FA1A1AFD6C8F007E2847 /* example.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = example.css; sourceTree = "<group>"; };
+		CB89FA1C1AFD6CA2007E2847 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
+		CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,10 @@
 		CBB962811AFD5A13001D8366 /* webRes */ = {
 			isa = PBXGroup;
 			children = (
+				CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */,
+				CB89FA181AFD6C85007E2847 /* example.html */,
+				CB89FA1A1AFD6C8F007E2847 /* example.css */,
+				CB89FA1C1AFD6CA2007E2847 /* example.js */,
 			);
 			path = webRes;
 			sourceTree = "<group>";
@@ -201,7 +213,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */,
 				CB20B6221AFD076A000FE355 /* Main.storyboard in Resources */,
+				CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */,
+				CB89FA191AFD6C85007E2847 /* example.html in Resources */,
+				CB89FA1D1AFD6CA2007E2847 /* example.js in Resources */,
 				CB20B6271AFD076A000FE355 /* LaunchScreen.xib in Resources */,
 				CB20B6241AFD076A000FE355 /* Images.xcassets in Resources */,
 			);

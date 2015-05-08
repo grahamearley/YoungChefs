@@ -1,0 +1,28 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+	width: 100vw;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
+
+body {
+    padding: 30pt;
+    color: lightgray;
+    font-family: AvenirNext-Regular;
+    background-color: darkred;
+}
+
+.box {
+    background-color: #ad0000;
+    margin-top: 10pt;
+    padding: 10pt;
+}
+
+h1 {
+    font-weight:500;
+}

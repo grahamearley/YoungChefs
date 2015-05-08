@@ -18,10 +18,11 @@ class ViewController: UIViewController, UIWebViewDelegate {
 		webView.scalesPageToFit = true
 		webView.suppressesIncrementalRendering = true
 		
-		let url = NSURL(string: "http://thacker.mathcs.carleton.edu/cs257-f14/imhoffc/noncs/homepage/lists.html")
-		let request = NSURLRequest(URL: url!)
-		webView.delegate = self
-		webView.loadRequest(request)
+		if let fileURL = NSBundle.mainBundle().URLForResource("example", withExtension: "html") {
+			let request = NSURLRequest(URL: fileURL, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
+			webView.delegate = self
+			webView.loadRequest(request)
+		}
 	}
 	
 	override func didReceiveMemoryWarning() {
