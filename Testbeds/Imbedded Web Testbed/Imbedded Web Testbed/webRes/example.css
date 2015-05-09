@@ -14,7 +14,8 @@ body {
     padding: 30pt;
     color: lightgray;
     font-family: AvenirNext-Regular;
-    background-color: darkred;
+	font-size: 150%;
+    background-color: #8d0000;
 }
 
 .box {
