@@ -5,6 +5,11 @@ $(document).ready(function () {
 		var message = {"command":"boxtouch"};
 		window.webkit.messageHandlers.javaSwift.postMessage(message);
 	});
+                  
+    $(".next").click(function() {
+                  var message = {"command":"nextbutton"};
+                  window.webkit.messageHandlers.javaSwift.postMessage(message);
+                  });
 });
 
 function changeBackgroundColor(newColor) {

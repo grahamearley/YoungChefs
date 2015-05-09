@@ -24,6 +24,14 @@ body {
     padding: 10pt;
 }
 
+.next {
+    background-color: #808080;
+    color: #FFFFFF;
+    margin-top: 10pt;
+    padding: 10pt;
+    text-align: right;
+}
+
 h1 {
     font-weight:500;
 }

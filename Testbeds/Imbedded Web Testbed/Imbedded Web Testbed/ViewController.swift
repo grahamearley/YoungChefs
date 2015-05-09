@@ -45,13 +45,24 @@ class ViewController: UIViewController, WKScriptMessageHandler {
 		let sentData = message.body as! NSDictionary
 		if let command = sentData["command"] as? NSString {
 			if command.isEqualToString("boxtouch") {
-				timesBoxTouched++
-				let pluralString = timesBoxTouched == 1 ? "" : "s"
-				self.boxTouchesLabel.text = "Box was Touched \(timesBoxTouched) time\(pluralString)"
+				onBoxTouch()
 			}
+            if command.isEqualToString("nextbutton") {
+                onNextButton()
+            }
 		}
 	}
-
+    
+    func onBoxTouch() {
+        timesBoxTouched++
+        let pluralString = timesBoxTouched == 1 ? "" : "s"
+        self.boxTouchesLabel.text = "Box was Touched \(timesBoxTouched) time\(pluralString)"
+    }
+    
+    func onNextButton() {
+        println("blah")
+    }
+    
 	///Called via a Swift UIButton press, calls a js method via
 	///		'evaluateJavaScript(<jsCode : String>, <completionHandler : block>)'
 	@IBAction func onChangeDivColorsButton(sender: AnyObject) {
