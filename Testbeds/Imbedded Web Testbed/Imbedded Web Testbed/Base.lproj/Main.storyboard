@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -42,6 +42,17 @@
                                     <action selector="onChangeDivColorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="To0-xb-pce"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYK-iJ-nAW">
+                                <rect key="frame" x="16" y="562" width="68" height="30"/>
+                                <state key="normal" title="Notebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1hv-Tv-g48" kind="popoverPresentation" identifier="Popover" popoverAnchorView="bYK-iJ-nAW" id="PL0-yg-PAQ">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -53,6 +64,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R4x-gJ-QUa" secondAttribute="bottom" constant="8" id="hh5-mJ-RvN"/>
                             <constraint firstAttribute="centerX" secondItem="aSX-xi-OQV" secondAttribute="centerX" id="rxc-AY-LcN"/>
                             <constraint firstAttribute="centerY" secondItem="YHt-11-gv9" secondAttribute="centerY" id="tZp-Tn-fOP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bYK-iJ-nAW" secondAttribute="bottom" constant="8" id="vnm-oB-tpE"/>
+                            <constraint firstItem="bYK-iJ-nAW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xHI-BO-XCd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -62,6 +75,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Notebook Popover View Controller-->
+        <scene sceneID="Y8C-3d-ftI">
+            <objects>
+                <viewController id="1hv-Tv-g48" customClass="NotebookPopoverViewController" customModule="Imbedded_Web_Testbed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0yP-fn-1Co"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fs7-E1-oNJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ri0-vZ-gAR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lab Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UZ-gf-Jos">
+                                <rect key="frame" x="16" y="20" width="84" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="277-nW-NpQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="qgs-Zi-DAV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="olL-B9-Woq">
+                                <rect key="frame" x="16" y="49" width="568" height="203"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="5Uz-hC-Adp"/>
+                                    <constraint firstAttribute="height" constant="203" id="hAn-PQ-bJ5"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.2038023551" blue="0.0076892162980000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="olL-B9-Woq" firstAttribute="leading" secondItem="Ri0-vZ-gAR" secondAttribute="leadingMargin" constant="10" id="AxD-9T-Bh5"/>
+                            <constraint firstItem="olL-B9-Woq" firstAttribute="top" secondItem="0UZ-gf-Jos" secondAttribute="bottom" constant="8" id="Nzt-c2-guH"/>
+                            <constraint firstItem="olL-B9-Woq" firstAttribute="trailing" secondItem="Ri0-vZ-gAR" secondAttribute="trailingMargin" id="aWR-wc-mIF"/>
+                            <constraint firstItem="0UZ-gf-Jos" firstAttribute="top" secondItem="0yP-fn-1Co" secondAttribute="bottom" id="pOM-TO-4rW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="NotebookPopoverView" destination="Ri0-vZ-gAR" id="ZNJ-Ld-WdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOW-uQ-2th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="240"/>
         </scene>
     </scenes>
 </document>
