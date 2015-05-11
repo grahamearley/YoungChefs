@@ -88,34 +88,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lab Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UZ-gf-Jos">
-                                <rect key="frame" x="16" y="20" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UZ-gf-Jos">
+                                <rect key="frame" x="16" y="30" width="84" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="277-nW-NpQ"/>
                                     <constraint firstAttribute="height" constant="21" id="qgs-Zi-DAV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="olL-B9-Woq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Science is fun!" translatesAutoresizingMaskIntoConstraints="NO" id="olL-B9-Woq">
                                 <rect key="frame" x="16" y="49" width="568" height="203"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="568" id="5Uz-hC-Adp"/>
-                                    <constraint firstAttribute="height" constant="203" id="hAn-PQ-bJ5"/>
+                                    <constraint firstAttribute="height" constant="200" id="hAn-PQ-bJ5"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.2038023551" blue="0.0076892162980000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.47999526515151514" green="0.3066706435966966" blue="0.054892847570552433" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="olL-B9-Woq" firstAttribute="leading" secondItem="Ri0-vZ-gAR" secondAttribute="leadingMargin" constant="10" id="AxD-9T-Bh5"/>
-                            <constraint firstItem="olL-B9-Woq" firstAttribute="top" secondItem="0UZ-gf-Jos" secondAttribute="bottom" constant="8" id="Nzt-c2-guH"/>
+                            <constraint firstItem="olL-B9-Woq" firstAttribute="leading" secondItem="Ri0-vZ-gAR" secondAttribute="leadingMargin" id="AxD-9T-Bh5"/>
+                            <constraint firstItem="0UZ-gf-Jos" firstAttribute="leading" secondItem="Ri0-vZ-gAR" secondAttribute="leadingMargin" id="DJS-cx-gew"/>
+                            <constraint firstItem="olL-B9-Woq" firstAttribute="top" secondItem="0UZ-gf-Jos" secondAttribute="bottom" constant="10" id="Nzt-c2-guH"/>
                             <constraint firstItem="olL-B9-Woq" firstAttribute="trailing" secondItem="Ri0-vZ-gAR" secondAttribute="trailingMargin" id="aWR-wc-mIF"/>
-                            <constraint firstItem="0UZ-gf-Jos" firstAttribute="top" secondItem="0yP-fn-1Co" secondAttribute="bottom" id="pOM-TO-4rW"/>
+                            <constraint firstItem="0UZ-gf-Jos" firstAttribute="top" secondItem="0yP-fn-1Co" secondAttribute="bottom" constant="10" id="pOM-TO-4rW"/>
                         </constraints>
                     </view>
                     <connections>
