@@ -14,6 +14,8 @@
 		CBA1263A1B03C368001C2488 /* Young_ChefsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126391B03C368001C2488 /* Young_ChefsTests.swift */; };
 		CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126431B03C41F001C2488 /* HomeViewController.swift */; };
 		CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */; };
+		CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */; };
+		CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		CBA126391B03C368001C2488 /* Young_ChefsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Young_ChefsTests.swift; sourceTree = "<group>"; };
 		CBA126431B03C41F001C2488 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
+		CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				CBA126271B03C368001C2488 /* Main.storyboard */,
 				CBA1262A1B03C368001C2488 /* Images.xcassets */,
 				CBA1262C1B03C368001C2488 /* LaunchScreen.xib */,
+				CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */,
+				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
 				CBA126211B03C368001C2488 /* Supporting Files */,
 			);
 			path = "Young Chefs";
@@ -198,6 +204,7 @@
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
 				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
+				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +225,7 @@
 				CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */,
 				CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */,
 				CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */,
+				CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

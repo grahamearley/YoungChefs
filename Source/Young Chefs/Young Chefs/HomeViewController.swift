@@ -8,14 +8,19 @@
 
 import UIKit
 
-let reuseIdentifier = "Cell"
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-class HomeViewController: UICollectionViewController {
-
+	@IBOutlet var collectionView : UICollectionView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+		layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+		layout.itemSize = CGSize(width: 90, height: 90)
 		
+		collectionView.collectionViewLayout = layout
+		collectionView.registerNib(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.REUSE_ID)
 	}
 	
     override func didReceiveMemoryWarning() {
@@ -25,30 +30,32 @@ class HomeViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+	func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
-    
-        // Configure the cell
-    
-        return cell
+	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+		if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(HomeCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? HomeCollectionViewCell {
+			cell.imageView.image = UIImage(named: "Cookie")
+			return cell
+		} else {
+			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name.")
+		}
+		
     }
 
     // MARK: UICollectionViewDelegate
 
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
+    func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
         return false
     }
 
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+    func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
 		
     }
 
