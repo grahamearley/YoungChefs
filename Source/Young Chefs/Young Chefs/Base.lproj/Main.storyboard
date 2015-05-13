@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdW-xH-R2O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t83-yy-qPc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--HomeViewController-->
         <scene sceneID="3B9-eu-DEY">
             <objects>
-                <viewController id="PdW-xH-R2O" userLabel="HomeViewController" customClass="HomeViewController" customModule="Young_Chefs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="PdW-xH-R2O" userLabel="HomeViewController" customClass="HomeViewController" customModule="Young_Chefs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="efG-MP-0FI"/>
                         <viewControllerLayoutGuide type="bottom" id="rZu-ia-Zbc"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N8A-LN-Pmj">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Iyc-yL-hDS">
                                     <size key="itemSize" width="50" height="50"/>
@@ -37,22 +37,40 @@
                         <constraints>
                             <constraint firstItem="N8A-LN-Pmj" firstAttribute="leading" secondItem="bZd-L8-Sda" secondAttribute="leading" id="N7V-zT-ICT"/>
                             <constraint firstItem="N8A-LN-Pmj" firstAttribute="bottom" secondItem="rZu-ia-Zbc" secondAttribute="top" id="Tos-gO-85B"/>
-                            <constraint firstItem="N8A-LN-Pmj" firstAttribute="top" secondItem="efG-MP-0FI" secondAttribute="bottom" constant="8" symbolic="YES" id="eCp-mo-FbV"/>
+                            <constraint firstItem="N8A-LN-Pmj" firstAttribute="top" secondItem="efG-MP-0FI" secondAttribute="bottom" constant="-64" id="eCp-mo-FbV"/>
                             <constraint firstAttribute="trailing" secondItem="N8A-LN-Pmj" secondAttribute="trailing" id="zV5-rK-aCK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="DKg-BH-ME3"/>
                     <connections>
                         <outlet property="collectionView" destination="N8A-LN-Pmj" id="30h-Yc-bsV"/>
+                        <segue destination="daV-KR-Jzk" kind="show" identifier="toExperiment" id="mCJ-Zf-6EK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5X-hL-a3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-397" y="353"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rPE-6X-eVd">
+            <objects>
+                <navigationController id="t83-yy-qPc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ISu-nO-GNG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PdW-xH-R2O" kind="relationship" relationship="rootViewController" id="dV9-am-2fN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OqZ-ur-eub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075" y="353"/>
+        </scene>
         <!--ExperimentViewController-->
         <scene sceneID="Lh1-Vy-8a7">
             <objects>
-                <viewController id="daV-KR-Jzk" userLabel="ExperimentViewController" customClass="ExperimentViewController" customModule="Young_Chefs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Experiment" id="daV-KR-Jzk" userLabel="ExperimentViewController" customClass="ExperimentViewController" customModule="Young_Chefs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ek6-by-B5E"/>
                         <viewControllerLayoutGuide type="bottom" id="B1y-gN-AWb"/>
@@ -86,16 +104,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="top" secondItem="Ek6-by-B5E" secondAttribute="bottom" constant="50" id="Dw4-ur-pxx"/>
+                            <constraint firstAttribute="bottom" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="71" id="8YU-A4-MWG"/>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="top" secondItem="Ek6-by-B5E" secondAttribute="bottom" constant="6" id="FVL-ad-4YH"/>
                             <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="QGF-Jg-pMX" secondAttribute="bottom" constant="8" id="K51-xW-3hU"/>
-                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" constant="66" id="R7F-RJ-8kK"/>
-                            <constraint firstItem="IQd-k4-q0Q" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="13" id="T27-Je-jWX"/>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="centerX" secondItem="IQd-k4-q0Q" secondAttribute="centerX" id="Zfa-da-467"/>
                             <constraint firstAttribute="centerX" secondItem="QGF-Jg-pMX" secondAttribute="centerX" id="dvy-Fb-6fD"/>
                             <constraint firstAttribute="centerX" secondItem="IQd-k4-q0Q" secondAttribute="centerX" id="iRs-ec-vzL"/>
-                            <constraint firstAttribute="centerX" secondItem="wxc-Ob-xyV" secondAttribute="centerX" id="pXj-cz-DvR"/>
-                            <constraint firstAttribute="centerY" secondItem="wxc-Ob-xyV" secondAttribute="centerY" id="s7f-cp-myQ"/>
+                            <constraint firstItem="IQd-k4-q0Q" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="13" id="j85-zH-aKc"/>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" constant="66" id="zn0-iL-vYJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="placeholderViewForWebview" destination="wxc-Ob-xyV" id="rhf-XO-ll9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgd-gt-LTs" sceneMemberID="firstResponder"/>
             </objects>

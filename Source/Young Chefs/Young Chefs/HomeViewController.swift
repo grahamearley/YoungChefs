@@ -29,34 +29,39 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 
     // MARK: UICollectionViewDataSource
-
 	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
 
 
 	func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 15
     }
 
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(HomeCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? HomeCollectionViewCell {
 			cell.imageView.image = UIImage(named: "Cookie")
+			
 			return cell
 		} else {
-			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name.")
+			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
 		}
 		
     }
 
     // MARK: UICollectionViewDelegate
-
-    func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-		
-    }
-
+	
+	func collectionView(collectionView: UICollectionView,
+		didSelectItemAtIndexPath indexPath: NSIndexPath) {
+			if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? HomeCollectionViewCell {
+				self.performSegueWithIdentifier("toExperiment", sender: self)
+			}
+	}
+	
+	//We use this method to pass incoming view controllers the experiment we want to present
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if let destinationExperimentViewController = segue.destinationViewController as? ExperimentViewController {
+			destinationExperimentViewController.experiment = Experiment()
+		}
+	}
 }

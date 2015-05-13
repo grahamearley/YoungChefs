@@ -13,5 +13,5 @@ class HomeCollectionViewCell: UICollectionViewCell {
 	static let REUSE_ID = "HomeCell"
 
 	@IBOutlet var imageView : UIImageView!
-
+	
 }

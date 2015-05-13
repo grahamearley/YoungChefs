@@ -16,6 +16,11 @@
 		CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */; };
 		CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */; };
 		CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */; };
+		CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */; };
+		CBA126581B03CD42001C2488 /* example.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA126551B03CD42001C2488 /* example.css */; };
+		CBA126591B03CD42001C2488 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA126561B03CD42001C2488 /* example.html */; };
+		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
+		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 		CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
+		CBA126551B03CD42001C2488 /* example.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = example.css; sourceTree = "<group>"; };
+		CBA126561B03CD42001C2488 /* example.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
+		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
+		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +95,14 @@
 			children = (
 				CBA126231B03C368001C2488 /* AppDelegate.swift */,
 				CBA126431B03C41F001C2488 /* HomeViewController.swift */,
+				CBA1265D1B03CF62001C2488 /* Experiment.swift */,
 				CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */,
 				CBA126271B03C368001C2488 /* Main.storyboard */,
 				CBA1262A1B03C368001C2488 /* Images.xcassets */,
 				CBA1262C1B03C368001C2488 /* LaunchScreen.xib */,
 				CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */,
 				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
+				CBA1264B1B03CCE1001C2488 /* WebResources */,
 				CBA126211B03C368001C2488 /* Supporting Files */,
 			);
 			path = "Young Chefs";
@@ -119,6 +131,25 @@
 				CBA126381B03C368001C2488 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBA1264B1B03CCE1001C2488 /* WebResources */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126541B03CD42001C2488 /* example */,
+				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
+			);
+			path = WebResources;
+			sourceTree = "<group>";
+		};
+		CBA126541B03CD42001C2488 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126551B03CD42001C2488 /* example.css */,
+				CBA126561B03CD42001C2488 /* example.html */,
+				CBA126571B03CD42001C2488 /* example.js */,
+			);
+			path = example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +232,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA126581B03CD42001C2488 /* example.css in Resources */,
+				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
+				CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */,
 				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
+				CBA126591B03CD42001C2488 /* example.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */,
 				CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */,
 				CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */,
 				CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */,

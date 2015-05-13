@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B0379EA2-7AA6-44B0-8C97-F13D143E36D4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Young Chefs</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>16DC41F177D09558E3450CE9B841B6027BE910D5</key>
@@ -16,7 +16,7 @@
 		<string>https://bitbucket.org/imhoffc/cs-342.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Source/Young Chefs/Young Chefs.xcodeproj/project.xcworkspace</string>
+	<string>Source/Young Chefs/Young Chefs.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>16DC41F177D09558E3450CE9B841B6027BE910D5</key>
