@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317489471B0272E800860422 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317489461B0272E800860422 /* CollectionViewController.swift */; };
+		3174894D1B02DABF00860422 /* cookie.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3174894C1B02DABF00860422 /* cookie.gif */; };
+		3174894F1B02DB0A00860422 /* choco.png in Resources */ = {isa = PBXBuildFile; fileRef = 3174894E1B02DB0A00860422 /* choco.png */; };
+		317489511B02DE8D00860422 /* cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 317489501B02DE8D00860422 /* cookie.png */; };
+		317489531B02E31400860422 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317489521B02E31400860422 /* CollectionViewCell.swift */; };
 		CB20B61D1AFD076A000FE355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B61C1AFD076A000FE355 /* AppDelegate.swift */; };
 		CB20B61F1AFD076A000FE355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20B61E1AFD076A000FE355 /* ViewController.swift */; };
 		CB20B6221AFD076A000FE355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB20B6201AFD076A000FE355 /* Main.storyboard */; };
@@ -30,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		317489461B0272E800860422 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		3174894C1B02DABF00860422 /* cookie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cookie.gif; path = Images.xcassets/cookie.gif; sourceTree = "<group>"; };
+		3174894E1B02DB0A00860422 /* choco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = choco.png; path = Images.xcassets/choco.png; sourceTree = "<group>"; };
+		317489501B02DE8D00860422 /* cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cookie.png; path = Images.xcassets/cookie.png; sourceTree = "<group>"; };
+		317489521B02E31400860422 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../CollectionViewCell.swift; sourceTree = "<group>"; };
 		CB20B6171AFD076A000FE355 /* Imbedded Web Testbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Imbedded Web Testbed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB20B61B1AFD076A000FE355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB20B61C1AFD076A000FE355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,8 +97,13 @@
 			children = (
 				CB20B61C1AFD076A000FE355 /* AppDelegate.swift */,
 				CB20B61E1AFD076A000FE355 /* ViewController.swift */,
+				317489521B02E31400860422 /* CollectionViewCell.swift */,
 				CB20B6201AFD076A000FE355 /* Main.storyboard */,
+				317489461B0272E800860422 /* CollectionViewController.swift */,
 				CB20B6231AFD076A000FE355 /* Images.xcassets */,
+				317489501B02DE8D00860422 /* cookie.png */,
+				3174894E1B02DB0A00860422 /* choco.png */,
+				3174894C1B02DABF00860422 /* cookie.gif */,
 				CB20B6251AFD076A000FE355 /* LaunchScreen.xib */,
 				CBB962811AFD5A13001D8366 /* webRes */,
 				CB20B61A1AFD076A000FE355 /* Supporting Files */,
@@ -213,6 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3174894F1B02DB0A00860422 /* choco.png in Resources */,
+				3174894D1B02DABF00860422 /* cookie.gif in Resources */,
 				CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */,
 				CB20B6221AFD076A000FE355 /* Main.storyboard in Resources */,
 				CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */,
@@ -220,6 +237,7 @@
 				CB89FA1D1AFD6CA2007E2847 /* example.js in Resources */,
 				CB20B6271AFD076A000FE355 /* LaunchScreen.xib in Resources */,
 				CB20B6241AFD076A000FE355 /* Images.xcassets in Resources */,
+				317489511B02DE8D00860422 /* cookie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317489471B0272E800860422 /* CollectionViewController.swift in Sources */,
 				CB20B61F1AFD076A000FE355 /* ViewController.swift in Sources */,
+				317489531B02E31400860422 /* CollectionViewCell.swift in Sources */,
 				CB20B61D1AFD076A000FE355 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Imbedded Web Testbed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Imbedded Web Testbed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
