@@ -17,6 +17,10 @@
 		CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1A1AFD6C8F007E2847 /* example.css */; };
 		CB89FA1D1AFD6CA2007E2847 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1C1AFD6CA2007E2847 /* example.js */; };
 		CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */; };
+		D258B7961B014E5B00231A64 /* NotebookPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258B7951B014E5B00231A64 /* NotebookPopoverViewController.swift */; };
+		D2CB79FC1B0238130087CDB0 /* NotebookPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2CB79FB1B0238130087CDB0 /* NotebookPopoverViewController.xib */; };
+		D2CB7A011B025B9E0087CDB0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CB79FF1B025B9E0087CDB0 /* PopoverViewController.swift */; };
+		D2CB7A021B025B9E0087CDB0 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2CB7A001B025B9E0087CDB0 /* PopoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		CB89FA1A1AFD6C8F007E2847 /* example.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = example.css; sourceTree = "<group>"; };
 		CB89FA1C1AFD6CA2007E2847 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
+		D258B7951B014E5B00231A64 /* NotebookPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPopoverViewController.swift; sourceTree = "<group>"; };
+		D2CB79FB1B0238130087CDB0 /* NotebookPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPopoverViewController.xib; sourceTree = "<group>"; };
+		D2CB79FF1B025B9E0087CDB0 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		D2CB7A001B025B9E0087CDB0 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +93,12 @@
 		CB20B6191AFD076A000FE355 /* Imbedded Web Testbed */ = {
 			isa = PBXGroup;
 			children = (
+				D2CB79FF1B025B9E0087CDB0 /* PopoverViewController.swift */,
+				D2CB7A001B025B9E0087CDB0 /* PopoverViewController.xib */,
 				CB20B61C1AFD076A000FE355 /* AppDelegate.swift */,
 				CB20B61E1AFD076A000FE355 /* ViewController.swift */,
+				D258B7951B014E5B00231A64 /* NotebookPopoverViewController.swift */,
+				D2CB79FB1B0238130087CDB0 /* NotebookPopoverViewController.xib */,
 				CB20B6201AFD076A000FE355 /* Main.storyboard */,
 				CB20B6231AFD076A000FE355 /* Images.xcassets */,
 				CB20B6251AFD076A000FE355 /* LaunchScreen.xib */,
@@ -213,7 +225,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CB79FC1B0238130087CDB0 /* NotebookPopoverViewController.xib in Resources */,
 				CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */,
+				D2CB7A021B025B9E0087CDB0 /* PopoverViewController.xib in Resources */,
 				CB20B6221AFD076A000FE355 /* Main.storyboard in Resources */,
 				CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */,
 				CB89FA191AFD6C85007E2847 /* example.html in Resources */,
@@ -237,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CB7A011B025B9E0087CDB0 /* PopoverViewController.swift in Sources */,
 				CB20B61F1AFD076A000FE355 /* ViewController.swift in Sources */,
+				D258B7961B014E5B00231A64 /* NotebookPopoverViewController.swift in Sources */,
 				CB20B61D1AFD076A000FE355 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

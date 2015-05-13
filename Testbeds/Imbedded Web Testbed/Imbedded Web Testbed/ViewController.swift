@@ -14,7 +14,11 @@ class ViewController: UIViewController, WKScriptMessageHandler {
 	@IBOutlet var placeholderViewForWebView : UIView!
 	var webView : WKWebView!
 	@IBOutlet var boxTouchesLabel : UILabel!
+    @IBOutlet weak var showNotebookButton: UIButton!
 	
+    @IBOutlet weak var mysteryButton: UIButton!
+    let popoverVC = PopoverViewController(nibName: "PopoverViewController", bundle: nil)
+    
 	var timesBoxTouched = 0
 	
 	override func viewDidLoad() {
@@ -62,6 +66,24 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     func onNextButton() {
         println("blah")
     }
+    
+
+    @IBAction func showNotebook(sender: UIButton) {
+        let popoverViewController = NotebookPopoverViewController(nibName: "NotebookPopoverViewController", bundle: nil)
+        popoverViewController.modalPresentationStyle = .Popover
+        let popRect = showNotebookButton.frame
+        let popover =  UIPopoverController(contentViewController: popoverViewController)
+        popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+//        let notebookPopover = NSBundle.mainBundle().loadNibNamed("NotebookPopoverView", owner: self, options: nil)
+//        self.view = notebookPopover[0] as! UIView
+        
+    }
+    
+    @IBAction func onMysteryButtonPress(sender: UIButton) {
+        popoverVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        presentViewController(popoverVC, animated: true, completion: nil)
+    }
+    
     
 	///Called via a Swift UIButton press, calls a js method via
 	///		'evaluateJavaScript(<jsCode : String>, <completionHandler : block>)'
