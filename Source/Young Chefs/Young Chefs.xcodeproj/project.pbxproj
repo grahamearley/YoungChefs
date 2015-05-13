@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */ = {isa = PBXBuildFile; fileRef = CB16EF731B03D62A00A606A8 /* fastclick.js */; };
+		CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */; };
+		CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */; };
 		CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126231B03C368001C2488 /* AppDelegate.swift */; };
 		CBA126291B03C368001C2488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA126271B03C368001C2488 /* Main.storyboard */; };
 		CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA1262A1B03C368001C2488 /* Images.xcassets */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		CB16EF731B03D62A00A606A8 /* fastclick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fastclick.js; sourceTree = "<group>"; };
+		CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
+		CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookView.xib; sourceTree = "<group>"; };
 		CBA1261E1B03C368001C2488 /* Young Chefs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Young Chefs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA126221B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA126231B03C368001C2488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				CBA126431B03C41F001C2488 /* HomeViewController.swift */,
 				CBA1265D1B03CF62001C2488 /* Experiment.swift */,
 				CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */,
+				CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */,
+				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
 				CBA126271B03C368001C2488 /* Main.storyboard */,
 				CBA1262A1B03C368001C2488 /* Images.xcassets */,
 				CBA1262C1B03C368001C2488 /* LaunchScreen.xib */,
@@ -242,6 +248,7 @@
 				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
 				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
+				CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				CBA126591B03CD42001C2488 /* example.html in Resources */,
 			);
@@ -266,6 +273,7 @@
 				CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */,
 				CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */,
 				CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */,
+				CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

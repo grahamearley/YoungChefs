@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotebookViewController" customModule="Young_Chefs" customModuleProvider="target">
+            <connections>
+                <outlet property="editText" destination="ruO-Va-QEl" id="WAf-tQ-yJx"/>
+                <outlet property="view" destination="lK3-w9-8Mo" id="tGg-tM-PQF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lK3-w9-8Mo">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-Va-QEl">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="0.92408389136904767" green="0.92408389136904767" blue="0.92408389136904767" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ruO-Va-QEl" secondAttribute="trailing" id="6zL-ha-mBu"/>
+                <constraint firstItem="ruO-Va-QEl" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="top" id="F7e-0n-eu8"/>
+                <constraint firstItem="ruO-Va-QEl" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" id="OWi-3q-7Rd"/>
+                <constraint firstAttribute="bottom" secondItem="ruO-Va-QEl" secondAttribute="bottom" id="p1G-aA-PDn"/>
+            </constraints>
+            <point key="canvasLocation" x="250" y="-402"/>
+        </view>
+    </objects>
+</document>

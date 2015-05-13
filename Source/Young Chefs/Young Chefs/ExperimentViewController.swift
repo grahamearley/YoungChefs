@@ -16,6 +16,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	@IBOutlet var placeholderViewForWebview : UIView!
 	var webView : WKWebView!
 	
+	//MARK: Init
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -40,6 +42,19 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		self.placeholderViewForWebview.addSubview(webView)
     }
 	
+	//MARK: IBActions
+	
+	@IBAction func onNotebookButton(sender: UIButton) {
+		let popoverViewController = NotebookViewController(nibName: "NotebookView", bundle: nil)
+		popoverViewController.modalPresentationStyle = .Popover
+		let popRect = sender.frame
+		let popover =  UIPopoverController(contentViewController: popoverViewController)
+		popover.popoverContentSize = CGSize(width: 700, height: 500)
+		popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+	}
+	
+	//MARK: JavaSwift
+	
 	///Called whenever js posts a message to 'javaSwift'
 	///Explicitly whenever js runs:
 	///		'window.webkit.messageHandlers.javaSwift.postMessage(<message : NSDictionary>)'
@@ -49,12 +64,11 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			if command == "nextbutton" {
 				println("next")
 			}
+			if command == "boxtouch" {
+				self.evaluateJavaScriptNoReturn("changeBackgroundColor('#000');")
+			}
 		}
 	}
-	
-	
-	
-	
 	
 	///Handy function for running javascript and not worrying about a return value.
 	///Will still print the error if there was one.

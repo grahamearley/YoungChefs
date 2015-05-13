@@ -101,6 +101,15 @@
                                     <rect key="frame" x="327" y="762" width="147" height="30"/>
                                 </variation>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-d0-Zcl">
+                                <rect key="frame" x="16" y="562" width="68" height="30"/>
+                                <state key="normal" title="Notebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNotebookButton:" destination="daV-KR-Jzk" eventType="touchUpInside" id="b0G-4l-GQ1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -111,6 +120,8 @@
                             <constraint firstAttribute="centerX" secondItem="QGF-Jg-pMX" secondAttribute="centerX" id="dvy-Fb-6fD"/>
                             <constraint firstAttribute="centerX" secondItem="IQd-k4-q0Q" secondAttribute="centerX" id="iRs-ec-vzL"/>
                             <constraint firstItem="IQd-k4-q0Q" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="13" id="j85-zH-aKc"/>
+                            <constraint firstItem="u6E-d0-Zcl" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" id="kFk-57-LTf"/>
+                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="u6E-d0-Zcl" secondAttribute="bottom" constant="8" id="spL-HF-VkQ"/>
                             <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" constant="66" id="zn0-iL-vYJ"/>
                         </constraints>
                     </view>
