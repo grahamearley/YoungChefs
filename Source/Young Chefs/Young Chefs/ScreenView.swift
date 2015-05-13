@@ -34,7 +34,9 @@ class ScreenView : WKWebView {
 	///Prints errors to console.
 	func evaluateJavaScriptNoReturn(javascript: String) {
 		self.evaluateJavaScript(javascript, completionHandler: { (returnedVal:AnyObject!, error:NSError?) -> Void in
-			println(error?.description ?? "")
+			if error != nil {
+				println(error!.description)
+			}
 		})
 	}
 	

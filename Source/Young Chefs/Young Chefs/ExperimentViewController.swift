@@ -41,7 +41,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	
 	///Presents a popup with the Notebook modually
 	@IBAction func onNotebookButton(sender: UIButton) {
-		let popoverViewController = NotebookViewController(nibName: "NotebookView", bundle: nil)
+		let popoverViewController = NotebookViewController(notebook: experiment.notebook)
 		popoverViewController.modalPresentationStyle = .Popover
 		let popRect = sender.frame
 		let popover =  UIPopoverController(contentViewController: popoverViewController)

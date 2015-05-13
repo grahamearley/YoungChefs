@@ -80,27 +80,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxc-Ob-xyV" userLabel="WebView">
-                                <rect key="frame" x="82" y="70" width="436" height="459"/>
+                                <rect key="frame" x="66" y="69" width="468" height="476"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JS to Swift Outlet (touch a box in the webview)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-k4-q0Q">
-                                <rect key="frame" x="121" y="542" width="359" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-Jg-pMX">
-                                <rect key="frame" x="239" y="562" width="123" height="30"/>
-                                <state key="normal" title="Swift to JS Action">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="327" y="362" width="147" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="327" y="762" width="147" height="30"/>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-d0-Zcl">
                                 <rect key="frame" x="16" y="562" width="68" height="30"/>
                                 <state key="normal" title="Notebook">
@@ -113,16 +95,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="71" id="8YU-A4-MWG"/>
-                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="top" secondItem="Ek6-by-B5E" secondAttribute="bottom" constant="6" id="FVL-ad-4YH"/>
-                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="QGF-Jg-pMX" secondAttribute="bottom" constant="8" id="K51-xW-3hU"/>
-                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="centerX" secondItem="IQd-k4-q0Q" secondAttribute="centerX" id="Zfa-da-467"/>
-                            <constraint firstAttribute="centerX" secondItem="QGF-Jg-pMX" secondAttribute="centerX" id="dvy-Fb-6fD"/>
-                            <constraint firstAttribute="centerX" secondItem="IQd-k4-q0Q" secondAttribute="centerX" id="iRs-ec-vzL"/>
-                            <constraint firstItem="IQd-k4-q0Q" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="13" id="j85-zH-aKc"/>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" constant="50" id="POF-cd-bQ8"/>
+                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="55" id="U7m-JU-aai"/>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="top" secondItem="Ek6-by-B5E" secondAttribute="bottom" constant="5" id="gxv-28-gdi"/>
                             <constraint firstItem="u6E-d0-Zcl" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" id="kFk-57-LTf"/>
+                            <constraint firstAttribute="centerX" secondItem="wxc-Ob-xyV" secondAttribute="centerX" id="obh-OH-ACL"/>
                             <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="u6E-d0-Zcl" secondAttribute="bottom" constant="8" id="spL-HF-VkQ"/>
-                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" constant="66" id="zn0-iL-vYJ"/>
                         </constraints>
                     </view>
                     <connections>

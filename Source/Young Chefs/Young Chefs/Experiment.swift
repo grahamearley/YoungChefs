@@ -11,6 +11,7 @@ import UIKit
 class Experiment {
 	
 	var screens = [Screen]()
+	var notebook = Notebook()
 	
 	///Inits a new Experiment by pulling html files from the main bundle and converting them to screens.
 	///
