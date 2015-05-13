@@ -14,7 +14,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	var experiment : Experiment!	//must be set externally before the storyboard presents this view
 	
 	@IBOutlet var placeholderViewForWebview : UIView!
-	var webView : WKWebView!
+	var screenView : ScreenView!
 	
 	//MARK: Init
 	
@@ -25,21 +25,15 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			fatalError("experiment must be set before this view is presented.\nUse 'prepareForSegue' to pass incoming ExperimentViewController an Experiment before storyboard presentation")
 		}
 		
-		//config the webView with our javaScript message handler
-		let webViewConfig = WKWebViewConfiguration()
-		webViewConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
-		self.webView = WKWebView(frame: placeholderViewForWebview.bounds, configuration: webViewConfig)
-		
-		//load webView content
-		if let fileURL = NSBundle.mainBundle().URLForResource("example", withExtension: "html") {
-			let request = NSURLRequest(URL: fileURL, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
-			webView.loadRequest(request)
-		}
+		//config the screenView with our javaScript message handler and our first screen
+		let javaSwiftConfig = WKWebViewConfiguration()
+		javaSwiftConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
+		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, firstScreen: experiment.screens[0])
 		
 		//replace (cover and fill) our placeholder view with our WKWebView
-		self.webView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-		self.webView.frame = self.placeholderViewForWebview.bounds
-		self.placeholderViewForWebview.addSubview(webView)
+		self.screenView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+		self.screenView.frame = self.placeholderViewForWebview.bounds
+		self.placeholderViewForWebview.addSubview(screenView)
     }
 	
 	//MARK: IBActions
@@ -65,17 +59,11 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 				println("next")
 			}
 			if command == "boxtouch" {
-				self.evaluateJavaScriptNoReturn("changeBackgroundColor('#000');")
+				screenView.evaluateJavaScriptNoReturn("changeBackgroundColor('#000');")
 			}
 		}
 	}
 	
-	///Handy function for running javascript and not worrying about a return value.
-	///Will still print the error if there was one.
-	private func evaluateJavaScriptNoReturn(javascript: String) {
-		self.webView.evaluateJavaScript(javascript, completionHandler: { (returnedVal:AnyObject!, error:NSError?) -> Void in
-			println(error?.description ?? "")
-		})
-	}
+	
 	
 }

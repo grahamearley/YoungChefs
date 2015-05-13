@@ -10,6 +10,13 @@ import UIKit
 
 class Experiment {
 	
+	var screens = [Screen]()
 	
+	static func testExperiment() -> Experiment {
+		let e = Experiment()
+		e.screens.append(Screen(htmlFileName: "example"))
+		e.screens.append(Screen(htmlFileName: "example"))
+		return e
+	}
 	
 }

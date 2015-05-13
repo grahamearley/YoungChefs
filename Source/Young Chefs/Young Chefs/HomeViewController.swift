@@ -41,7 +41,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(HomeCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? HomeCollectionViewCell {
 			cell.imageView.image = UIImage(named: "Cookie")
-			
 			return cell
 		} else {
 			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
@@ -61,7 +60,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 	//We use this method to pass incoming view controllers the experiment we want to present
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if let destinationExperimentViewController = segue.destinationViewController as? ExperimentViewController {
-			destinationExperimentViewController.experiment = Experiment()
+			destinationExperimentViewController.experiment = Experiment.testExperiment()
 		}
 	}
 }
