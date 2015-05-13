@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0K9-9K-qiH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home View Controller-->
+        <scene sceneID="YZB-iB-MZe">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="0K9-9K-qiH" customClass="HomeViewController" customModule="Young_Chefs" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ch4-n8-bCJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uy8-HC-cLa">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="24U-WW-JUL">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0K9-9K-qiH" id="0ER-Ii-Oll"/>
+                            <outlet property="delegate" destination="0K9-9K-qiH" id="b7s-pC-Sru"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yyd-k0-QNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="353"/>
+        </scene>
+        <!--ExperimentViewController-->
+        <scene sceneID="Lh1-Vy-8a7">
+            <objects>
+                <viewController id="daV-KR-Jzk" userLabel="ExperimentViewController" customClass="ExperimentViewController" customModule="Young_Chefs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ek6-by-B5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="B1y-gN-AWb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XvE-QF-jld">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxc-Ob-xyV" userLabel="WebView">
+                                <rect key="frame" x="82" y="70" width="436" height="459"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JS to Swift Outlet (touch a box in the webview)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-k4-q0Q">
+                                <rect key="frame" x="121" y="542" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-Jg-pMX">
+                                <rect key="frame" x="239" y="562" width="123" height="30"/>
+                                <state key="normal" title="Swift to JS Action">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="327" y="362" width="147" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="327" y="762" width="147" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="top" secondItem="Ek6-by-B5E" secondAttribute="bottom" constant="50" id="Dw4-ur-pxx"/>
+                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="QGF-Jg-pMX" secondAttribute="bottom" constant="8" id="K51-xW-3hU"/>
+                            <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" constant="66" id="R7F-RJ-8kK"/>
+                            <constraint firstItem="IQd-k4-q0Q" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="13" id="T27-Je-jWX"/>
+                            <constraint firstAttribute="centerX" secondItem="QGF-Jg-pMX" secondAttribute="centerX" id="dvy-Fb-6fD"/>
+                            <constraint firstAttribute="centerX" secondItem="IQd-k4-q0Q" secondAttribute="centerX" id="iRs-ec-vzL"/>
+                            <constraint firstAttribute="centerX" secondItem="wxc-Ob-xyV" secondAttribute="centerX" id="pXj-cz-DvR"/>
+                            <constraint firstAttribute="centerY" secondItem="wxc-Ob-xyV" secondAttribute="centerY" id="s7f-cp-myQ"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgd-gt-LTs" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

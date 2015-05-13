@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126231B03C368001C2488 /* AppDelegate.swift */; };
-		CBA126261B03C368001C2488 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126251B03C368001C2488 /* ViewController.swift */; };
 		CBA126291B03C368001C2488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA126271B03C368001C2488 /* Main.storyboard */; };
 		CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA1262A1B03C368001C2488 /* Images.xcassets */; };
 		CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA1262C1B03C368001C2488 /* LaunchScreen.xib */; };
 		CBA1263A1B03C368001C2488 /* Young_ChefsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126391B03C368001C2488 /* Young_ChefsTests.swift */; };
+		CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126431B03C41F001C2488 /* HomeViewController.swift */; };
+		CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		CBA1261E1B03C368001C2488 /* Young Chefs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Young Chefs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA126221B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA126231B03C368001C2488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBA126251B03C368001C2488 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBA126281B03C368001C2488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBA1262A1B03C368001C2488 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBA1262D1B03C368001C2488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CBA126331B03C368001C2488 /* Young ChefsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Young ChefsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA126381B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA126391B03C368001C2488 /* Young_ChefsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Young_ChefsTests.swift; sourceTree = "<group>"; };
+		CBA126431B03C41F001C2488 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				CBA126231B03C368001C2488 /* AppDelegate.swift */,
-				CBA126251B03C368001C2488 /* ViewController.swift */,
+				CBA126431B03C41F001C2488 /* HomeViewController.swift */,
+				CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */,
 				CBA126271B03C368001C2488 /* Main.storyboard */,
 				CBA1262A1B03C368001C2488 /* Images.xcassets */,
 				CBA1262C1B03C368001C2488 /* LaunchScreen.xib */,
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA126261B03C368001C2488 /* ViewController.swift in Sources */,
 				CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */,
+				CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */,
+				CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
