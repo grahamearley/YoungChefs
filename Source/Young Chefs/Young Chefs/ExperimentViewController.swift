@@ -46,8 +46,9 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
 		let sentData = message.body as! NSDictionary
 		if let command = sentData["command"] as? NSString {
-			//parse command and args...
-			//dispatch swift method messages...
+			if command == "nextbutton" {
+				println("next")
+			}
 		}
 	}
 	

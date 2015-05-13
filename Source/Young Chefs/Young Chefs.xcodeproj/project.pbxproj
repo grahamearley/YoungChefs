@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */ = {isa = PBXBuildFile; fileRef = CB16EF731B03D62A00A606A8 /* fastclick.js */; };
 		CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126231B03C368001C2488 /* AppDelegate.swift */; };
 		CBA126291B03C368001C2488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA126271B03C368001C2488 /* Main.storyboard */; };
 		CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA1262A1B03C368001C2488 /* Images.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB16EF731B03D62A00A606A8 /* fastclick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fastclick.js; sourceTree = "<group>"; };
 		CBA1261E1B03C368001C2488 /* Young Chefs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Young Chefs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA126221B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA126231B03C368001C2488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				CBA126541B03CD42001C2488 /* example */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
+				CB16EF731B03D62A00A606A8 /* fastclick.js */,
 			);
 			path = WebResources;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */,
 				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
+				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				CBA126591B03CD42001C2488 /* example.html in Resources */,
 			);
@@ -459,6 +463,7 @@
 				CBA1263F1B03C368001C2488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBA126401B03C368001C2488 /* Build configuration list for PBXNativeTarget "Young ChefsTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +472,7 @@
 				CBA126421B03C368001C2488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
