@@ -1,20 +1,19 @@
 //
-//  NotebookPopoverViewController.swift
+//  PopoverViewController.swift
 //  Imbedded Web Testbed
 //
-//  Created by Graham Earley on 5/11/15.
+//  Created by Graham Earley on 5/12/15.
 //  Copyright (c) 2015 YoungChefs. All rights reserved.
 //
 
 import UIKit
 
-class NotebookPopoverViewController: UIViewController {
-    @IBOutlet weak var testLabel: UILabel!
-    
+class PopoverViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        testLabel.text = "This text was added programatically. Yay!"
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +21,8 @@ class NotebookPopoverViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onExitButton(sender: UIButton) {
+    }
 
     /*
     // MARK: - Navigation

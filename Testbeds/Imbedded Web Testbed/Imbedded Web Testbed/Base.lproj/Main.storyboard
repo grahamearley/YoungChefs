@@ -48,9 +48,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1hv-Tv-g48" kind="popoverPresentation" identifier="Popover" popoverAnchorView="bYK-iJ-nAW" id="PL0-yg-PAQ">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="showNotebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARY-UH-cl1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSZ-ov-MCt">
+                                <rect key="frame" x="16" y="524" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onMysteryButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4CO-61-FYB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,7 +77,9 @@
                     </view>
                     <connections>
                         <outlet property="boxTouchesLabel" destination="aSX-xi-OQV" id="GJv-Ll-qdO"/>
+                        <outlet property="mysteryButton" destination="GSZ-ov-MCt" id="cif-Bl-wzc"/>
                         <outlet property="placeholderViewForWebView" destination="YHt-11-gv9" id="06L-0P-9jE"/>
+                        <outlet property="showNotebookButton" destination="bYK-iJ-nAW" id="QJW-gd-AQ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
