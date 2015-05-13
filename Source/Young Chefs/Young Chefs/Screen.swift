@@ -13,8 +13,8 @@ class Screen {
 	
 	let htmlURL : NSURL
 	
-	init(htmlFileName: String) {
-		 self.htmlURL = NSBundle.mainBundle().URLForResource(htmlFileName, withExtension: "html")!
+	init(htmlURL: NSURL) {
+		self.htmlURL = htmlURL
 	}
 	
 }

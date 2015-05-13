@@ -12,6 +12,7 @@ import WebKit
 class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	
 	var experiment : Experiment!	//must be set externally before the storyboard presents this view
+	var indexInExperiment = 0
 	
 	@IBOutlet var placeholderViewForWebview : UIView!
 	var screenView : ScreenView!
@@ -22,13 +23,13 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
         super.viewDidLoad()
 		
 		if experiment == nil {
-			fatalError("experiment must be set before this view is presented.\nUse 'prepareForSegue' to pass incoming ExperimentViewController an Experiment before storyboard presentation")
+			fatalError("experiment must be set before this view is presented. Use 'prepareForSegue' to pass incoming ExperimentViewController an Experiment before storyboard presentation")
 		}
 		
 		//config the screenView with our javaScript message handler and our first screen
 		let javaSwiftConfig = WKWebViewConfiguration()
 		javaSwiftConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
-		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, firstScreen: experiment.screens[0])
+		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, screen: experiment.screens[indexInExperiment])
 		
 		//replace (cover and fill) our placeholder view with our WKWebView
 		self.screenView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
@@ -38,6 +39,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	
 	//MARK: IBActions
 	
+	///Presents a popup with the Notebook modually
 	@IBAction func onNotebookButton(sender: UIButton) {
 		let popoverViewController = NotebookViewController(nibName: "NotebookView", bundle: nil)
 		popoverViewController.modalPresentationStyle = .Popover
@@ -56,7 +58,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		let sentData = message.body as! NSDictionary
 		if let command = sentData["command"] as? NSString {
 			if command == "nextbutton" {
-				println("next")
+				onNextScreenButton()
 			}
 			if command == "boxtouch" {
 				screenView.evaluateJavaScriptNoReturn("changeBackgroundColor('#000');")
@@ -64,6 +66,15 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		}
 	}
 	
+	///Progress to the next screen in the experiment if it exists
+	func onNextScreenButton() {
+		self.indexInExperiment++
+		if indexInExperiment >= self.experiment.screens.count {
+			return
+		} else {
+			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
+		}
+	}
 	
 	
 }

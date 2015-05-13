@@ -12,10 +12,13 @@ import UIKit
 ///Subclass of WKWebView for rendering and interacting with Screens
 class ScreenView : WKWebView {
 	
-	private(set) var currentScreen : Screen		//read-only
+	///The currently displayed screen
+	///(read-only)
+	private(set) var currentScreen : Screen
 	
-	init(frame: CGRect, configuration: WKWebViewConfiguration, firstScreen: Screen) {
-		self.currentScreen = firstScreen
+	///Inits a new ScreenView with the specified frame, configuration, and screen.
+	init(frame: CGRect, configuration: WKWebViewConfiguration, screen: Screen) {
+		self.currentScreen = screen
 		super.init(frame: frame, configuration: configuration)
 		self.loadScreen(self.currentScreen)
 	}

@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 	//We use this method to pass incoming view controllers the experiment we want to present
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if let destinationExperimentViewController = segue.destinationViewController as? ExperimentViewController {
-			destinationExperimentViewController.experiment = Experiment.testExperiment()
+			destinationExperimentViewController.experiment = Experiment(experimentName: "example")
 		}
 	}
 }
