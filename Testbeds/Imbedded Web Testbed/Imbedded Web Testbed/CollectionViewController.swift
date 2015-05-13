@@ -23,16 +23,15 @@ class CollectionViewController: UICollectionViewController {
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView!.dataSource = self
         collectionView!.delegate = self
-        //collectionView!.registerClass(Cell.self, forCellWithReuseIdentifier: "Cell")
         collectionView!.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(collectionView!)
+		collectionView!.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+		
         // Do any additional setup after loading the view.
     }
 
@@ -73,14 +72,21 @@ class CollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
+		
+		let cell: AnyObject? = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+		if cell != nil {
+			println("found cell")
+		} else {
+			println("no cell")
+			fatalError("we don't init cells ourselves")
+		}
+		
+        let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         let photo = UIImage(named: cells[indexPath.row])
        
-        cell.img.image = photo
-        
-
-    
-        return cell
+        myCell.img.image = photo
+		
+        return myCell
     }
     
 

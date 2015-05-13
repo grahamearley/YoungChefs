@@ -22,6 +22,7 @@
 		CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1A1AFD6C8F007E2847 /* example.css */; };
 		CB89FA1D1AFD6CA2007E2847 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1C1AFD6CA2007E2847 /* example.js */; };
 		CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */; };
+		CB9AC3C61B02F1DA00362CF6 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9AC3C51B02F1DA00362CF6 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CB89FA1A1AFD6C8F007E2847 /* example.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = example.css; sourceTree = "<group>"; };
 		CB89FA1C1AFD6CA2007E2847 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CB89FA1E1AFD734A007E2847 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
+		CB9AC3C51B02F1DA00362CF6 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionViewCell.xib; path = ../CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 			children = (
 				CB20B61C1AFD076A000FE355 /* AppDelegate.swift */,
 				CB20B61E1AFD076A000FE355 /* ViewController.swift */,
-				317489521B02E31400860422 /* CollectionViewCell.swift */,
 				CB20B6201AFD076A000FE355 /* Main.storyboard */,
 				317489461B0272E800860422 /* CollectionViewController.swift */,
+				317489521B02E31400860422 /* CollectionViewCell.swift */,
+				CB9AC3C51B02F1DA00362CF6 /* CollectionViewCell.xib */,
 				CB20B6231AFD076A000FE355 /* Images.xcassets */,
 				317489501B02DE8D00860422 /* cookie.png */,
 				3174894E1B02DB0A00860422 /* choco.png */,
@@ -232,6 +235,7 @@
 				3174894D1B02DABF00860422 /* cookie.gif in Resources */,
 				CB89FA1F1AFD734A007E2847 /* jquery-2.1.4.js in Resources */,
 				CB20B6221AFD076A000FE355 /* Main.storyboard in Resources */,
+				CB9AC3C61B02F1DA00362CF6 /* CollectionViewCell.xib in Resources */,
 				CB89FA1B1AFD6C8F007E2847 /* example.css in Resources */,
 				CB89FA191AFD6C85007E2847 /* example.html in Resources */,
 				CB89FA1D1AFD6CA2007E2847 /* example.js in Resources */,
