@@ -12,6 +12,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 	
 	static let REUSE_ID = "HomeCell"
 
+	@IBOutlet var titleLabel : UILabel!
 	@IBOutlet var imageView : UIImageView!
 	
 }

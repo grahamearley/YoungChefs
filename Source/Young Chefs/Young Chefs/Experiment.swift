@@ -21,6 +21,11 @@ class Experiment {
 	///
 	///The initializer will automatically read in all the associated html files in the correct order.
 	init(experimentName screensFilePrefix:String) {
+		
+		//WARNING: Currently, this only searchs in the MainBundle.
+		//		which is inconsistant, filenames from the Library directory can be
+		//		requested for init from experimentsDirectory.plist/HomeViewController
+		
 		var reachedEndOfScreens = false
 		var screenNumber = 0
 		while !reachedEndOfScreens {
@@ -29,11 +34,8 @@ class Experiment {
 				let screen = Screen(htmlURL: htmlURL)
 				self.screens.append(screen)
 			} else {
-				if screenNumber == 0 {
-					continue	//in case a non-dev starts numbering at 1 instead of 0
-				} else {
+				if screenNumber != 0 { //in case a non-dev starts numbering at 1 instead of 0
 					reachedEndOfScreens = true
-
 				}
 			}
 			screenNumber++

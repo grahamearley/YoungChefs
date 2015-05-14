@@ -29,6 +29,7 @@
 		CBA126591B03CD42001C2488 /* example-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA126561B03CD42001C2488 /* example-0.html */; };
 		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
 		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
+		CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		CBA126561B03CD42001C2488 /* example-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-0.html"; sourceTree = "<group>"; };
 		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
+		CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = experimentsDirectory.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		CBA1264B1B03CCE1001C2488 /* WebResources */ = {
 			isa = PBXGroup;
 			children = (
+				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
 				CBA126541B03CD42001C2488 /* example */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
 				CB16EF731B03D62A00A606A8 /* fastclick.js */,
@@ -290,6 +293,7 @@
 				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
 				CB932ED51B04096E00BC52EC /* example-1.html in Resources */,
 				CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */,
+				CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				CBA126591B03CD42001C2488 /* example-0.html in Resources */,
 			);
