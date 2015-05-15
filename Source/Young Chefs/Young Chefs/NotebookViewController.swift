@@ -8,15 +8,23 @@
 
 import UIKit
 
-class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate {
+class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	var notebook: Notebook
+    var imageSourceType: UIImagePickerControllerSourceType
 	
 	@IBOutlet weak var editText : UITextView!
     @IBOutlet weak var imageView: UIImageView!
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            // Users without a camera will only be able to add from their photo library.
+            self.imageSourceType = .PhotoLibrary
+        } else {
+            self.imageSourceType = .Camera
+        }
+        
 		super.init(nibName: "NotebookView", bundle: nil)
 	}
 
@@ -30,14 +38,27 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 		editText.text = notebook.scribbleText
 		editText.delegate = self
 	}
+    
+    func imagePickerController(picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        let chosenImage: AnyObject? = info[UIImagePickerControllerOriginalImage]
+        self.imageView.image = chosenImage as? UIImage
+        
+        // TODO: Test on physical device, see how this performs with Camera as the imageSource
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 	
     @IBAction func onTakePictureButton(sender: UIButton) {
         let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = false
-//        picker.sourceType = UIImagePickerControllerSourceTypeCamera
+        picker.delegate = self
+        picker.allowsEditing = false
+        picker.sourceType = self.imageSourceType
         
-        
+        self.presentViewController(picker, animated: true, completion: nil)
     }
     
 	//MARK: UITextView Delegate
