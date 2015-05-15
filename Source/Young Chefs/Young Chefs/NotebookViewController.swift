@@ -15,6 +15,7 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	
 	@IBOutlet weak var editText : UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var notebookImageView: UIImageView!
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -34,6 +35,10 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        if let mostRecentImage = notebook.scribbleImages.last {
+            self.imageView.image = mostRecentImage
+        }
 
 		editText.text = notebook.scribbleText
 		editText.delegate = self
@@ -43,6 +48,8 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let chosenImage: AnyObject? = info[UIImagePickerControllerOriginalImage]
         self.imageView.image = chosenImage as? UIImage
+            
+        self.notebook.scribbleImages.append(chosenImage as! UIImage)
         
         // TODO: Test on physical device, see how this performs with Camera as the imageSource
         picker.dismissViewControllerAnimated(true, completion: nil)

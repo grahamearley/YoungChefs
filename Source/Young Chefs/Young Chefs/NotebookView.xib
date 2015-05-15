@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="editText" destination="ruO-Va-QEl" id="WAf-tQ-yJx"/>
                 <outlet property="imageView" destination="k8g-4h-v0A" id="JsA-Pm-G9D"/>
+                <outlet property="notebookImageView" destination="k8g-4h-v0A" id="hiN-um-lC6"/>
                 <outlet property="view" destination="lK3-w9-8Mo" id="WLi-MG-EYN"/>
             </connections>
         </placeholder>
