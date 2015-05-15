@@ -8,11 +8,12 @@
 
 import UIKit
 
-class NotebookViewController: UIViewController, UITextViewDelegate {
+class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate {
 
 	var notebook: Notebook
 	
 	@IBOutlet weak var editText : UITextView!
+    @IBOutlet weak var imageView: UIImageView!
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -30,6 +31,15 @@ class NotebookViewController: UIViewController, UITextViewDelegate {
 		editText.delegate = self
 	}
 	
+    @IBAction func onTakePictureButton(sender: UIButton) {
+        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = false
+//        picker.sourceType = UIImagePickerControllerSourceTypeCamera
+        
+        
+    }
+    
 	//MARK: UITextView Delegate
 	
 	func textViewDidChange(textView: UITextView) {
