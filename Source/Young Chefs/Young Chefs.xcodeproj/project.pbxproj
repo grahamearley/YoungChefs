@@ -25,7 +25,7 @@
 		CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */; };
 		CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */; };
 		CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */; };
-		CBA126581B03CD42001C2488 /* example.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA126551B03CD42001C2488 /* example.css */; };
+		CBA126581B03CD42001C2488 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA126551B03CD42001C2488 /* styles.css */; };
 		CBA126591B03CD42001C2488 /* example-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA126561B03CD42001C2488 /* example-0.html */; };
 		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
 		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
@@ -65,7 +65,7 @@
 		CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
-		CBA126551B03CD42001C2488 /* example.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = example.css; sourceTree = "<group>"; };
+		CBA126551B03CD42001C2488 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = styles.css; path = example/styles.css; sourceTree = "<group>"; };
 		CBA126561B03CD42001C2488 /* example-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-0.html"; sourceTree = "<group>"; };
 		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
@@ -183,6 +183,7 @@
 		CBA1264B1B03CCE1001C2488 /* WebResources */ = {
 			isa = PBXGroup;
 			children = (
+				CBA126551B03CD42001C2488 /* styles.css */,
 				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
 				CBA126541B03CD42001C2488 /* example */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
@@ -197,7 +198,6 @@
 				CBA126561B03CD42001C2488 /* example-0.html */,
 				CB932ED41B04096E00BC52EC /* example-1.html */,
 				CB932ED21B04069500BC52EC /* example-2.html */,
-				CBA126551B03CD42001C2488 /* example.css */,
 				CBA126571B03CD42001C2488 /* example.js */,
 			);
 			path = example;
@@ -283,7 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA126581B03CD42001C2488 /* example.css in Resources */,
+				CBA126581B03CD42001C2488 /* styles.css in Resources */,
 				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
