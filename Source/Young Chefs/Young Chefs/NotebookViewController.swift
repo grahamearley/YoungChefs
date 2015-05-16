@@ -8,11 +8,12 @@
 
 import UIKit
 
-class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource {
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
 	
+    @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
 	@IBOutlet weak var editText : UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var notebookImageView: UIImageView!
@@ -42,6 +43,15 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 
 		editText.text = notebook.scribbleText
 		editText.delegate = self
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 5, left: 30, bottom: 5, right: 0)
+        layout.itemSize = CGSize(width: 200, height: 200)
+        layout.scrollDirection = .Horizontal
+        layout.minimumInteritemSpacing = 0
+        
+        notebookPhotoCollectionView.collectionViewLayout = layout
+        notebookPhotoCollectionView.registerNib(UINib(nibName: "NotebookPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
 	}
     
     func imagePickerController(picker: UIImagePickerController,
@@ -73,4 +83,26 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	func textViewDidChange(textView: UITextView) {
 		self.notebook.scribbleText = editText.text
 	}
+    
+    //MARK: UICollectionViewDataSource:
+    
+    func collectionView(collectionView: UICollectionView,
+        numberOfItemsInSection section: Int) -> Int {
+            return self.notebook.scribbleImages.count
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+            if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(NotebookPhotoCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? NotebookPhotoCollectionViewCell {
+                cell.imageView.image = self.notebook.scribbleImages[indexPath.row]
+                return cell
+            } else {
+                fatalError("NotebookPhotoCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
+            }
+    }
+
 }

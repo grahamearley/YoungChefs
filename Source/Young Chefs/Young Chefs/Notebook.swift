@@ -16,5 +16,5 @@ class Notebook {
 	
 	var scribbleText : String?
 	var scribbleImages = [UIImage]()
-	
+    
 }

@@ -9,6 +9,7 @@
                 <outlet property="editText" destination="ruO-Va-QEl" id="WAf-tQ-yJx"/>
                 <outlet property="imageView" destination="k8g-4h-v0A" id="JsA-Pm-G9D"/>
                 <outlet property="notebookImageView" destination="k8g-4h-v0A" id="hiN-um-lC6"/>
+                <outlet property="notebookPhotoCollectionView" destination="fmw-Da-Jj0" id="H0h-Rk-KDa"/>
                 <outlet property="view" destination="lK3-w9-8Mo" id="WLi-MG-EYN"/>
             </connections>
         </placeholder>
@@ -20,19 +21,19 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab Notebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-c3-adT">
                     <rect key="frame" x="230" y="10" width="142" height="29"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-96-iu9">
                     <rect key="frame" x="10" y="49" width="46" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-Yo-v9b">
                     <rect key="frame" x="10" y="283" width="53" height="24"/>
                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-Va-QEl">
@@ -65,6 +66,18 @@
                         <action selector="onTakePictureButton:" destination="-1" eventType="touchUpInside" id="zYh-Cg-UFR"/>
                     </connections>
                 </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-Da-Jj0">
+                    <rect key="frame" x="203" y="352" width="365" height="175"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xv8-zJ-KDa">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="g3c-y7-CJX"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="0.92408389136904767" green="0.89036729396691572" blue="0.82428988227409472" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>

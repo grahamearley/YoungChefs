@@ -30,6 +30,8 @@
 		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
 		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
 		CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */; };
+		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
+		D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = experimentsDirectory.plist; sourceTree = "<group>"; };
+		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
 				CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */,
 				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
+				D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */,
+				D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			files = (
 				CBA126581B03CD42001C2488 /* example.css in Resources */,
 				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
+				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
 				CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */,
@@ -315,6 +322,7 @@
 			files = (
 				CB8463ED1B03F28C002B59FD /* Screen.swift in Sources */,
 				CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */,
+				D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */,
 				CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */,
 				CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */,
 				CB932ED71B040D9100BC52EC /* Notebook.swift in Sources */,
