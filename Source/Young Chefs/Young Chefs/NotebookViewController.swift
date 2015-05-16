@@ -15,8 +15,6 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
 	@IBOutlet weak var editText : UITextView!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var notebookImageView: UIImageView!
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -36,17 +34,13 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        
-        if let mostRecentImage = notebook.scribbleImages.last {
-            self.imageView.image = mostRecentImage
-        }
 
 		editText.text = notebook.scribbleText
 		editText.delegate = self
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 5, left: 30, bottom: 5, right: 0)
-        layout.itemSize = CGSize(width: 200, height: 200)
+        layout.sectionInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
+        layout.itemSize = CGSize(width: 140, height: 140)
         layout.scrollDirection = .Horizontal
         layout.minimumInteritemSpacing = 0
         
@@ -57,9 +51,8 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let chosenImage: AnyObject? = info[UIImagePickerControllerOriginalImage]
-        self.imageView.image = chosenImage as? UIImage
-            
         self.notebook.scribbleImages.append(chosenImage as! UIImage)
+        notebookPhotoCollectionView.reloadData()
         
         // TODO: Test on physical device, see how this performs with Camera as the imageSource
         picker.dismissViewControllerAnimated(true, completion: nil)
