@@ -4,5 +4,7 @@ A project for Carleton College's CS 342 Mobile App Development course, creating 
 
 ##### Created by:
 Julia Bindler
+
 Charlie Imhoff
+
 Graham Earley
