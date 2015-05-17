@@ -5,6 +5,17 @@
 //  Created by Charlie Imhoff on 5/13/15.
 //  Copyright (c) 2015 Young Chefs. All rights reserved.
 //
+//  Julia Bindler
+//  Graham Earley
+//  Charlie Imhoff
+/*
+
+This class allows the student to take notes and/or take a picture (or load from gallery, if there is no camera). It also presents the student's photos in a CollectionView.
+
+Notebook data is stored in the Notebook class.
+
+*/
+//
 
 import UIKit
 

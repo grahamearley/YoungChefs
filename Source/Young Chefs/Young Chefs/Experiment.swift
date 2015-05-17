@@ -5,6 +5,20 @@
 //  Created by Charlie Imhoff on 5/13/15.
 //  Copyright (c) 2015 Young Chefs. All rights reserved.
 //
+//  Julia Bindler
+//  Graham Earley
+//  Charlie Imhoff
+/*
+
+This class initializes a new experiment by pulling html files from the main bundle and converting them into screens.
+
+File references are not passed in individually, but rather all html files are named with the following convention:
+        [experimentName]-[order]
+        e.g. ChocolateExperiment-0.html (for the first screen in the Chocolate Experiment)
+The initializer will automatically read in all the associated html files in the correct order.
+
+*/
+//
 
 import UIKit
 
@@ -13,19 +27,12 @@ class Experiment {
 	var screens = [Screen]()
 	var notebook = Notebook()
 	
-	///Inits a new Experiment by pulling html files from the main bundle and converting them to screens.
-	///
-	///Instead of passing in each file reference individually, simply name all html files of one experiment
-	///in the following format:
-	///		[experimentName]-[order]
-	///
-	///The initializer will automatically read in all the associated html files in the correct order.
 	init(experimentName screensFilePrefix:String) {
 		
-		//WARNING: Currently, this only searchs in the MainBundle.
-		//		which is inconsistant, filenames from the Library directory can be
-		//		requested for init from experimentsDirectory.plist/HomeViewController
-		
+		/* 
+        WARNING: Currently, this only searchs in the MainBundle, which is inconsistent. Filenames from the Library directory can be requested for init from experimentsDirectory.plist/HomeViewController
+		*/
+        
 		var reachedEndOfScreens = false
 		var screenNumber = 0
 		while !reachedEndOfScreens {

@@ -4,6 +4,10 @@
 //
 //  Created by Charlie Imhoff on 5/13/15.
 //  Copyright (c) 2015 Young Chefs. All rights reserved.
+// 
+//  Julia Bindler
+//  Graham Earley
+//  Charlie Imhoff
 //
 
 import UIKit

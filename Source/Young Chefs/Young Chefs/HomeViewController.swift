@@ -5,6 +5,16 @@
 //  Created by Charlie Imhoff on 5/13/15.
 //  Copyright (c) 2015 Young Chefs. All rights reserved.
 //
+//  Julia Bindler
+//  Graham Earley
+//  Charlie Imhoff
+/*  
+
+This class controls the main homepage, which displays a collection of experiments the student can try.
+It loads experiments from the disk and sends the experiment's information to the Experiment view when an experiment is selected.
+
+*/
+//
 
 import UIKit
 
@@ -12,11 +22,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 	@IBOutlet var collectionView : UICollectionView!
 	
-	//We dont want to actual init all the experiments for preview, because that could be a lot of screens, notebooks, and open file ports.
-	//Instead we load into memory just the names of all the possible experiments from our 'experimentsDirectory.plist' file.
-	//When a user actually selects an Experiment, we init it from the name before presenting the ExperimentViewController.
-	//
-	///A list of the avaliable experiments stored both on disc and in bundle
+	/* 
+    We dont want to actually initialize all the experiments for preview, because that could be a lot of screens, notebooks, and open file ports. Instead we load into memory just the names of all the possible experiments from our 'experimentsDirectory.plist' file. When a user actually selects an Experiment, we init it from the name before presenting the ExperimentViewController.
+	*/
+    
+	/// A list of the avaliable experiments stored both on disc and in bundle
 	var experimentNames : [String]!
 	
     override func viewDidLoad() {
@@ -30,11 +40,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 		collectionView.collectionViewLayout = layout
 		collectionView.registerNib(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.REUSE_ID)
 		
-		//load collectionView contents
+		// Load collectionView contents
 		self.experimentNames = self.loadExperimentNamesFromExperimentsDirectory()
 	}
 	
-	///Returns all the experiment names listed in 'experimentsDirectory.plist'
+	/// Returns all the experiment names listed in 'experimentsDirectory.plist'
 	private func loadExperimentNamesFromExperimentsDirectory() -> [String] {
 		let fileURL = NSBundle.mainBundle().URLForResource("experimentsDirectory", withExtension: "plist")!
 		let objectiveCDictionary = NSDictionary(contentsOfURL: fileURL)!
@@ -92,14 +102,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 			}
 	}
 	
-	//We use this method to pass incoming view controllers the experiment we want to present
+	// We use this method to pass incoming view controllers the experiment we want to present
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if let destinationExperimentViewController = segue.destinationViewController as? ExperimentViewController {
-			//if we're naving to an experiment...
+			// If we're naving to an experiment...
 			if let experimentPreviewSender = sender as? HomeCollectionViewCell {
-				//if a HomeCollectionViewCell (a preview of an experiment) sent us...
+				// If a HomeCollectionViewCell (a preview of an experiment) sent us...
 				destinationExperimentViewController.experiment = Experiment(experimentName: experimentPreviewSender.titleLabel.text!)
-				//use that cell's title as a pointer to load the correct experiment
+				// use that cell's title as a pointer to load the correct experiment
 			}
 		}
 	}
