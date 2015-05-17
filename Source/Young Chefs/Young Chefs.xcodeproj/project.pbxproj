@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */ = {isa = PBXBuildFile; fileRef = CB16EF731B03D62A00A606A8 /* fastclick.js */; };
+		CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */; };
+		CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */; };
+		CB8463ED1B03F28C002B59FD /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8463EC1B03F28C002B59FD /* Screen.swift */; };
+		CB8463EF1B03F532002B59FD /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8463EE1B03F532002B59FD /* ScreenView.swift */; };
+		CB932ED31B04069500BC52EC /* example-2.html in Resources */ = {isa = PBXBuildFile; fileRef = CB932ED21B04069500BC52EC /* example-2.html */; };
+		CB932ED51B04096E00BC52EC /* example-1.html in Resources */ = {isa = PBXBuildFile; fileRef = CB932ED41B04096E00BC52EC /* example-1.html */; };
+		CB932ED71B040D9100BC52EC /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB932ED61B040D9100BC52EC /* Notebook.swift */; };
+		CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126231B03C368001C2488 /* AppDelegate.swift */; };
+		CBA126291B03C368001C2488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA126271B03C368001C2488 /* Main.storyboard */; };
+		CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA1262A1B03C368001C2488 /* Images.xcassets */; };
+		CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA1262C1B03C368001C2488 /* LaunchScreen.xib */; };
+		CBA1263A1B03C368001C2488 /* Young_ChefsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126391B03C368001C2488 /* Young_ChefsTests.swift */; };
+		CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126431B03C41F001C2488 /* HomeViewController.swift */; };
+		CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */; };
+		CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */; };
+		CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */; };
+		CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */; };
+		CBA126581B03CD42001C2488 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA126551B03CD42001C2488 /* styles.css */; };
+		CBA126591B03CD42001C2488 /* example-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA126561B03CD42001C2488 /* example-0.html */; };
+		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
+		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
+		CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */; };
+		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
+		D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBA126341B03C368001C2488 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBA126161B03C368001C2488 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBA1261D1B03C368001C2488;
+			remoteInfo = "Young Chefs";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB16EF731B03D62A00A606A8 /* fastclick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fastclick.js; sourceTree = "<group>"; };
+		CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
+		CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookView.xib; sourceTree = "<group>"; };
+		CB8463EC1B03F28C002B59FD /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		CB8463EE1B03F532002B59FD /* ScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		CB932ED21B04069500BC52EC /* example-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-2.html"; sourceTree = "<group>"; };
+		CB932ED41B04096E00BC52EC /* example-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-1.html"; sourceTree = "<group>"; };
+		CB932ED61B040D9100BC52EC /* Notebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		CBA1261E1B03C368001C2488 /* Young Chefs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Young Chefs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA126221B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBA126231B03C368001C2488 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBA126281B03C368001C2488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBA1262A1B03C368001C2488 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBA1262D1B03C368001C2488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CBA126331B03C368001C2488 /* Young ChefsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Young ChefsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA126381B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBA126391B03C368001C2488 /* Young_ChefsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Young_ChefsTests.swift; sourceTree = "<group>"; };
+		CBA126431B03C41F001C2488 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
+		CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
+		CBA126551B03CD42001C2488 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = styles.css; path = example/styles.css; sourceTree = "<group>"; };
+		CBA126561B03CD42001C2488 /* example-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-0.html"; sourceTree = "<group>"; };
+		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
+		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
+		CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = experimentsDirectory.plist; sourceTree = "<group>"; };
+		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBA1261B1B03C368001C2488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA126301B03C368001C2488 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB8463F01B03FDC5002B59FD /* ExperimentComponants */ = {
+			isa = PBXGroup;
+			children = (
+				CBA1265D1B03CF62001C2488 /* Experiment.swift */,
+				CB932ED61B040D9100BC52EC /* Notebook.swift */,
+				CB8463EC1B03F28C002B59FD /* Screen.swift */,
+			);
+			name = ExperimentComponants;
+			sourceTree = "<group>";
+		};
+		CB8463F11B03FEB4002B59FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126431B03C41F001C2488 /* HomeViewController.swift */,
+				CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CB8463F21B03FECF002B59FD /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CB8463EE1B03F532002B59FD /* ScreenView.swift */,
+				CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */,
+				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
+				CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */,
+				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
+				D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */,
+				D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		CBA126151B03C368001C2488 = {
+			isa = PBXGroup;
+			children = (
+				CBA126201B03C368001C2488 /* Young Chefs */,
+				CBA126361B03C368001C2488 /* Young ChefsTests */,
+				CBA1261F1B03C368001C2488 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBA1261F1B03C368001C2488 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBA1261E1B03C368001C2488 /* Young Chefs.app */,
+				CBA126331B03C368001C2488 /* Young ChefsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBA126201B03C368001C2488 /* Young Chefs */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126231B03C368001C2488 /* AppDelegate.swift */,
+				CB8463F11B03FEB4002B59FD /* ViewControllers */,
+				CB8463F01B03FDC5002B59FD /* ExperimentComponants */,
+				CB8463F21B03FECF002B59FD /* CustomViews */,
+				CBA126271B03C368001C2488 /* Main.storyboard */,
+				CBA1262A1B03C368001C2488 /* Images.xcassets */,
+				CBA1262C1B03C368001C2488 /* LaunchScreen.xib */,
+				CBA1264B1B03CCE1001C2488 /* WebResources */,
+				CBA126211B03C368001C2488 /* Supporting Files */,
+			);
+			path = "Young Chefs";
+			sourceTree = "<group>";
+		};
+		CBA126211B03C368001C2488 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126221B03C368001C2488 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBA126361B03C368001C2488 /* Young ChefsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126391B03C368001C2488 /* Young_ChefsTests.swift */,
+				CBA126371B03C368001C2488 /* Supporting Files */,
+			);
+			path = "Young ChefsTests";
+			sourceTree = "<group>";
+		};
+		CBA126371B03C368001C2488 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126381B03C368001C2488 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBA1264B1B03CCE1001C2488 /* WebResources */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126551B03CD42001C2488 /* styles.css */,
+				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
+				CBA126541B03CD42001C2488 /* example */,
+				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
+				CB16EF731B03D62A00A606A8 /* fastclick.js */,
+			);
+			path = WebResources;
+			sourceTree = "<group>";
+		};
+		CBA126541B03CD42001C2488 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				CBA126561B03CD42001C2488 /* example-0.html */,
+				CB932ED41B04096E00BC52EC /* example-1.html */,
+				CB932ED21B04069500BC52EC /* example-2.html */,
+				CBA126571B03CD42001C2488 /* example.js */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBA1261D1B03C368001C2488 /* Young Chefs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBA1263D1B03C368001C2488 /* Build configuration list for PBXNativeTarget "Young Chefs" */;
+			buildPhases = (
+				CBA1261A1B03C368001C2488 /* Sources */,
+				CBA1261B1B03C368001C2488 /* Frameworks */,
+				CBA1261C1B03C368001C2488 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Young Chefs";
+			productName = "Young Chefs";
+			productReference = CBA1261E1B03C368001C2488 /* Young Chefs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBA126321B03C368001C2488 /* Young ChefsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBA126401B03C368001C2488 /* Build configuration list for PBXNativeTarget "Young ChefsTests" */;
+			buildPhases = (
+				CBA1262F1B03C368001C2488 /* Sources */,
+				CBA126301B03C368001C2488 /* Frameworks */,
+				CBA126311B03C368001C2488 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBA126351B03C368001C2488 /* PBXTargetDependency */,
+			);
+			name = "Young ChefsTests";
+			productName = "Young ChefsTests";
+			productReference = CBA126331B03C368001C2488 /* Young ChefsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBA126161B03C368001C2488 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Young Chefs";
+				TargetAttributes = {
+					CBA1261D1B03C368001C2488 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = WNZEWX34Q6;
+					};
+					CBA126321B03C368001C2488 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = CBA1261D1B03C368001C2488;
+					};
+				};
+			};
+			buildConfigurationList = CBA126191B03C368001C2488 /* Build configuration list for PBXProject "Young Chefs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBA126151B03C368001C2488;
+			productRefGroup = CBA1261F1B03C368001C2488 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBA1261D1B03C368001C2488 /* Young Chefs */,
+				CBA126321B03C368001C2488 /* Young ChefsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBA1261C1B03C368001C2488 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA126581B03CD42001C2488 /* styles.css in Resources */,
+				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
+				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
+				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
+				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
+				CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */,
+				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
+				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
+				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
+				CB932ED51B04096E00BC52EC /* example-1.html in Resources */,
+				CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */,
+				CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */,
+				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
+				CBA126591B03CD42001C2488 /* example-0.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA126311B03C368001C2488 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBA1261A1B03C368001C2488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8463ED1B03F28C002B59FD /* Screen.swift in Sources */,
+				CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */,
+				D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */,
+				CBA126241B03C368001C2488 /* AppDelegate.swift in Sources */,
+				CBA126461B03C4CC001C2488 /* ExperimentViewController.swift in Sources */,
+				CB932ED71B040D9100BC52EC /* Notebook.swift in Sources */,
+				CBA126441B03C41F001C2488 /* HomeViewController.swift in Sources */,
+				CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */,
+				CB8463EF1B03F532002B59FD /* ScreenView.swift in Sources */,
+				CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA1262F1B03C368001C2488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA1263A1B03C368001C2488 /* Young_ChefsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBA126351B03C368001C2488 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBA1261D1B03C368001C2488 /* Young Chefs */;
+			targetProxy = CBA126341B03C368001C2488 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBA126271B03C368001C2488 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBA126281B03C368001C2488 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBA1262C1B03C368001C2488 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBA1262D1B03C368001C2488 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBA1263B1B03C368001C2488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CBA1263C1B03C368001C2488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBA1263E1B03C368001C2488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Young Chefs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBA1263F1B03C368001C2488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Young Chefs/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBA126411B03C368001C2488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Young ChefsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Young Chefs.app/Young Chefs";
+			};
+			name = Debug;
+		};
+		CBA126421B03C368001C2488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Young ChefsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Young Chefs.app/Young Chefs";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBA126191B03C368001C2488 /* Build configuration list for PBXProject "Young Chefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBA1263B1B03C368001C2488 /* Debug */,
+				CBA1263C1B03C368001C2488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBA1263D1B03C368001C2488 /* Build configuration list for PBXNativeTarget "Young Chefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBA1263E1B03C368001C2488 /* Debug */,
+				CBA1263F1B03C368001C2488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBA126401B03C368001C2488 /* Build configuration list for PBXNativeTarget "Young ChefsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBA126411B03C368001C2488 /* Debug */,
+				CBA126421B03C368001C2488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBA126161B03C368001C2488 /* Project object */;
+}

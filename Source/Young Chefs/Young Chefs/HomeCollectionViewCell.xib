@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="Young_Chefs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="5" width="317" height="317"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="317"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3P-cr-nai">
+                        <rect key="frame" x="0.0" y="0.0" width="318" height="318"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NavTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p54-ck-eOe">
+                        <rect key="frame" x="0.0" y="246" width="318" height="72"/>
+                        <color key="backgroundColor" red="0.1299251914" green="0.12992927430000001" blue="0.1299270689" alpha="0.5" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="72" id="3n1-Nv-nLO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="1"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="p54-ck-eOe" firstAttribute="bottom" secondItem="D3P-cr-nai" secondAttribute="bottom" id="2xs-ct-rQa"/>
+                <constraint firstItem="p54-ck-eOe" firstAttribute="trailing" secondItem="D3P-cr-nai" secondAttribute="trailing" id="K8a-wF-bZD"/>
+                <constraint firstItem="D3P-cr-nai" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Qyj-8L-g6I"/>
+                <constraint firstAttribute="centerY" secondItem="D3P-cr-nai" secondAttribute="centerY" id="RCr-G5-xoT"/>
+                <constraint firstAttribute="centerX" secondItem="D3P-cr-nai" secondAttribute="centerX" id="q0E-nU-UwC"/>
+                <constraint firstItem="p54-ck-eOe" firstAttribute="leading" secondItem="D3P-cr-nai" secondAttribute="leading" id="tvy-C3-NL9"/>
+                <constraint firstItem="D3P-cr-nai" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uHx-me-7Gh"/>
+            </constraints>
+            <size key="customSize" width="317" height="317"/>
+            <connections>
+                <outlet property="imageView" destination="D3P-cr-nai" id="YlZ-ey-ILi"/>
+                <outlet property="titleLabel" destination="p54-ck-eOe" id="YSc-VS-02I"/>
+            </connections>
+            <point key="canvasLocation" x="373.5" y="504.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

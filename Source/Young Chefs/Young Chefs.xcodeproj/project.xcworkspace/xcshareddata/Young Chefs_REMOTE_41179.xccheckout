@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B0379EA2-7AA6-44B0-8C97-F13D143E36D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Young Chefs</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>16DC41F177D09558E3450CE9B841B6027BE910D5</key>
+		<string>https://bitbucket.org/youngchefs/youngchefs.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Source/Young Chefs/Young Chefs.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>16DC41F177D09558E3450CE9B841B6027BE910D5</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/youngchefs/youngchefs.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>16DC41F177D09558E3450CE9B841B6027BE910D5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>16DC41F177D09558E3450CE9B841B6027BE910D5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YC%20Repo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

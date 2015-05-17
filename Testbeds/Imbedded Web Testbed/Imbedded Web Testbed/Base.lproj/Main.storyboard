@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="51w-Vs-kIe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="Y8o-Ni-ySr">
+            <objects>
+                <collectionViewController id="tQ4-1K-UnY" customClass="CollectionViewController" customModule="Imbedded_Web_Testbed" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ed5-zF-clN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fcq-Xt-8XW">
+                            <size key="itemSize" width="113" height="114"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="tQ4-1K-UnY" id="bs8-wi-Ok9"/>
+                            <outlet property="delegate" destination="tQ4-1K-UnY" id="dhf-he-S27"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="nyk-2F-YYC"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="cellSegue" id="0C7-4B-wST"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgH-Je-m81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="319"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,14 +46,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHt-11-gv9" userLabel="WebView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHt-11-gv9" userLabel="WebView">
                                 <rect key="frame" x="82" y="70" width="436" height="459"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JS to Swift Outlet (touch a box in the webview)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-xi-OQV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JS to Swift Outlet (touch a box in the webview)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-xi-OQV">
                                 <rect key="frame" x="121" y="542" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4x-gJ-QUa">
@@ -84,55 +113,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1252" y="295"/>
         </scene>
-        <!--Notebook Popover View Controller-->
-        <scene sceneID="Y8C-3d-ftI">
+        <!--Navigation Controller-->
+        <scene sceneID="ri5-zJ-ahL">
             <objects>
-                <viewController id="1hv-Tv-g48" customClass="NotebookPopoverViewController" customModule="Imbedded_Web_Testbed" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0yP-fn-1Co"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fs7-E1-oNJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ri0-vZ-gAR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UZ-gf-Jos">
-                                <rect key="frame" x="16" y="30" width="84" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="277-nW-NpQ"/>
-                                    <constraint firstAttribute="height" constant="21" id="qgs-Zi-DAV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Science is fun!" translatesAutoresizingMaskIntoConstraints="NO" id="olL-B9-Woq">
-                                <rect key="frame" x="16" y="49" width="568" height="203"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="hAn-PQ-bJ5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.47999526515151514" green="0.3066706435966966" blue="0.054892847570552433" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="olL-B9-Woq" firstAttribute="leading" secondItem="Ri0-vZ-gAR" secondAttribute="leadingMargin" id="AxD-9T-Bh5"/>
-                            <constraint firstItem="0UZ-gf-Jos" firstAttribute="leading" secondItem="Ri0-vZ-gAR" secondAttribute="leadingMargin" id="DJS-cx-gew"/>
-                            <constraint firstItem="olL-B9-Woq" firstAttribute="top" secondItem="0UZ-gf-Jos" secondAttribute="bottom" constant="10" id="Nzt-c2-guH"/>
-                            <constraint firstItem="olL-B9-Woq" firstAttribute="trailing" secondItem="Ri0-vZ-gAR" secondAttribute="trailingMargin" id="aWR-wc-mIF"/>
-                            <constraint firstItem="0UZ-gf-Jos" firstAttribute="top" secondItem="0yP-fn-1Co" secondAttribute="bottom" constant="10" id="pOM-TO-4rW"/>
-                        </constraints>
-                    </view>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="51w-Vs-kIe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dTf-d3-chs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="NotebookPopoverView" destination="Ri0-vZ-gAR" id="ZNJ-Ld-WdN"/>
+                        <segue destination="tQ4-1K-UnY" kind="relationship" relationship="rootViewController" id="dhB-zi-x37"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XOW-uQ-2th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVf-8n-DDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="240"/>
+            <point key="canvasLocation" x="-245" y="319"/>
         </scene>
     </scenes>
 </document>
