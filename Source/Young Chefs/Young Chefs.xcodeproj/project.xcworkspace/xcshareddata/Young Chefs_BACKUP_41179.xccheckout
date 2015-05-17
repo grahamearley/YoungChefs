@@ -34,7 +34,11 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>16DC41F177D09558E3450CE9B841B6027BE910D5</string>
 			<key>IDESourceControlWCCName</key>
+<<<<<<< HEAD
+			<string>youngchefs</string>
+=======
 			<string>YC%20Repo</string>
+>>>>>>> notebook_work
 		</dict>
 	</array>
 </dict>
