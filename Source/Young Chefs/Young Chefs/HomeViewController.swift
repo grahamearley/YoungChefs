@@ -85,8 +85,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(HomeCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? HomeCollectionViewCell {
-			cell.titleLabel.text = self.experimentNames[indexPath.row]
-			cell.imageView.image = UIImage(named: "Cookie")
+            let experimentName = self.experimentNames[indexPath.row]
+			cell.titleLabel.text = experimentName
+			cell.imageView.image = UIImage(named: experimentName + ".jpg", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: experimentName + ".png", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: "default.jpg", inBundle: nil, compatibleWithTraitCollection: nil)
 			return cell
 		} else {
 			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
