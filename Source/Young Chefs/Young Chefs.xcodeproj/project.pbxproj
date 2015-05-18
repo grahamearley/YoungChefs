@@ -30,6 +30,14 @@
 		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
 		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
 		CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */; };
+		CBA9514C1B09C20E006585CF /* demo-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951441B09C20E006585CF /* demo-0.html */; };
+		CBA9514D1B09C20E006585CF /* demo-1.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951451B09C20E006585CF /* demo-1.html */; };
+		CBA9514E1B09C20E006585CF /* demo-2.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951461B09C20E006585CF /* demo-2.html */; };
+		CBA9514F1B09C20E006585CF /* demo-3.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951471B09C20E006585CF /* demo-3.html */; };
+		CBA951501B09C20E006585CF /* demo-4.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951481B09C20E006585CF /* demo-4.html */; };
+		CBA951511B09C20E006585CF /* demo-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951491B09C20E006585CF /* demo-5.html */; };
+		CBA951521B09C20E006585CF /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* demo.js */; };
+		CBA951531B09C20E006585CF /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514B1B09C20E006585CF /* styles.css */; };
 		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
 		D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -72,6 +80,14 @@
 		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = experimentsDirectory.plist; sourceTree = "<group>"; };
+		CBA951441B09C20E006585CF /* demo-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-0.html"; sourceTree = "<group>"; };
+		CBA951451B09C20E006585CF /* demo-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-1.html"; sourceTree = "<group>"; };
+		CBA951461B09C20E006585CF /* demo-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-2.html"; sourceTree = "<group>"; };
+		CBA951471B09C20E006585CF /* demo-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-3.html"; sourceTree = "<group>"; };
+		CBA951481B09C20E006585CF /* demo-4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-4.html"; sourceTree = "<group>"; };
+		CBA951491B09C20E006585CF /* demo-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-5.html"; sourceTree = "<group>"; };
+		CBA9514A1B09C20E006585CF /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
+		CBA9514B1B09C20E006585CF /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +207,7 @@
 			children = (
 				CBA126551B03CD42001C2488 /* styles.css */,
 				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
+				CBA951431B09C20E006585CF /* demo */,
 				CBA126541B03CD42001C2488 /* example */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
 				CB16EF731B03D62A00A606A8 /* fastclick.js */,
@@ -207,6 +224,21 @@
 				CBA126571B03CD42001C2488 /* example.js */,
 			);
 			path = example;
+			sourceTree = "<group>";
+		};
+		CBA951431B09C20E006585CF /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				CBA951441B09C20E006585CF /* demo-0.html */,
+				CBA951451B09C20E006585CF /* demo-1.html */,
+				CBA951461B09C20E006585CF /* demo-2.html */,
+				CBA951471B09C20E006585CF /* demo-3.html */,
+				CBA951481B09C20E006585CF /* demo-4.html */,
+				CBA951491B09C20E006585CF /* demo-5.html */,
+				CBA9514A1B09C20E006585CF /* demo.js */,
+				CBA9514B1B09C20E006585CF /* styles.css */,
+			);
+			path = demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,8 +322,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA951501B09C20E006585CF /* demo-4.html in Resources */,
 				CBA126581B03CD42001C2488 /* styles.css in Resources */,
+				CBA9514F1B09C20E006585CF /* demo-3.html in Resources */,
+				CBA9514D1B09C20E006585CF /* demo-1.html in Resources */,
 				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
+				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
+				CBA951521B09C20E006585CF /* demo.js in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
@@ -300,8 +337,11 @@
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
 				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
 				CB932ED51B04096E00BC52EC /* example-1.html in Resources */,
+				CBA9514C1B09C20E006585CF /* demo-0.html in Resources */,
 				CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */,
 				CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */,
+				CBA9514E1B09C20E006585CF /* demo-2.html in Resources */,
+				CBA951531B09C20E006585CF /* styles.css in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				CBA126591B03CD42001C2488 /* example-0.html in Resources */,
 			);
