@@ -23,5 +23,8 @@ class Notebook {
 	
 	var scribbleText : String?
 	var scribbleImages = [UIImage]()
-    
+	
+//	var responses = [String: String]()
+
+	var responses = ["question_reasonForTaste":"test response"]
 }

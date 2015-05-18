@@ -39,6 +39,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		let javaSwiftConfig = WKWebViewConfiguration()
 		javaSwiftConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
 		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, screen: experiment.screens[indexInExperiment])
+		self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
 		
 		// Replace (cover and fill) our placeholder view with our WKWebView
 		self.screenView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
@@ -69,8 +70,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			if command == "nextbutton" {
 				onNextScreenButton()
 			}
-			if command == "boxtouch" {
-				screenView.evaluateJavaScriptNoReturn("changeBackgroundColor('#000');")
+			if command == "bindResponseKey" {
+				self.bindResponseKey(sentData)
 			}
 		}
 	}
@@ -82,8 +83,19 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			return
 		} else {
 			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
+			self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
 		}
 	}
 	
+	///Binds a given response key to an associated value for use later
+	func bindResponseKey(key: String, toValue value:String) {
+		self.experiment.notebook.responses[key] = value
+	}
+	///Ease of use, given a javaSwift dictionary, parse it's contents and call 'bindResponseKey:(:)'
+	func bindResponseKey(jsDict: NSDictionary) {
+		if let key = jsDict["key"] as? String, let value = jsDict["value"] as? String {
+			self.bindResponseKey(key, toValue: value)
+		}
+	}
 	
 }

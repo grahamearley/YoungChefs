@@ -9,4 +9,22 @@ $(document).ready(function() {
 		window.webkit.messageHandlers.javaSwift.postMessage(message);
 	});
 	
+	$(".input").bind("input propertychange", function() {
+		var field = $(this);
+		var key = field.attr("id");
+		var value = field.val();
+		var message = {"command":"bindResponseKey",
+					  "key":key,
+					  "value":value};
+		window.webkit.messageHandlers.javaSwift.postMessage(message);
+		console.log("hyey");
+
+	});
+	
 });
+
+function fillKeyedHTMLWithValue(key, value) {
+	var idkey = "#"+key;
+	console.log(idkey);
+	$(idkey).val(value);
+}
