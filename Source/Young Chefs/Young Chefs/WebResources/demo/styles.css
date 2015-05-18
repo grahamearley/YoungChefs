@@ -56,9 +56,9 @@ ol.steps li {
 	left: 25px;
 }
 
-ol.steps li:nth-child(4n+3) {
+/*ol.steps li:nth-child(4n+3) {
 	left: 35px;
-}
+}*/
 
 ol.steps p {
 	font-weight: 500;
@@ -67,7 +67,7 @@ ol.steps p {
 
 /* Inputs, boxes, etc. */
 
-.input { 
+.input {
     display: block;
 	width: 100%;
     font-family: sans-serif;
