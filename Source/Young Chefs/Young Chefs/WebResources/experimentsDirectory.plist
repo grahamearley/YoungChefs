@@ -5,6 +5,7 @@
 	<key>MainBundle</key>
 	<array>
 		<string>example</string>
+		<string>demo</string>
 	</array>
 	<key>LibraryDirectory</key>
 	<array/>
