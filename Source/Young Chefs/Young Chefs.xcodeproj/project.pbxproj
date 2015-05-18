@@ -109,6 +109,7 @@
 			children = (
 				CBA126431B03C41F001C2488 /* HomeViewController.swift */,
 				CBA126451B03C4CC001C2488 /* ExperimentViewController.swift */,
+				CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -119,7 +120,6 @@
 				CB8463EE1B03F532002B59FD /* ScreenView.swift */,
 				CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */,
 				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
-				CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */,
 				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
 				D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */,
 				D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */,
