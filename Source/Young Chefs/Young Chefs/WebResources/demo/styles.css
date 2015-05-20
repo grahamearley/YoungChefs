@@ -56,10 +56,6 @@ ol.steps li {
 	left: 25px;
 }
 
-ol.steps li:nth-child(4n+3) {
-	left: 35px;
-}
-
 ol.steps p {
 	font-weight: 500;
 }
@@ -85,12 +81,33 @@ ol.steps p {
     margin-top: 10pt;
     padding: 10pt;
     text-align: right;
+	width: 48%;
+	float: right;
+}
+
+/* If the next button is the only one, make it big*/
+.next:nth-child(1) {
+	width: 100%;
+}
+
+.back {
+	background-color: #808080;
+	color: #FFFFFF;
+	margin-top: 10pt;
+	padding: 10pt;
+	text-align: left;
+	width: 40%;
+	float: left;
 }
 
 .box {
     background-color: #ad0000;
     margin-top: 10pt;
     padding: 10pt;
+}
+
+.navigationBlock {
+	
 }
 
 /* Headers */
@@ -106,6 +123,14 @@ h2 {
 	font-style: italic;
 	font-weight: inherit;
 	margin-top: 5px;
+}
+
+h3 {
+	font-weight: inherit;
+	font-size: 70%;
+	text-decoration: underline;
+	color: black;
+	margin-bottom: 5px;
 }
 
 ul h2 {
@@ -145,12 +170,4 @@ img .leftPic {
 img .rightPic {
     width: 300pxvw;
     float: right;
-}
-
-h3 {
-	font-weight: inherit;
-	font-size: 70%;
-	text-decoration: underline;
-	color: black;
-	margin-bottom: 5px;
 }

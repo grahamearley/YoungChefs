@@ -39,7 +39,6 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		let javaSwiftConfig = WKWebViewConfiguration()
 		javaSwiftConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
 		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, screen: experiment.screens[indexInExperiment])
-		self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
 		
 		// Replace (cover and fill) our placeholder view with our WKWebView
 		self.screenView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
@@ -67,8 +66,14 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
 		let sentData = message.body as! NSDictionary
 		if let command = sentData["command"] as? NSString {
-			if command == "nextbutton" {
+			if command == "contentIsReady" {
+				onContentReady()
+			}
+			if command == "nextButton" {
 				onNextScreenButton()
+			}
+			if command == "backButton" {
+				onPreviousScreenButton()
 			}
 			if command == "bindResponseKey" {
 				self.bindResponseKey(sentData)
@@ -76,14 +81,28 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		}
 	}
 	
+	/// Called when the ScreenView has fully loaded the DOM asscociated with the current Screen.
+	func onContentReady() {
+		//fill in data from 'responseKeys' into the forms on the page
+		self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
+	}
+	
 	/// Progress to the next screen in the experiment if it exists
 	func onNextScreenButton() {
-		self.indexInExperiment++
-		if indexInExperiment >= self.experiment.screens.count {
+		if indexInExperiment+1 >= self.experiment.screens.count {
 			return
 		} else {
+			self.indexInExperiment++
 			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
-			self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
+		}
+	}
+	
+	func onPreviousScreenButton() {
+		if indexInExperiment-1 < 0 {
+			return
+		} else {
+			self.indexInExperiment--
+			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
 		}
 	}
 	

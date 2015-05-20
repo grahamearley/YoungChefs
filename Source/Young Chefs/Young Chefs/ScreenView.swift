@@ -45,7 +45,6 @@ class ScreenView : WKWebView {
 	func fillKeyedHTMLWithValues(keysAndValues : [String:String]) {
 		for key in keysAndValues.keys {
 			if let value = keysAndValues[key] {
-				println("fillKeyedHTMLWithValue(\"\(key)\",\"\(value)\");")
 				self.evaluateJavaScriptNoReturn("fillKeyedHTMLWithValue('\(key)','\(value)');")
 			}
 		}
