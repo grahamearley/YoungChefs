@@ -40,6 +40,16 @@ class ScreenView : WKWebView {
 		self.currentScreen = newScreen
 	}
 	
+	///Runs through the file and calls 'fillKeyedHTMLWithValue()' for each key in the responseKeys dictionary passed into it.
+	///This basically fills question boxes with previously answered values (such a situation exists on say,
+	func fillKeyedHTMLWithValues(keysAndValues : [String:String]) {
+		for key in keysAndValues.keys {
+			if let value = keysAndValues[key] {
+				self.evaluateJavaScriptNoReturn("fillKeyedHTMLWithValue('\(key)','\(value)');")
+			}
+		}
+	}
+	
 	/// Shorthand for evaluating a JavaScript string with no return value.
 	/// Prints errors to console.
 	func evaluateJavaScriptNoReturn(javascript: String) {

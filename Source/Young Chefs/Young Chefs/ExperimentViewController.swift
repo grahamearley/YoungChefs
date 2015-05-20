@@ -88,15 +88,40 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		}
 	}
 	
+	/// Called when the ScreenView has fully loaded the DOM asscociated with the current Screen.
+	func onContentReady() {
+		//fill in data from 'responseKeys' into the forms on the page
+		self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
+	}
+	
 	/// Progress to the next screen in the experiment if it exists
 	func onNextScreenButton() {
-		self.indexInExperiment++
-		if indexInExperiment >= self.experiment.screens.count {
+		if indexInExperiment+1 >= self.experiment.screens.count {
 			return
 		} else {
+			self.indexInExperiment++
 			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
 		}
 	}
 	
+	func onPreviousScreenButton() {
+		if indexInExperiment-1 < 0 {
+			return
+		} else {
+			self.indexInExperiment--
+			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
+		}
+	}
+	
+	///Binds a given response key to an associated value for use later
+	func bindResponseKey(key: String, toValue value:String) {
+		self.experiment.notebook.responses[key] = value
+	}
+	///Ease of use, given a javaSwift dictionary, parse it's contents and call 'bindResponseKey:(:)'
+	func bindResponseKey(jsDict: NSDictionary) {
+		if let key = jsDict["key"] as? String, let value = jsDict["value"] as? String {
+			self.bindResponseKey(key, toValue: value)
+		}
+	}
 	
 }
