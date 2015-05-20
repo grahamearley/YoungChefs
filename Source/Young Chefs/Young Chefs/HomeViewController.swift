@@ -34,11 +34,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 		
 		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 		layout.sectionInset = UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 0)
-		layout.itemSize = CGSize(width: 200, height: 200)
+		layout.itemSize = HomeCollectionViewCell.defaultSize
 		layout.minimumInteritemSpacing = 0
 		
 		collectionView.collectionViewLayout = layout
-		collectionView.registerNib(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.REUSE_ID)
+		collectionView.registerNib(UINib(nibName: HomeCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.REUSE_ID)
 		
 		// Load collectionView contents
 		self.experimentNames = self.loadExperimentNamesFromExperimentsDirectory()

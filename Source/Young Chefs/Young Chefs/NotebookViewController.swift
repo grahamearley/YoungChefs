@@ -51,12 +51,12 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
-        layout.itemSize = CGSize(width: 140, height: 140)
+        layout.itemSize = NotebookPhotoCollectionViewCell.defaultSize
         layout.scrollDirection = .Horizontal
         layout.minimumInteritemSpacing = 0
         
         notebookPhotoCollectionView.collectionViewLayout = layout
-        notebookPhotoCollectionView.registerNib(UINib(nibName: "NotebookPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
+        notebookPhotoCollectionView.registerNib(UINib(nibName: NotebookPhotoCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
 	}
     
     func imagePickerController(picker: UIImagePickerController,

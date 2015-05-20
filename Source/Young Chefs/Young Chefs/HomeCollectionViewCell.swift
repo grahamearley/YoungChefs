@@ -20,6 +20,8 @@ import UIKit
 class HomeCollectionViewCell: UICollectionViewCell {
 	
 	static let REUSE_ID = "HomeCell"
+	static let xibName = "HomeCollectionViewCell"
+	static let defaultSize = CGSize(width: 200, height: 200)
 
 	@IBOutlet var titleLabel : UILabel!
 	@IBOutlet var imageView : UIImageView!
