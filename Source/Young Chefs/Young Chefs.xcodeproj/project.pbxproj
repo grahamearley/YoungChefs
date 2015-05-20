@@ -37,6 +37,7 @@
 		CBA951511B09C20E006585CF /* demo-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951491B09C20E006585CF /* demo-5.html */; };
 		CBA951521B09C20E006585CF /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* demo.js */; };
 		CBA951531B09C20E006585CF /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514B1B09C20E006585CF /* styles.css */; };
+		CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */; };
 		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
 		D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		CBA951491B09C20E006585CF /* demo-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-5.html"; sourceTree = "<group>"; };
 		CBA9514A1B09C20E006585CF /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
 		CBA9514B1B09C20E006585CF /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = styles.css; path = demo/styles.css; sourceTree = "<group>"; };
+		CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaSwift.swift; sourceTree = "<group>"; };
 		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 		CBA1264B1B03CCE1001C2488 /* WebResources */ = {
 			isa = PBXGroup;
 			children = (
+				CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */,
 				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
 				CBA9514B1B09C20E006585CF /* styles.css */,
 				CBA951431B09C20E006585CF /* demo */,
@@ -367,6 +370,7 @@
 				CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */,
 				CB8463EF1B03F532002B59FD /* ScreenView.swift in Sources */,
 				CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */,
+				CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,13 +48,19 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	
 	//MARK: IBActions
 	
+	///defines the ratio of the screen the notebook should take up when it's displayed
+	private let notebookPopoverScreenRatios = (CGFloat(0.8), CGFloat(0.75))
 	/// Presents the notebook popover
 	@IBAction func onNotebookButton(sender: UIButton) {
 		let popoverViewController = NotebookViewController(notebook: experiment.notebook)
 		popoverViewController.modalPresentationStyle = .Popover
-		let popRect = sender.frame
 		let popover =  UIPopoverController(contentViewController: popoverViewController)
-		popover.popoverContentSize = CGSize(width: 700, height: 500)
+		
+		//set the size and present it
+		let popWidth = self.view.frame.size.width * notebookPopoverScreenRatios.0
+		let popHeight = self.view.frame.size.height * notebookPopoverScreenRatios.1
+		popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
+		let popRect = sender.frame
 		popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
 	}
 	
@@ -65,12 +71,19 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	///		'window.webkit.messageHandlers.javaSwift.postMessage(<message : NSDictionary>)'
 	func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
 		let sentData = message.body as! NSDictionary
-		if let command = sentData["command"] as? NSString {
-			if command == "nextbutton" {
-				onNextScreenButton()
-			}
-			if command == "boxtouch" {
-				screenView.evaluateJavaScriptNoReturn("changeBackgroundColor('#000');")
+		if let commandString = sentData[JavaSwiftConstants.commandKey] as? NSString {
+			//parse the command value String into a JSCommand enum value
+			if let command = JSCommand(rawValue: commandString) {
+				switch command {
+				case .NextScreen:
+					onNextScreenButton()
+				case .PreviousScreen:
+					println("goto previous screen")
+				default:
+					break
+				}
+			} else {
+				println("Err: command string '\(commandString)' not recognized.")
 			}
 		}
 	}
