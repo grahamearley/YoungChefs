@@ -19,7 +19,7 @@ Notebook data is stored in the Notebook class.
 
 import UIKit
 
-class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource {
+class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
@@ -87,6 +87,19 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	func textViewDidChange(textView: UITextView) {
 		self.notebook.scribbleText = editText.text
 	}
+    
+    //MARK: UICollectionViewDelegate:
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // COMING SOON! This is for making images go full screen upon selection.
+        println("not in if let yet")
+        if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? NotebookPhotoCollectionViewCell {
+            let selectedImage = selectedCell.imageView.image!
+            selectedCell.imageView.frame=CGRectMake(0, 0, 500, 500)
+//            let expandedImageView = UIView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
+            println("got here")
+        }
+    }
     
     //MARK: UICollectionViewDataSource:
     

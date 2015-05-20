@@ -57,7 +57,7 @@
                         <action selector="onTakePictureButton:" destination="-1" eventType="touchUpInside" id="zYh-Cg-UFR"/>
                     </connections>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-Da-Jj0">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-Da-Jj0">
                     <rect key="frame" x="10" y="350" width="580" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

@@ -33,7 +33,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
 		
 		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-		layout.sectionInset = UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 0)
+		layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 0)
 		layout.itemSize = HomeCollectionViewCell.defaultSize
 		layout.minimumInteritemSpacing = 0
 		
@@ -85,8 +85,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(HomeCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? HomeCollectionViewCell {
-			cell.titleLabel.text = self.experimentNames[indexPath.row]
-			cell.imageView.image = UIImage(named: "Cookie")
+            let experimentName = self.experimentNames[indexPath.row]
+			
+            cell.titleLabel.text = experimentName
+			
+            // The experiment's icon image is either .jpg or .png. Otherwise, use the default image.
+            cell.imageView.image = UIImage(named: experimentName + ".jpg", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: experimentName + ".png", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: "default.jpg", inBundle: nil, compatibleWithTraitCollection: nil)
 			return cell
 		} else {
 			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
