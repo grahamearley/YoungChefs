@@ -78,9 +78,11 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 				case .NextScreen:
 					onNextScreenButton()
 				case .PreviousScreen:
-					println("goto previous screen")
-				default:
-					break
+					onPreviousScreenButton()
+				case .ContentReadyNotification:
+					onContentReady()
+				case .BindResponseKey:
+					self.bindResponseKey(sentData)
 				}
 			} else {
 				println("Err: command string '\(commandString)' not recognized.")
