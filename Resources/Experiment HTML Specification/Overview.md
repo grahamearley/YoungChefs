@@ -67,7 +67,11 @@ Inside the navigationBlock div, include this for backward navigation:
 
 Note that these navigation buttons will function inside the **Young Chefs** app, but not in a test browser.
 
-####Demo Experiment
+####Creating Questions
+To create a question, simply include this:
+> <textarea class="input" rows="4" id="[unique question identifier]"></textarea>
+
+_[unique question identifier]_ is a unique string of text. If this is non-unique, user responses will not save correctly.
 
 ###Icon
 The icon image which should be presented along with the experiment name when a user is selecting which experiment they wish to do.
