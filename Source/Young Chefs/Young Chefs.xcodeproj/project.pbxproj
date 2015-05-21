@@ -35,7 +35,7 @@
 		CBA9514F1B09C20E006585CF /* demo-3.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951471B09C20E006585CF /* demo-3.html */; };
 		CBA951501B09C20E006585CF /* demo-4.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951481B09C20E006585CF /* demo-4.html */; };
 		CBA951511B09C20E006585CF /* demo-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951491B09C20E006585CF /* demo-5.html */; };
-		CBA951521B09C20E006585CF /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* demo.js */; };
+		CBA951521B09C20E006585CF /* javaswift.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* javaswift.js */; };
 		CBA951531B09C20E006585CF /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514B1B09C20E006585CF /* styles.css */; };
 		CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */; };
 		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
@@ -87,7 +87,7 @@
 		CBA951471B09C20E006585CF /* demo-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-3.html"; sourceTree = "<group>"; };
 		CBA951481B09C20E006585CF /* demo-4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-4.html"; sourceTree = "<group>"; };
 		CBA951491B09C20E006585CF /* demo-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-5.html"; sourceTree = "<group>"; };
-		CBA9514A1B09C20E006585CF /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
+		CBA9514A1B09C20E006585CF /* javaswift.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javaswift.js; sourceTree = "<group>"; };
 		CBA9514B1B09C20E006585CF /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = styles.css; path = demo/styles.css; sourceTree = "<group>"; };
 		CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaSwift.swift; sourceTree = "<group>"; };
 		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -213,6 +213,7 @@
 				CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */,
 				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
 				CBA9514B1B09C20E006585CF /* styles.css */,
+				CBA9514A1B09C20E006585CF /* javaswift.js */,
 				CBA951431B09C20E006585CF /* demo */,
 				CBA126541B03CD42001C2488 /* example */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
@@ -242,7 +243,6 @@
 				CBA951471B09C20E006585CF /* demo-3.html */,
 				CBA951481B09C20E006585CF /* demo-4.html */,
 				CBA951491B09C20E006585CF /* demo-5.html */,
-				CBA9514A1B09C20E006585CF /* demo.js */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 				CBA9514D1B09C20E006585CF /* demo-1.html in Resources */,
 				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
 				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
-				CBA951521B09C20E006585CF /* demo.js in Resources */,
+				CBA951521B09C20E006585CF /* javaswift.js in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
