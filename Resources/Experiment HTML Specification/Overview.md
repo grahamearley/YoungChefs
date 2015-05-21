@@ -41,7 +41,6 @@ The HTML should be structured like this:
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="styles.css"/>
 		<script src="jquery-2.1.4.js"></script>
 		<script src="fastclick.js"></script>
 		<script src="javaswift.js"></script>
@@ -59,11 +58,13 @@ You should include buttons for navigation to other screens.
 To include these, first define a navigation block as such:
 > <div class="navigationBlock"> [...] </div>
 
+Inside the navigationBlock div, include this for backward navigation:
+> <div class="back block">Previous Screen...</div>
+
 Inside the navigationBlock div, include this for forward navigation:
 > <div class="next block">Next Screen...</div>
 
-Inside the navigationBlock div, include this for backward navigation:
-> <div class="back block">Previous Screen...</div>
+**Important:** If you include both a forward and a back button, make sure the back button comes first, or else the spacing of the buttons may become clipped.
 
 Note that these navigation buttons will function inside the **Young Chefs** app, but not in a test browser.
 
