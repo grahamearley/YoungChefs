@@ -26,6 +26,7 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
 	@IBOutlet weak var editText : UITextView!
+    @IBOutlet weak var fullscreenImageView: UIImageView!
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -45,6 +46,12 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        // This image view will be revealed only when the student taps a picture to enlarge it:
+        self.fullscreenImageView.alpha = 0.0
+        let recognizer = UITapGestureRecognizer(target: self, action: Selector("hideFullScreenView:"))
+        recognizer.numberOfTapsRequired = 1
+        self.fullscreenImageView.addGestureRecognizer(recognizer)
 
 		editText.text = notebook.scribbleText
 		editText.delegate = self
@@ -57,6 +64,7 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         
         notebookPhotoCollectionView.collectionViewLayout = layout
         notebookPhotoCollectionView.registerNib(UINib(nibName: NotebookPhotoCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
+        notebookPhotoCollectionView.delegate = self
 	}
     
     func imagePickerController(picker: UIImagePickerController,
@@ -91,13 +99,18 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
     //MARK: UICollectionViewDelegate:
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // COMING SOON! This is for making images go full screen upon selection.
-        println("not in if let yet")
+        // When a student taps an image in their notebook, expand the image.
         if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? NotebookPhotoCollectionViewCell {
             let selectedImage = selectedCell.imageView.image!
-            selectedCell.imageView.frame=CGRectMake(0, 0, 500, 500)
-//            let expandedImageView = UIView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
-            println("got here")
+            self.fullscreenImageView.image = selectedImage
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {self.fullscreenImageView.alpha = 1.0}, completion: nil)
+        }
+    }
+    
+    func hideFullScreenView(sender: AnyObject) {
+        // Fade the fullscreen image out if it's visible.
+        if self.fullscreenImageView.alpha == 1 {
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {self.fullscreenImageView.alpha = 0.0}, completion: nil)
         }
     }
     
