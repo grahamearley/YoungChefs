@@ -23,7 +23,6 @@ import UIKit
 	
 	var scribbleText : String?
 	var scribbleImages : [UIImage]
-	
 	var responses : [String: String]
 	
 	init() {

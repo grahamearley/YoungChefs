@@ -25,25 +25,29 @@ import UIKit
 @objc class Experiment : NSCoding {
 	
 	var name : String
-	var screens = [Screen]()
 	var notebook : Notebook
+	var screens : [Screen]	//synthesized
 	
 	init(experimentName:String) {
-		
-		/* 
-        WARNING: Currently, this only searchs in the MainBundle, which is inconsistent. Filenames from the Library directory can be requested for init from experimentsDirectory.plist/HomeViewController
-		*/
-		
 		self.name = experimentName
 		self.notebook = Notebook()
-        
+		self.screens = Experiment.getScreensForExperimentName(self.name)
+	}
+	
+	///Returns a list of Screens for the given experiment
+	private static func getScreensForExperimentName(prefix: String) -> [Screen] {
+		/*
+		WARNING: Currently, this only searchs in the MainBundle, which is inconsistent. Filenames from the Library directory can be requested for init from experimentsDirectory.plist/HomeViewController
+		*/
+		var screens = [Screen]()
+		
 		var reachedEndOfScreens = false
 		var screenNumber = 0
 		while !reachedEndOfScreens {
-			let fileName = experimentName + "-" + screenNumber.description
+			let fileName = prefix + "-" + screenNumber.description
 			if let htmlURL = NSBundle.mainBundle().URLForResource(fileName, withExtension: "html") {
 				let screen = Screen(htmlURL: htmlURL)
-				self.screens.append(screen)
+				screens.append(screen)
 			} else {
 				if screenNumber != 0 { //in case a non-dev starts numbering at 1 instead of 0
 					reachedEndOfScreens = true
@@ -53,8 +57,10 @@ import UIKit
 		}
 		
 		if screens.count == 0 {
-			fatalError("no Screens were found from name: \(experimentName), check the file names of relevant html")
+			fatalError("no Screens were found from name: \(prefix), check the file names of relevant html")
 		}
+		
+		return screens
 	}
 	
 	//MARK: - Save/Load
@@ -70,6 +76,7 @@ import UIKit
 	required init(coder decoder: NSCoder) {
 		self.name = decoder.decodeObjectForKey(Experiment.nameKey) as! String
 		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as! Notebook
+		self.screens = Experiment.getScreensForExperimentName(self.name)
 	}
 	
 }
