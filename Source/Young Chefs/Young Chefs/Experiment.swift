@@ -22,21 +22,25 @@ The initializer will automatically read in all the associated html files in the 
 
 import UIKit
 
-class Experiment {
+@objc class Experiment : NSCoding {
 	
+	var name : String
 	var screens = [Screen]()
-	var notebook = Notebook()
+	var notebook : Notebook
 	
-	init(experimentName screensFilePrefix:String) {
+	init(experimentName:String) {
 		
 		/* 
         WARNING: Currently, this only searchs in the MainBundle, which is inconsistent. Filenames from the Library directory can be requested for init from experimentsDirectory.plist/HomeViewController
 		*/
+		
+		self.name = experimentName
+		self.notebook = Notebook()
         
 		var reachedEndOfScreens = false
 		var screenNumber = 0
 		while !reachedEndOfScreens {
-			let fileName = screensFilePrefix + "-" + screenNumber.description
+			let fileName = experimentName + "-" + screenNumber.description
 			if let htmlURL = NSBundle.mainBundle().URLForResource(fileName, withExtension: "html") {
 				let screen = Screen(htmlURL: htmlURL)
 				self.screens.append(screen)
@@ -49,8 +53,23 @@ class Experiment {
 		}
 		
 		if screens.count == 0 {
-			fatalError("no Screens were found from name: \(screensFilePrefix), check the file names of relevant html")
+			fatalError("no Screens were found from name: \(experimentName), check the file names of relevant html")
 		}
+	}
+	
+	//MARK: - Save/Load
+	
+	private static let nameKey = "name"
+	private static let notebookKey = "notebook"
+	
+	func encodeWithCoder(encoder: NSCoder) {
+		encoder.encodeObject(self.name, forKey: Experiment.nameKey)
+		encoder.encodeObject(self.notebook, forKey: Experiment.notebookKey)
+	}
+	
+	required init(coder decoder: NSCoder) {
+		self.name = decoder.decodeObjectForKey(Experiment.nameKey) as! String
+		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as! Notebook
 	}
 	
 }
