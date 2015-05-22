@@ -104,6 +104,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			self.indexInExperiment++
 			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
 		}
+		self.experiment.saveToFile()
 	}
 	
 	func onPreviousScreenButton() {
@@ -125,5 +126,4 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			self.bindResponseKey(key, toValue: value)
 		}
 	}
-	
 }

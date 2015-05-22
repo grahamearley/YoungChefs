@@ -19,15 +19,16 @@ Not to be confused with NotebookView and NotebookViewController, which handle th
 
 import UIKit
 
-@objc class Notebook : NSCoding {
+@objc class Notebook : NSObject, NSCoding {
 	
 	var scribbleText : String?
 	var scribbleImages : [UIImage]
 	var responses : [String: String]
 	
-	init() {
+	override init() {
 		scribbleImages = [UIImage]()
 		responses = [String: String]()
+		super.init()
 	}
 	
 	//MARK: - Save/Load

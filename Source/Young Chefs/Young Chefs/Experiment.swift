@@ -22,7 +22,7 @@ The initializer will automatically read in all the associated html files in the 
 
 import UIKit
 
-@objc class Experiment : NSCoding {
+@objc class Experiment : NSObject, NSCoding {
 	
 	var name : String
 	var notebook : Notebook
@@ -32,6 +32,22 @@ import UIKit
 		self.name = experimentName
 		self.notebook = Notebook()
 		self.screens = Experiment.getScreensForExperimentName(self.name)
+	}
+	
+	///Inits an experiment from a file if one exists, else inits a fresh one
+	static func experiment(experimentName: String) -> Experiment {
+		let fileName = "\(experimentName).chef"
+		let directories = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.AllDomainsMask)
+		if let selectedDirectory = directories[0] as? NSURL {
+			if let filePath = selectedDirectory.URLByAppendingPathComponent(fileName).path {
+				if let loadedExperiment = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? Experiment {
+					return loadedExperiment
+				}
+			}
+		}
+		
+		//else return a fresh one
+		return Experiment(experimentName: experimentName)
 	}
 	
 	///Returns a list of Screens for the given experiment
@@ -77,6 +93,18 @@ import UIKit
 		self.name = decoder.decodeObjectForKey(Experiment.nameKey) as! String
 		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as! Notebook
 		self.screens = Experiment.getScreensForExperimentName(self.name)
+	}
+	
+	///Saves the object to its unique file. Returns a Bool indicating its success.
+	func saveToFile() -> Bool {
+		let fileName = "\(self.name).chef"
+		let directories = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.AllDomainsMask)
+		if let selectedDirectory = directories[0] as? NSURL {
+			if let filePath = selectedDirectory.URLByAppendingPathComponent(fileName).path {
+				return NSKeyedArchiver.archiveRootObject(self, toFile: filePath)
+			}
+		}
+		return false
 	}
 	
 }
