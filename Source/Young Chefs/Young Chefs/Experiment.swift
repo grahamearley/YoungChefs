@@ -24,30 +24,54 @@ import UIKit
 
 @objc class Experiment : NSObject, NSCoding {
 	
+	//MARK: - Fields
+	
 	var name : String
 	var notebook : Notebook
 	var screens : [Screen]	//synthesized
 	
-	init(experimentName:String) {
-		self.name = experimentName
-		self.notebook = Notebook()
-		self.screens = Experiment.getScreensForExperimentName(self.name)
+	///Keeps track of where the user is in the experiment,
+	///stored here as aposed to in the ViewController because the progress
+	///in the experiment should be persistant across launches
+	var progressIndex : Int
+	
+	///Easy access to the current Screen
+	var currentScreen : Screen {
+		return self.screens[progressIndex]
 	}
 	
-	///Inits an experiment from a file if one exists, else inits a fresh one
+	//MARK: - Mixed Init
+	
+	///Inits an experiment with progress from a file if a progress file exists.
+	///else inits a fresh one via vanilla/designated init.
+	///
+	///In almost all cases, use this factory method to load new Experiments
 	static func experiment(experimentName: String) -> Experiment {
 		let fileName = "\(experimentName).chef"
 		let directories = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.AllDomainsMask)
 		if let selectedDirectory = directories[0] as? NSURL {
 			if let filePath = selectedDirectory.URLByAppendingPathComponent(fileName).path {
 				if let loadedExperiment = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? Experiment {
+					println("loading experiment in progress from file")
 					return loadedExperiment
 				}
 			}
 		}
 		
 		//else return a fresh one
+		println("no progress on this experiment found, starting fresh")
 		return Experiment(experimentName: experimentName)
+	}
+	
+	//MARK: - Designated Init
+	
+	///Initializes an Experiment with the name *without* pulling in
+	///data from a previous session.
+	private init(experimentName:String) {
+		self.name = experimentName
+		self.notebook = Notebook()
+		self.screens = Experiment.getScreensForExperimentName(self.name)
+		self.progressIndex = 0
 	}
 	
 	///Returns a list of Screens for the given experiment
@@ -81,21 +105,28 @@ import UIKit
 	
 	//MARK: - Save/Load
 	
+	//Keys for encoders...
 	private static let nameKey = "name"
 	private static let notebookKey = "notebook"
+	private static let progressIndexKey = "progressIndex"
 	
+	///Encodes a coder with this Experiment's name, notebook, and progressIndex
 	func encodeWithCoder(encoder: NSCoder) {
 		encoder.encodeObject(self.name, forKey: Experiment.nameKey)
 		encoder.encodeObject(self.notebook, forKey: Experiment.notebookKey)
+		encoder.encodeObject(self.progressIndex, forKey: Experiment.progressIndexKey)
 	}
 	
+	///Unencodes an Experiment with stored information, and synthesizes the [Screen] array
 	required init(coder decoder: NSCoder) {
 		self.name = decoder.decodeObjectForKey(Experiment.nameKey) as! String
 		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as! Notebook
 		self.screens = Experiment.getScreensForExperimentName(self.name)
+		self.progressIndex = decoder.decodeObjectForKey(Experiment.progressIndexKey) as! Int
 	}
 	
-	///Saves the object to its unique file. Returns a Bool indicating its success.
+	///Saves the object to a unique file inside the app Documents directory.
+	///Returns a Bool indicating its success.
 	func saveToFile() -> Bool {
 		let fileName = "\(self.name).chef"
 		let directories = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.AllDomainsMask)

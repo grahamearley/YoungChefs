@@ -19,10 +19,18 @@ Notebook data is stored in the Notebook class.
 
 import UIKit
 
+protocol NotebookDelegate {
+	
+	func notebookContentDidChange(aNotebook: Notebook)
+	
+	func notebookViewControllerWillDismiss(aNotebook: Notebook)
+}
+
 class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
+	var delegate: NotebookDelegate?
 	
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
 	@IBOutlet weak var editText : UITextView!
@@ -58,12 +66,17 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         notebookPhotoCollectionView.collectionViewLayout = layout
         notebookPhotoCollectionView.registerNib(UINib(nibName: NotebookPhotoCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
 	}
-    
+	
+	override func viewWillDisappear(animated: Bool) {
+		self.delegate?.notebookViewControllerWillDismiss(self.notebook)
+	}
+	
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let chosenImage: AnyObject? = info[UIImagePickerControllerOriginalImage]
         self.notebook.scribbleImages.append(chosenImage as! UIImage)
         notebookPhotoCollectionView.reloadData()
+		self.delegate?.notebookContentDidChange(self.notebook)
         
         // TODO: Test on physical device, see how this performs with Camera as the imageSource
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -79,13 +92,14 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         picker.allowsEditing = false
         picker.sourceType = self.imageSourceType
         
-        self.presentViewController(picker, animated: true, completion: nil)
+		self.presentViewController(picker, animated: true, completion: nil)
     }
     
 	//MARK: UITextView Delegate
 	
 	func textViewDidChange(textView: UITextView) {
 		self.notebook.scribbleText = editText.text
+		self.delegate?.notebookContentDidChange(self.notebook)
 	}
     
     //MARK: UICollectionViewDelegate:

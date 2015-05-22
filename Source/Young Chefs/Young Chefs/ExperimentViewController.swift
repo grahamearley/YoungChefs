@@ -18,10 +18,9 @@ This class controls the experiment view. It interacts with the experiment's webv
 import UIKit
 import WebKit
 
-class ExperimentViewController: UIViewController, WKScriptMessageHandler {
+class ExperimentViewController: UIViewController, WKScriptMessageHandler, NotebookDelegate {
 	
 	var experiment : Experiment!	//must be set externally before the storyboard presents this view
-	var indexInExperiment = 0
 	
 	@IBOutlet var placeholderViewForWebview : UIView!
 	var screenView : ScreenView!
@@ -38,7 +37,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		// Configure the screenView with our javaScript message handler and our first screen
 		let javaSwiftConfig = WKWebViewConfiguration()
 		javaSwiftConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
-		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, screen: experiment.screens[indexInExperiment])
+		self.screenView = ScreenView(frame: placeholderViewForWebview.bounds, configuration: javaSwiftConfig, screen: experiment.currentScreen)
 		
 		// Replace (cover and fill) our placeholder view with our WKWebView
 		self.screenView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
@@ -53,6 +52,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 	/// Presents the notebook popover
 	@IBAction func onNotebookButton(sender: UIButton) {
 		let popoverViewController = NotebookViewController(notebook: experiment.notebook)
+		popoverViewController.delegate = self
 		popoverViewController.modalPresentationStyle = .Popover
 		let popover =  UIPopoverController(contentViewController: popoverViewController)
 		
@@ -62,6 +62,44 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
 		let popRect = sender.frame
 		popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+	}
+	
+	//MARK: Experiment Interaction
+	///Called whenever Notebook is edited, should not be used for saving to disk
+	func notebookContentDidChange(aNotebook: Notebook) {
+		//do not respond
+	}
+	
+	//Used as a callback to save contents
+	func notebookViewControllerWillDismiss(aNotebook: Notebook) {
+		self.experiment.saveToFile()
+	}
+	
+	///Progress to the next screen in the experiment if it exists
+	func nextScreen() {
+		if experiment.progressIndex+1 >= self.experiment.screens.count {
+			return
+		} else {
+			experiment.progressIndex++
+			self.screenView.loadScreen(self.experiment.currentScreen)
+		}
+		experiment.saveToFile()
+	}
+	
+	///Progress to the previous screen in the experiment if it exists
+	func previousScreen() {
+		if experiment.progressIndex-1 < 0 {
+			return
+		} else {
+			experiment.progressIndex--
+			self.screenView.loadScreen(self.experiment.currentScreen)
+		}
+		experiment.saveToFile()
+	}
+	
+	///Binds a given response key to an associated value for use later
+	func bindResponseKey(key: String, toValue value:String) {
+		self.experiment.notebook.responses[key] = value
 	}
 	
 	//MARK: JavaSwift
@@ -76,9 +114,9 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 			if let command = JSCommand(rawValue: commandString) {
 				switch command {
 				case .NextScreen:
-					onNextScreenButton()
+					nextScreen()
 				case .PreviousScreen:
-					onPreviousScreenButton()
+					previousScreen()
 				case .ContentReadyNotification:
 					onContentReady()
 				case .BindResponseKey:
@@ -90,36 +128,12 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler {
 		}
 	}
 	
-	/// Called when the ScreenView has fully loaded the DOM asscociated with the current Screen.
+	///Called when the ScreenView has fully loaded the DOM asscociated with the current Screen.
 	func onContentReady() {
 		//fill in data from 'responseKeys' into the forms on the page
 		self.screenView.fillKeyedHTMLWithValues(self.experiment.notebook.responses)
 	}
 	
-	/// Progress to the next screen in the experiment if it exists
-	func onNextScreenButton() {
-		if indexInExperiment+1 >= self.experiment.screens.count {
-			return
-		} else {
-			self.indexInExperiment++
-			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
-		}
-		self.experiment.saveToFile()
-	}
-	
-	func onPreviousScreenButton() {
-		if indexInExperiment-1 < 0 {
-			return
-		} else {
-			self.indexInExperiment--
-			self.screenView.loadScreen(self.experiment.screens[self.indexInExperiment])
-		}
-	}
-	
-	///Binds a given response key to an associated value for use later
-	func bindResponseKey(key: String, toValue value:String) {
-		self.experiment.notebook.responses[key] = value
-	}
 	///Ease of use, given a javaSwift dictionary, parse it's contents and call 'bindResponseKey:(:)'
 	func bindResponseKey(jsDict: NSDictionary) {
 		if let key = jsDict["key"] as? String, let value = jsDict["value"] as? String {
