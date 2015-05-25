@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */ = {isa = PBXBuildFile; fileRef = CB16EF731B03D62A00A606A8 /* fastclick.js */; };
+		CB71C2D91B13D6D500E23296 /* WKWebViewTempContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */; };
 		CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */; };
 		CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */; };
 		CB8463ED1B03F28C002B59FD /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8463EC1B03F28C002B59FD /* Screen.swift */; };
@@ -26,7 +27,6 @@
 		CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */; };
 		CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */; };
 		CBA126591B03CD42001C2488 /* example-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA126561B03CD42001C2488 /* example-0.html */; };
-		CBA1265A1B03CD42001C2488 /* example.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA126571B03CD42001C2488 /* example.js */; };
 		CBA1265E1B03CF62001C2488 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1265D1B03CF62001C2488 /* Experiment.swift */; };
 		CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */; };
 		CBA9514C1B09C20E006585CF /* demo-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951441B09C20E006585CF /* demo-0.html */; };
@@ -56,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		CB16EF731B03D62A00A606A8 /* fastclick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fastclick.js; sourceTree = "<group>"; };
+		CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewTempContextExtension.swift; sourceTree = "<group>"; };
 		CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
 		CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookView.xib; sourceTree = "<group>"; };
 		CB8463EC1B03F28C002B59FD /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
 		CBA126561B03CD42001C2488 /* example-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-0.html"; sourceTree = "<group>"; };
-		CBA126571B03CD42001C2488 /* example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = example.js; sourceTree = "<group>"; };
 		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = experimentsDirectory.plist; sourceTree = "<group>"; };
 		CBA951441B09C20E006585CF /* demo-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-0.html"; sourceTree = "<group>"; };
@@ -138,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8463EE1B03F532002B59FD /* ScreenView.swift */,
+				CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */,
 				CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */,
 				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
 				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
@@ -228,7 +229,6 @@
 				CBA126561B03CD42001C2488 /* example-0.html */,
 				CB932ED41B04096E00BC52EC /* example-1.html */,
 				CB932ED21B04069500BC52EC /* example-2.html */,
-				CBA126571B03CD42001C2488 /* example.js */,
 			);
 			path = example;
 			sourceTree = "<group>";
@@ -332,7 +332,6 @@
 				CBA9514F1B09C20E006585CF /* demo-3.html in Resources */,
 				D293213A1B0A36BD002D3B0D /* default.jpg in Resources */,
 				CBA9514D1B09C20E006585CF /* demo-1.html in Resources */,
-				CBA1265A1B03CD42001C2488 /* example.js in Resources */,
 				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
 				CBA951521B09C20E006585CF /* javaswift.js in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
@@ -378,6 +377,7 @@
 				CBA126491B03C5DB001C2488 /* HomeCollectionViewCell.swift in Sources */,
 				CB8463EF1B03F532002B59FD /* ScreenView.swift in Sources */,
 				CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */,
+				CB71C2D91B13D6D500E23296 /* WKWebViewTempContextExtension.swift in Sources */,
 				CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

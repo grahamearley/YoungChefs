@@ -22,6 +22,8 @@ import UIKit
 
 class ScreenView : WKWebView {
 	
+	//MARK:- Screen Content
+	
 	/// The currently displayed screen
 	/// (read-only)
 	private(set) var currentScreen : Screen
@@ -35,12 +37,19 @@ class ScreenView : WKWebView {
 	
 	/// Loads a new screen into this view
 	func loadScreen(newScreen: Screen) {
-		let request = NSURLRequest(URL: newScreen.htmlURL, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
-		self.loadRequest(request)
-		self.currentScreen = newScreen
+		if let fixedURL = WKWebView.convertURLToBugCompatibleURL(newScreen.htmlURL) {
+			let request = NSURLRequest(URL: fixedURL, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 5)
+			self.loadRequest(request)
+			self.currentScreen = newScreen
+		} else {
+			println("failed to copy web resouce to `temp/www` directory")
+		}
 	}
 	
+	//MARK:-JavaSwift
+	
 	///Runs through the file and calls 'fillKeyedHTMLWithValue()' for each key in the responseKeys dictionary passed into it.
+	///
 	///This basically fills question boxes with previously answered values (such a situation exists on say,
 	func fillKeyedHTMLWithValues(keysAndValues : [String:String]) {
 		for key in keysAndValues.keys {

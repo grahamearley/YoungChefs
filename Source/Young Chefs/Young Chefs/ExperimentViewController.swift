@@ -34,6 +34,14 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 			fatalError("experiment must be set before this view is presented. Use 'prepareForSegue' to pass incoming ExperimentViewController an Experiment before storyboard presentation")
 		}
 		
+		// Ensure constant web resource files are copied into our temp context
+		var constantWebRes = [NSURL?]()
+		constantWebRes.append(NSBundle.mainBundle().URLForResource("styles", withExtension: "css"))
+		constantWebRes.append(NSBundle.mainBundle().URLForResource("javaswift", withExtension: "js"))
+		constantWebRes.append(NSBundle.mainBundle().URLForResource("jquery-2.1.4", withExtension: "js"))
+		constantWebRes.append(NSBundle.mainBundle().URLForResource("fastclick", withExtension: "js"))
+		WKWebView.copyResourcesIntoTempContext(constantWebRes)
+		
 		// Configure the screenView with our javaScript message handler and our first screen
 		let javaSwiftConfig = WKWebViewConfiguration()
 		javaSwiftConfig.userContentController.addScriptMessageHandler(self, name: "javaSwift")
