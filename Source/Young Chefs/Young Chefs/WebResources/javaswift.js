@@ -20,6 +20,14 @@ $(document).ready(function() {
 	
 	$(".input").bind("input propertychange", function() {
 		var field = $(this);
+		
+		//clean input of double quotes
+		var uncleanValue = field.val();
+		var warningElements = new RegExp("\"");	//matches double quotes
+		var cleanValue = uncleanValue.replace(warningElements,"");
+		field.val(cleanValue);
+		
+		//pull contents and post them to JavaSwift
 		var key = field.attr("id");
 		var value = field.val();
 		var commandMessage = {"command":"bindResponseKey",
