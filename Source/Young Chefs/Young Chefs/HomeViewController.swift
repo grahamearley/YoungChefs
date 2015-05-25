@@ -111,9 +111,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 		if let destinationExperimentViewController = segue.destinationViewController as? ExperimentViewController {
 			// If we're naving to an experiment...
 			if let experimentPreviewSender = sender as? HomeCollectionViewCell {
-				// If a HomeCollectionViewCell (a preview of an experiment) sent us...
-				destinationExperimentViewController.experiment = Experiment(experimentName: experimentPreviewSender.titleLabel.text!)
-				// use that cell's title as a pointer to load the correct experiment
+				//init and bind an Experiment to the baby
+				destinationExperimentViewController.experiment = Experiment.experiment(experimentPreviewSender.titleLabel.text!)
 			}
 		}
 	}

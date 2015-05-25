@@ -114,14 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB8463F01B03FDC5002B59FD /* ExperimentComponants */ = {
+		CB8463F01B03FDC5002B59FD /* ExperimentComponents */ = {
 			isa = PBXGroup;
 			children = (
 				CBA1265D1B03CF62001C2488 /* Experiment.swift */,
 				CB932ED61B040D9100BC52EC /* Notebook.swift */,
 				CB8463EC1B03F28C002B59FD /* Screen.swift */,
 			);
-			name = ExperimentComponants;
+			name = ExperimentComponents;
 			sourceTree = "<group>";
 		};
 		CB8463F11B03FEB4002B59FD /* ViewControllers */ = {
@@ -170,7 +170,7 @@
 			children = (
 				CBA126231B03C368001C2488 /* AppDelegate.swift */,
 				CB8463F11B03FEB4002B59FD /* ViewControllers */,
-				CB8463F01B03FDC5002B59FD /* ExperimentComponants */,
+				CB8463F01B03FDC5002B59FD /* ExperimentComponents */,
 				CB8463F21B03FECF002B59FD /* CustomViews */,
 				CBA126271B03C368001C2488 /* Main.storyboard */,
 				CBA1262A1B03C368001C2488 /* Images.xcassets */,
