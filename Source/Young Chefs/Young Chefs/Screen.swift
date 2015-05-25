@@ -21,6 +21,9 @@ import WebKit
 class Screen {
 	
 	let htmlURL : NSURL
+	var htmlPath : String? {
+		return htmlURL.path
+	}
 	
 	init(htmlURL: NSURL) {
 		self.htmlURL = htmlURL
