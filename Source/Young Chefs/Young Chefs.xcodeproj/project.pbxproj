@@ -36,7 +36,6 @@
 		CBA951501B09C20E006585CF /* demo-4.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951481B09C20E006585CF /* demo-4.html */; };
 		CBA951511B09C20E006585CF /* demo-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951491B09C20E006585CF /* demo-5.html */; };
 		CBA951521B09C20E006585CF /* javaswift.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* javaswift.js */; };
-		CBA951531B09C20E006585CF /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514B1B09C20E006585CF /* styles.css */; };
 		CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */; };
 		D241D4C51B14D091000039CF /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D241D4BA1B14D091000039CF /* placeholder.jpg */; };
 		D241D4C61B14D091000039CF /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = D241D4BB1B14D091000039CF /* styles.css */; };
@@ -99,7 +98,6 @@
 		CBA951481B09C20E006585CF /* demo-4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-4.html"; sourceTree = "<group>"; };
 		CBA951491B09C20E006585CF /* demo-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-5.html"; sourceTree = "<group>"; };
 		CBA9514A1B09C20E006585CF /* javaswift.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javaswift.js; sourceTree = "<group>"; };
-		CBA9514B1B09C20E006585CF /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = styles.css; path = demo/styles.css; sourceTree = "<group>"; };
 		CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaSwift.swift; sourceTree = "<group>"; };
 		D241D4BA1B14D091000039CF /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		D241D4BB1B14D091000039CF /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
@@ -233,11 +231,11 @@
 		CBA1264B1B03CCE1001C2488 /* WebResources */ = {
 			isa = PBXGroup;
 			children = (
-				D241D4A31B14D065000039CF /* The Quest for the Perfect Cookie */,
 				CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */,
 				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
-				CBA9514B1B09C20E006585CF /* styles.css */,
+				D241D4BB1B14D091000039CF /* styles.css */,
 				CBA9514A1B09C20E006585CF /* javaswift.js */,
+				D241D4A31B14D065000039CF /* The Quest for the Perfect Cookie */,
 				CBA951431B09C20E006585CF /* demo */,
 				CBA126541B03CD42001C2488 /* example */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
@@ -274,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				D241D4BA1B14D091000039CF /* placeholder.jpg */,
-				D241D4BB1B14D091000039CF /* styles.css */,
 				D241D4BC1B14D091000039CF /* The Quest for the Perfect Cookie-0.html */,
 				D241D4BD1B14D091000039CF /* The Quest for the Perfect Cookie-1.html */,
 				D241D4BE1B14D091000039CF /* The Quest for the Perfect Cookie-2.html */,
@@ -396,7 +393,6 @@
 				D241D4CB1B14D091000039CF /* The Quest for the Perfect Cookie-4.html in Resources */,
 				CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */,
 				CBA9514E1B09C20E006585CF /* demo-2.html in Resources */,
-				CBA951531B09C20E006585CF /* styles.css in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				D241D4C61B14D091000039CF /* styles.css in Resources */,
 				D29321381B0A3570002D3B0D /* demo.jpg in Resources */,
