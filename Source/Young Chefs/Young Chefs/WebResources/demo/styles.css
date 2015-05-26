@@ -156,18 +156,18 @@ ul li::before {
 
 /* Images */
 
-img .centerPic {
+img.centerPic {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
-
 }
-img .leftPic {
+
+img.leftPic {
     width: 300px;
     float: left;
-
 }
-img .rightPic {
+
+img.rightPic {
     width: 300pxvw;
     float: right;
 }

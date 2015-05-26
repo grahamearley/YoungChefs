@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */ = {isa = PBXBuildFile; fileRef = CB16EF731B03D62A00A606A8 /* fastclick.js */; };
+		CB367DB21B14E2760071E103 /* demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB367DB11B14E2760071E103 /* demo.plist */; };
 		CB71C2D91B13D6D500E23296 /* WKWebViewTempContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */; };
 		CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */; };
 		CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		CB16EF731B03D62A00A606A8 /* fastclick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fastclick.js; sourceTree = "<group>"; };
+		CB367DB11B14E2760071E103 /* demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demo.plist; sourceTree = "<group>"; };
 		CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewTempContextExtension.swift; sourceTree = "<group>"; };
 		CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
 		CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookView.xib; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		CBA951431B09C20E006585CF /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				CB367DB11B14E2760071E103 /* demo.plist */,
 				D29321371B0A3570002D3B0D /* demo.jpg */,
 				CBA951441B09C20E006585CF /* demo-0.html */,
 				CBA951451B09C20E006585CF /* demo-1.html */,
@@ -336,6 +339,7 @@
 				CBA951521B09C20E006585CF /* javaswift.js in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
+				CB367DB21B14E2760071E103 /* demo.plist in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
 				CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */,
 				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
