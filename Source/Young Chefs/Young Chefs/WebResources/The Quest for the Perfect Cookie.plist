@@ -15,7 +15,12 @@
 	</array>
 	<key>AdditionalResources</key>
 	<array>
-		<string>placeholder.jpg</string>
+		<string>gooey.png</string>
+		<string>sweeter.png</string>
+		<string>crispier.png</string>
+		<string>flatter.png</string>
+		<string>cakey.png</string>
+		<string>browner.png</string>
 	</array>
 </dict>
 </plist>
