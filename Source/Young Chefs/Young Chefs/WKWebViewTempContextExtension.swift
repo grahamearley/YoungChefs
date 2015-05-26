@@ -5,11 +5,11 @@
 //  Created by Charlie Imhoff on 5/25/15.
 //  Copyright (c) 2015 Young Chefs. All rights reserved.
 //
-
-import Foundation
-import WebKit
-
+//  Julia Bindler
+//  Graham Earley
+//  Charlie Imhoff
 /**
+
 This extension provides a series of functions helpful in working around the
 `WKWebView` bug preventing content loading from non-server
 
@@ -20,6 +20,11 @@ Documented Radar Post:		http://www.openradar.me/18039024
 Credit for Workaround:		nacho4d via StackOverflow:
 							http://stackoverflow.com/a/28676439
 */
+//
+
+import Foundation
+import WebKit
+
 extension WKWebView {
 	
 	///Clears out the `temp/www` context entirely.
@@ -44,7 +49,7 @@ extension WKWebView {
 	/**
 	This 'converts' a given file URL to a functional one which works around the load bug.
 	
-	In actuallity, it *copies* the file into a temp directory and then loads it from there,
+	In actuality, it *copies* the file into a temp directory and then loads it from there,
 	tricking `WKWebView` into thinking it's loading from a www server.
 	
 	:para: fileURL a URL in any context intended for copying to a `temp/www` context.
@@ -63,10 +68,10 @@ extension WKWebView {
 	/**
 	This 'converts' a given file path to a functional one which works around the load bug.
 	
-	In actuallity, it *copies* the file into a temp directory and then loads it from there,
+	In actuality, it *copies* the file into a temp directory and then loads it from there,
 	tricking `WKWebView` into thinking it's loading from a www server.
 	
-	Source cortesy of nacho4d via StackOverflow:
+	Source courtesy of nacho4d via StackOverflow:
 	http://stackoverflow.com/a/28676439
 	
 	:para: filePath a path in any context intended for copying to a `temp/www` context.
