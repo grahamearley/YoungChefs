@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Screens</key>
+	<array>
+		<string>The Quest for the Perfect Cookie-0</string>
+		<string>The Quest for the Perfect Cookie-1</string>
+		<string>The Quest for the Perfect Cookie-2</string>
+		<string>The Quest for the Perfect Cookie-3</string>
+		<string>The Quest for the Perfect Cookie-4</string>
+		<string>The Quest for the Perfect Cookie-5</string>
+		<string>The Quest for the Perfect Cookie-6</string>
+		<string>The Quest for the Perfect Cookie-7</string>
+	</array>
+	<key>AdditionalResources</key>
+	<array>
+		<string>placeholder.jpg</string>
+	</array>
+</dict>
+</plist>

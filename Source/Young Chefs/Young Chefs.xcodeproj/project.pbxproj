@@ -14,6 +14,7 @@
 		CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */; };
 		CB8463ED1B03F28C002B59FD /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8463EC1B03F28C002B59FD /* Screen.swift */; };
 		CB8463EF1B03F532002B59FD /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8463EE1B03F532002B59FD /* ScreenView.swift */; };
+		CB8BB1AA1B14ED880050718B /* The Quest for the Perfect Cookie.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB8BB1A91B14ED880050718B /* The Quest for the Perfect Cookie.plist */; };
 		CB932ED31B04069500BC52EC /* example-2.html in Resources */ = {isa = PBXBuildFile; fileRef = CB932ED21B04069500BC52EC /* example-2.html */; };
 		CB932ED51B04096E00BC52EC /* example-1.html in Resources */ = {isa = PBXBuildFile; fileRef = CB932ED41B04096E00BC52EC /* example-1.html */; };
 		CB932ED71B040D9100BC52EC /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB932ED61B040D9100BC52EC /* Notebook.swift */; };
@@ -73,6 +74,7 @@
 		CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookView.xib; sourceTree = "<group>"; };
 		CB8463EC1B03F28C002B59FD /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		CB8463EE1B03F532002B59FD /* ScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		CB8BB1A91B14ED880050718B /* The Quest for the Perfect Cookie.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "The Quest for the Perfect Cookie.plist"; sourceTree = "<group>"; };
 		CB932ED21B04069500BC52EC /* example-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-2.html"; sourceTree = "<group>"; };
 		CB932ED41B04096E00BC52EC /* example-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-1.html"; sourceTree = "<group>"; };
 		CB932ED61B040D9100BC52EC /* Notebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 		D241D4A31B14D065000039CF /* The Quest for the Perfect Cookie */ = {
 			isa = PBXGroup;
 			children = (
+				CB8BB1A91B14ED880050718B /* The Quest for the Perfect Cookie.plist */,
 				D241D4BA1B14D091000039CF /* placeholder.jpg */,
 				D241D4BC1B14D091000039CF /* The Quest for the Perfect Cookie-0.html */,
 				D241D4BD1B14D091000039CF /* The Quest for the Perfect Cookie-1.html */,
@@ -377,6 +380,7 @@
 				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
 				D241D4CD1B14D091000039CF /* The Quest for the Perfect Cookie-6.html in Resources */,
 				CBA951521B09C20E006585CF /* javaswift.js in Resources */,
+				CB8BB1AA1B14ED880050718B /* The Quest for the Perfect Cookie.plist in Resources */,
 				D241D4C81B14D091000039CF /* The Quest for the Perfect Cookie-1.html in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				D241D4CA1B14D091000039CF /* The Quest for the Perfect Cookie-3.html in Resources */,
