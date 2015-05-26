@@ -8,19 +8,19 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
+
 /*
 
 This class initializes a new experiment by pulling html files from the main bundle and converting them into screens.
 
-File references are not passed in individually, but rather all html files are named with the following convention:
-        [experimentName]-[order]
-        e.g. ChocolateExperiment-0.html (for the first screen in the Chocolate Experiment)
-The initializer will automatically read in all the associated html files in the correct order.
+All resource references are eventually copied to the temp/www context, so searching is not an option.
+All required resources must be defined in the Experiment's manifest .plist file.
 
 */
 //
 
 import UIKit
+import WebKit
 
 @objc class Experiment : NSObject, NSCoding {
 	
@@ -28,7 +28,7 @@ import UIKit
 	
 	var name : String
 	var notebook : Notebook
-	var screens : [Screen]	//synthesized
+	var screens = [Screen]()	//synthesized
 	
 	///Keeps track of where the user is in the experiment,
 	///stored here as aposed to in the ViewController because the progress
@@ -52,14 +52,12 @@ import UIKit
 		if let selectedDirectory = directories[0] as? NSURL {
 			if let filePath = selectedDirectory.URLByAppendingPathComponent(fileName).path {
 				if let loadedExperiment = NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? Experiment {
-					println("loading experiment in progress from file")
 					return loadedExperiment
 				}
 			}
 		}
 		
 		//else return a fresh one
-		println("no progress on this experiment found, starting fresh")
 		return Experiment(experimentName: experimentName)
 	}
 	
@@ -70,37 +68,38 @@ import UIKit
 	private init(experimentName:String) {
 		self.name = experimentName
 		self.notebook = Notebook()
-		self.screens = Experiment.getScreensForExperimentName(self.name)
 		self.progressIndex = 0
+		super.init()
+		self.loadResourcesFromManifest(manifestName: experimentName)
 	}
 	
-	///Returns a list of Screens for the given experiment
-	private static func getScreensForExperimentName(prefix: String) -> [Screen] {
-		/*
-		WARNING: Currently, this only searchs in the MainBundle, which is inconsistent. Filenames from the Library directory can be requested for init from experimentsDirectory.plist/HomeViewController
-		*/
-		var screens = [Screen]()
+	///Loads in all resources from the given experiment manifest into the current experiment
+	func loadResourcesFromManifest(#manifestName: String) {
+		let manifestURL = NSBundle.mainBundle().URLForResource(manifestName, withExtension: "plist")!
+		let objectiveCDictionary = NSDictionary(contentsOfURL: manifestURL)!
+		let manifest = objectiveCDictionary as! Dictionary<String,AnyObject>
 		
-		var reachedEndOfScreens = false
-		var screenNumber = 0
-		while !reachedEndOfScreens {
-			let fileName = prefix + "-" + screenNumber.description
-			if let htmlURL = NSBundle.mainBundle().URLForResource(fileName, withExtension: "html") {
-				let screen = Screen(htmlURL: htmlURL)
-				screens.append(screen)
-			} else {
-				if screenNumber != 0 { //in case a non-dev starts numbering at 1 instead of 0
-					reachedEndOfScreens = true
+		//prep screens (copying to temp/www context is done later)
+		if let screens = manifest["Screens"] as? [String] {
+			for screenString in screens {
+				if let url = NSBundle.mainBundle().URLForResource(screenString, withExtension: "html") {
+					self.screens.append(Screen(htmlURL: url))
 				}
 			}
-			screenNumber++
 		}
 		
-		if screens.count == 0 {
-			fatalError("no Screens were found from name: \(prefix), check the file names of relevant html")
+		//prep additional resources (copy to temp/www context is done now)
+		if let additionalResources = manifest["AdditionalResources"] as? [String] {
+			var resURLs = [NSURL?]()
+			for res in additionalResources {
+				let fileName = res.stringByDeletingPathExtension
+				let fileType = res.pathExtension
+				
+				let url = NSBundle.mainBundle().URLForResource(fileName, withExtension: fileType)
+				resURLs.append(url)
+			}
+			WKWebView.copyResourcesIntoTempContext(resURLs)
 		}
-		
-		return screens
 	}
 	
 	//MARK: - Save/Load
@@ -121,8 +120,9 @@ import UIKit
 	required init(coder decoder: NSCoder) {
 		self.name = decoder.decodeObjectForKey(Experiment.nameKey) as! String
 		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as! Notebook
-		self.screens = Experiment.getScreensForExperimentName(self.name)
 		self.progressIndex = decoder.decodeObjectForKey(Experiment.progressIndexKey) as! Int
+		super.init()
+		self.loadResourcesFromManifest(manifestName: self.name)
 	}
 	
 	///Saves the object to a unique file inside the app Documents directory.

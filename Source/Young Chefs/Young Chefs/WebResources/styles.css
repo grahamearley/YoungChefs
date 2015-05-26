@@ -172,13 +172,13 @@ img.centerPic {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
-
 }
+
 img.leftPic {
     width: 300px;
     float: left;
-
 }
+
 img.rightPic {
     width: 300pxvw;
     float: right;

@@ -14,6 +14,7 @@ Experiments are constructed from the following assets:
 | Name | Text | example | Every experiment is required to have a unique name. This is used to group together and classify all the associated files. This is also the name presented to the user. |
 | Content | Multiple HTML Files | example-#.html | Each HTML file defines a single page of the experiment's walkthrough. The screens are ordered according to the # in their filename. Numbering can start at 0 or 1. |
 | Icon | Single Image File _(optional)_ | example.png | Image to display on the home screen along with the name of this experiment. Can be _.png_ or _.jpg_ |
+| Additional Resources | Any Type | example.jpg, example.txt | Anything else your HTML relies on to display content, including images. |
 ||||
 | Styles | CSS File | styles.css | This is a standard file automatically copied into every experiment. It defines the style and formatting of the HTML. |
 | Code | Javascript File(s) | example.js | These are standard files automatically copied into every experiment. It should not be modified. It defines how the app and the experiment communicate.
@@ -23,12 +24,8 @@ Experiments should hold all their assets in a single folder, and that folder's n
 ###Name
 The experiment name does not need to be stored in a file, but must remain consistent throughout an experiment. We recommend naming the folder the experiment name.
 
-This name defines how the app searches for and loads files associated with the experiment.
-
 ###Content
 The HTML which defines each page, or screen.
-
-Every HTML file associated with an experiment must be named `[experimentName]-[#].html`, where `[experimentName]` is the name of the experiment and `[#]` is the order of the screen. _(ie. example-2.html will be presented third, because counting starts at 0)_.
 
 An example of content, with inline comments can be found in the demo experiment.
 
