@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t83-yy-qPc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t83-yy-qPc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -41,7 +41,7 @@
                             <constraint firstAttribute="trailing" secondItem="N8A-LN-Pmj" secondAttribute="trailing" id="zV5-rK-aCK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="DKg-BH-ME3"/>
+                    <navigationItem key="navigationItem" title="Young Chefs Experiments" id="DKg-BH-ME3"/>
                     <connections>
                         <outlet property="collectionView" destination="N8A-LN-Pmj" id="30h-Yc-bsV"/>
                         <segue destination="daV-KR-Jzk" kind="show" identifier="toExperiment" id="mCJ-Zf-6EK"/>
@@ -111,4 +111,5 @@
             </objects>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.62012705176767668" green="0.16372938047760552" blue="0.024356332760064599" alpha="1" colorSpace="calibratedRGB"/>
 </document>

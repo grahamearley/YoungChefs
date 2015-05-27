@@ -32,10 +32,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+        let padding = CGFloat(40)
 		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-		layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 0)
+		layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
 		layout.itemSize = HomeCollectionViewCell.defaultSize
-		layout.minimumInteritemSpacing = 0
+		layout.minimumInteritemSpacing = padding
+        layout.minimumLineSpacing = padding
 		
 		collectionView.collectionViewLayout = layout
 		collectionView.registerNib(UINib(nibName: HomeCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: HomeCollectionViewCell.REUSE_ID)
