@@ -4,8 +4,8 @@
 <dict>
 	<key>MainBundle</key>
 	<array>
+		<string>First Test</string>
 		<string>The Quest for the Perfect Cookie</string>
-		<string>example</string>
 		<string>demo</string>
 	</array>
 	<key>LibraryDirectory</key>
