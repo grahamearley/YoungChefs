@@ -107,11 +107,6 @@ ol.steps p {
 	float: right;
 }
 
-/* If the next button is the only one, make it big*/
-.next:nth-child(1) {
-	width: 100%;
-}
-
 .back {
 	background-color: #808080;
 	color: #FFFFFF;
