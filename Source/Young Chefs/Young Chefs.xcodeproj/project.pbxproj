@@ -58,9 +58,9 @@
 		D279428B1B153B7000CD2CB8 /* sweeter.png in Resources */ = {isa = PBXBuildFile; fileRef = D27942851B153B7000CD2CB8 /* sweeter.png */; };
 		D279428D1B15413800CD2CB8 /* First Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = D279428C1B15413800CD2CB8 /* First Test.plist */; };
 		D279428F1B15419200CD2CB8 /* First Test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D279428E1B15419200CD2CB8 /* First Test.jpg */; };
+		D27942911B1543B700CD2CB8 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D27942901B1543B700CD2CB8 /* demo.jpg */; };
 		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
 		D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */; };
-		D29321381B0A3570002D3B0D /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29321371B0A3570002D3B0D /* demo.jpg */; };
 		D293213A1B0A36BD002D3B0D /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29321391B0A36BD002D3B0D /* default.jpg */; };
 /* End PBXBuildFile section */
 
@@ -130,9 +130,9 @@
 		D27942851B153B7000CD2CB8 /* sweeter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sweeter.png; sourceTree = "<group>"; };
 		D279428C1B15413800CD2CB8 /* First Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "First Test.plist"; sourceTree = "<group>"; };
 		D279428E1B15419200CD2CB8 /* First Test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "First Test.jpg"; sourceTree = "<group>"; };
+		D27942901B1543B700CD2CB8 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
-		D29321371B0A3570002D3B0D /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 		D29321391B0A36BD002D3B0D /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.jpg; path = WebResources/default.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				CB367DB11B14E2760071E103 /* demo.plist */,
-				D29321371B0A3570002D3B0D /* demo.jpg */,
+				D27942901B1543B700CD2CB8 /* demo.jpg */,
 				CBA951441B09C20E006585CF /* demo-0.html */,
 				CBA951451B09C20E006585CF /* demo-1.html */,
 				CBA951461B09C20E006585CF /* demo-2.html */,
@@ -429,6 +429,7 @@
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
 				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
 				D241D4C71B14D091000039CF /* The Quest for the Perfect Cookie-0.html in Resources */,
+				D27942911B1543B700CD2CB8 /* demo.jpg in Resources */,
 				CB932ED51B04096E00BC52EC /* example-1.html in Resources */,
 				D241D4C91B14D091000039CF /* The Quest for the Perfect Cookie-2.html in Resources */,
 				CBA9514C1B09C20E006585CF /* demo-0.html in Resources */,
@@ -443,7 +444,6 @@
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				D241D4C61B14D091000039CF /* styles.css in Resources */,
 				D279428D1B15413800CD2CB8 /* First Test.plist in Resources */,
-				D29321381B0A3570002D3B0D /* demo.jpg in Resources */,
 				D279428B1B153B7000CD2CB8 /* sweeter.png in Resources */,
 				D241D4CC1B14D091000039CF /* The Quest for the Perfect Cookie-5.html in Resources */,
 				CBA126591B03CD42001C2488 /* example-0.html in Resources */,

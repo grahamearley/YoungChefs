@@ -93,6 +93,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 			
             // The experiment's icon image is either .jpg or .png. Otherwise, use the default image.
             cell.imageView.image = UIImage(named: experimentName + ".jpg", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: experimentName + ".png", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: "default.jpg", inBundle: nil, compatibleWithTraitCollection: nil)
+            
+            // Adjust text to fit experiments with larger names:
+            cell.titleLabel.numberOfLines = 5
+            cell.titleLabel.adjustsFontSizeToFitWidth = true
+            
 			return cell
 		} else {
 			fatalError("HomeCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
