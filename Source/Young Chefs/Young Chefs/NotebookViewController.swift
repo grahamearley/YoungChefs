@@ -31,13 +31,15 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
 	var delegate: NotebookDelegate?
+    
+    var keysForQuestionsAnswered : [String]
 	
     @IBOutlet weak var responseTable: UITableView!
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
     @IBOutlet weak var fullscreenImageView: UIImageView!
     
     // TEST:
-    var responseDictionary: [String : String] = ["Q1":"A1", "Q2":"A2", "Q3":"A2"]
+    var responseDictionary: [String : String] = ["Q1":"A1", "Q3":"A3", "Q2":"A2", "Q4":"hi"]
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -47,6 +49,8 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         } else {
             self.imageSourceType = .Camera
         }
+        
+        keysForQuestionsAnswered = ["Q1", "Q3", "Q4"]
         
 		super.init(nibName: "NotebookView", bundle: nil)
 	}
@@ -148,17 +152,16 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     
     // MARK: UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.responseDictionary.keys.array.count
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        return self.keysForQuestionsAnswered.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.responseTable.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+                
+        let questionKey = self.keysForQuestionsAnswered[indexPath.row]
+        let questionText = self.responseDictionary[questionKey]
         
-        cell.textLabel?.text = self.responseDictionary.keys.array[indexPath.row]
+        cell.textLabel?.text = questionText
         
         return cell
     }
