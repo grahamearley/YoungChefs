@@ -62,8 +62,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-B6-2Bs">
-                    <rect key="frame" x="10" y="272" width="580" height="328"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-B6-2Bs">
+                    <rect key="frame" x="10" y="272" width="580" height="318"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="FTu-Ro-OoG"/>
@@ -75,6 +75,7 @@
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="z9a-c3-adT" secondAttribute="centerX" constant="-0.5" id="2UW-nh-2cv"/>
                 <constraint firstItem="D6o-Yo-v9b" firstAttribute="top" secondItem="z9a-c3-adT" secondAttribute="bottom" constant="10" id="AVN-Bb-rWf"/>
+                <constraint firstAttribute="bottom" secondItem="1h4-B6-2Bs" secondAttribute="bottom" constant="10" id="E3O-0v-L7D"/>
                 <constraint firstItem="hmP-3q-MaI" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="Icu-R4-ZeL"/>
                 <constraint firstItem="fmw-Da-Jj0" firstAttribute="top" secondItem="E22-MH-DYK" secondAttribute="bottom" constant="5" id="NLQ-dB-6rT"/>
                 <constraint firstItem="hmP-3q-MaI" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="top" constant="10" id="ONd-z9-ORm"/>
@@ -89,7 +90,6 @@
                 <constraint firstAttribute="bottom" secondItem="hmP-3q-MaI" secondAttribute="bottom" constant="10" id="meF-kt-jyU"/>
                 <constraint firstItem="z9a-c3-adT" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="top" constant="10" id="sfv-AR-La5"/>
                 <constraint firstItem="1h4-B6-2Bs" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="ujg-Fg-6UL"/>
-                <constraint firstItem="1h4-B6-2Bs" firstAttribute="bottom" secondItem="hmP-3q-MaI" secondAttribute="bottom" constant="10" id="vxS-Ur-TNw"/>
             </constraints>
             <point key="canvasLocation" x="250" y="-402"/>
         </view>
