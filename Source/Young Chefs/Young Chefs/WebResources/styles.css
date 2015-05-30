@@ -21,6 +21,24 @@ body {
     background-color: #efefef;
 }
 
+p {
+	font-size: 13pt;
+	margin-bottom: 12px;
+}
+
+b {
+	font-weight: inherit;
+	font-style: normal;
+	color: #b70000;
+}
+
+.debug {
+	color: darkorchid;
+	font-weight: 900;
+}
+
+/* Tables */
+
 table {
     width: 100%;
     border: 2px solid black;
@@ -33,25 +51,17 @@ th, td {
     padding: 5px;
 }
 
-p {
-	font-size: 13pt;
-	margin-bottom: 12px;
-}
+
+/* Callouts */
 
 .callout {
 	padding: 20px;
 	background-color: #ffffff;
 }
 
-b {
-	font-weight: inherit;
-	font-style: normal;
-	color: #b70000;
-}
-
-.debug {
-	color: darkorchid;
-	font-weight: 900;
+.callout :nth-child(1)::before {
+	content: "∨";
+	float: right;
 }
 
 /* Steps (ordered lists) */
@@ -95,11 +105,6 @@ ol.steps p {
     text-align: right;
 	width: 48%;
 	float: right;
-}
-
-/* If the next button is the only one, make it big*/
-.next:nth-child(1) {
-	width: 100%;
 }
 
 .back {

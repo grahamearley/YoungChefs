@@ -80,7 +80,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
 	//Used as a callback to save contents
 	func notebookViewControllerWillDismiss(aNotebook: Notebook) {
-		self.experiment.saveToFile()
+		self.experiment.asyncSaveToFile()
 	}
 	
 	///Progress to the next screen in the experiment if it exists
@@ -91,7 +91,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 			experiment.progressIndex++
 			self.screenView.loadScreen(self.experiment.currentScreen)
 		}
-		experiment.saveToFile()
+		experiment.asyncSaveToFile()
 	}
 	
 	///Progress to the previous screen in the experiment if it exists
@@ -102,7 +102,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 			experiment.progressIndex--
 			self.screenView.loadScreen(self.experiment.currentScreen)
 		}
-		experiment.saveToFile()
+		experiment.asyncSaveToFile()
 	}
 	
 	///Binds a given response key to an associated value for use later

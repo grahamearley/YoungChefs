@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import WebKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+		
+		WKWebView.clearTempContext()	//ensure that our recent changes to the css/html are sent
+		
 		return true
 	}
 
@@ -42,7 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func applicationWillTerminate(application: UIApplication) {
-		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:
+		
+		//save the current experiment if one is open
+		if let vc = self.window?.rootViewController as? ExperimentViewController {
+			vc.experiment.saveToFile()
+		}
 	}
 
 

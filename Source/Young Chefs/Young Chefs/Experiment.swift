@@ -21,6 +21,7 @@ All required resources must be defined in the Experiment's manifest .plist file.
 
 import UIKit
 import WebKit
+import Dispatch
 
 @objc class Experiment : NSObject, NSCoding {
 	
@@ -126,16 +127,29 @@ import WebKit
 	}
 	
 	///Saves the object to a unique file inside the app Documents directory.
-	///Returns a Bool indicating its success.
-	func saveToFile() -> Bool {
+	///Use `asyncSaveToFile` in almost all cases to preserve speed.
+	func saveToFile() {
 		let fileName = "\(self.name).chef"
 		let directories = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.AllDomainsMask)
 		if let selectedDirectory = directories[0] as? NSURL {
 			if let filePath = selectedDirectory.URLByAppendingPathComponent(fileName).path {
-				return NSKeyedArchiver.archiveRootObject(self, toFile: filePath)
+				NSKeyedArchiver.archiveRootObject(self, toFile: filePath)
 			}
 		}
-		return false
+	}
+	
+	var currentlySavingAsync = false	//used as a blocker for multiple save calls at once
+	///Saves the object to a unique file inside the app Documents directory asyncronously.
+	func asyncSaveToFile() {
+		if self.currentlySavingAsync {
+			return
+		} else {
+			self.currentlySavingAsync = true
+			dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)) {
+				self.saveToFile()				//do the save...(this call is synced to this task)
+				self.currentlySavingAsync = false	//allow upcoming saves
+			}
+		}
 	}
 	
 }

@@ -1,6 +1,25 @@
+/*
+// Enhancement Functionality
+*/
+
 $(function() {
 	FastClick.attach(document.body);	//inits fast click on all web contents
 });
+
+$(document).ready(function() {
+	
+	$(".callout").click(function() {
+		$(this).find(".slide").slideToggle("fast","swing");
+	});
+	$(".callout .slide").css("display","none");
+	
+});
+
+
+
+/*
+// JavaSwift Functionality
+*/
 
 $(document).ready(function() {
 	
@@ -17,7 +36,7 @@ $(document).ready(function() {
 		var commandMessage = {"command":"backButton"};
 		window.webkit.messageHandlers.javaSwift.postMessage(commandMessage);
 	});
-	
+		
 	$(".input").bind("input propertychange", function() {
 		var field = $(this);
 		
