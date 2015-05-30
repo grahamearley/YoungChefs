@@ -27,6 +27,9 @@ protocol NotebookDelegate {
 }
 
 class NotebookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    let RESPONSE_TABLE_HEADER_HEIGHT = CGFloat(50)
+    let RESPONSE_TABLE_INDENTATION_LEVEL = 2
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
@@ -39,7 +42,9 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var fullscreenImageView: UIImageView!
     
     // TEST:
-    var responseDictionary: [String : String] = ["Q1":"A1", "Q3":"A3", "Q2":"A2", "Q4":"hi"]
+    var questionTextForQuestionKeys: [String : String] = ["question_observations":"What observations did you make?", "question_compareCookies":"How did your second cookie compare to the first? And this is a loooong question!!", "question_Hypothesis":"What hypothesis did you form about all these 🍪s?", "question_dependentVariable":"What is your dependent variable?"]
+    
+    var responsesForQuestionKeys: [String : String] = ["question_observations":"I observed all sorts of stuff and yay I love cookies wow", "question_compareCookies":"Cookies are comparable, and they are delicious", "question_Hypothesis":"I think cookies are good because I like them", "question_dependentVariable":"I depend on cookies to live"]
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -50,7 +55,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
             self.imageSourceType = .Camera
         }
         
-        keysForQuestionsAnswered = ["Q1", "Q3", "Q4"]
+        keysForQuestionsAnswered = ["question_observations", "question_compareCookies", "question_dependentVariable"]
         
 		super.init(nibName: "NotebookView", bundle: nil)
 	}
@@ -80,6 +85,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         
         // Table view:
         self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "headerCell")
         
 	}
 	
@@ -150,20 +156,52 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
             }
     }
     
-    // MARK: UITableViewDataSource
+    // MARK: UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.keysForQuestionsAnswered.count
+        // This table's sections correspond to a question (the header) and the response (the body text). Each question has only one response, so each section has only one row.
+        return 1
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return keysForQuestionsAnswered.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.responseTable.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-                
-        let questionKey = self.keysForQuestionsAnswered[indexPath.row]
-        let questionText = self.responseDictionary[questionKey]
+        var cell = self.responseTable.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         
-        cell.textLabel?.text = questionText
+        // Get the questionKey (where the HTML form sends its data) for the current section:
+        let questionKey = self.keysForQuestionsAnswered[indexPath.section]
+        
+        // Get the response from that questionKey:
+        let responseText = self.responsesForQuestionKeys[questionKey]
+        
+        cell.textLabel?.text = responseText
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var  questionHeaderCell = self.responseTable.dequeueReusableCellWithIdentifier("headerCell") as! UITableViewCell
+        
+        // Headers are bold, have no line limit, and adjust to fit the frame.
+        questionHeaderCell.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        questionHeaderCell.textLabel?.numberOfLines = 0
+        questionHeaderCell.textLabel?.adjustsFontSizeToFitWidth = true
+        
+        let questionKey = self.keysForQuestionsAnswered[section]
+        let questionText = questionTextForQuestionKeys[questionKey]
+        
+        questionHeaderCell.textLabel?.text = questionText
+        
+        return questionHeaderCell
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return RESPONSE_TABLE_HEADER_HEIGHT
+    }
+    
+    func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
+        return RESPONSE_TABLE_INDENTATION_LEVEL
     }
 
 

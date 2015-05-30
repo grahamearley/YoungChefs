@@ -65,6 +65,7 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-B6-2Bs">
                     <rect key="frame" x="10" y="272" width="580" height="318"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.62012705180000005" green="0.16372938049999999" blue="0.024356332759999998" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="FTu-Ro-OoG"/>
                         <outlet property="delegate" destination="-1" id="jNX-ZP-AKW"/>
