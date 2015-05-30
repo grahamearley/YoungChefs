@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="fullscreenImageView" destination="hmP-3q-MaI" id="mM5-ww-9jm"/>
                 <outlet property="notebookPhotoCollectionView" destination="fmw-Da-Jj0" id="H0h-Rk-KDa"/>
+                <outlet property="responseTable" destination="1h4-B6-2Bs" id="T5n-M2-bmQ"/>
                 <outlet property="view" destination="lK3-w9-8Mo" id="WLi-MG-EYN"/>
             </connections>
         </placeholder>
@@ -27,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-MH-DYK">
-                    <rect key="frame" x="10" y="77.5" width="84" height="30"/>
+                    <rect key="frame" x="10" y="77" width="84" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="84" id="9VQ-AY-jUl"/>
                         <constraint firstAttribute="height" constant="30" id="Lcr-Us-kZS"/>
@@ -40,7 +41,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fmw-Da-Jj0">
-                    <rect key="frame" x="10" y="112.5" width="580" height="150"/>
+                    <rect key="frame" x="10" y="112" width="580" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="WOg-3A-Hjf"/>
@@ -56,11 +57,19 @@
                     </connections>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab Notebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-c3-adT">
-                    <rect key="frame" x="230.5" y="10" width="141.5" height="29"/>
+                    <rect key="frame" x="230" y="10" width="141.5" height="29"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-B6-2Bs">
+                    <rect key="frame" x="10" y="272" width="580" height="328"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FTu-Ro-OoG"/>
+                        <outlet property="delegate" destination="-1" id="jNX-ZP-AKW"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.75844381313131315" green="0.75511319357696205" blue="0.7374182641266892" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
             <constraints>
@@ -69,14 +78,18 @@
                 <constraint firstItem="hmP-3q-MaI" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="Icu-R4-ZeL"/>
                 <constraint firstItem="fmw-Da-Jj0" firstAttribute="top" secondItem="E22-MH-DYK" secondAttribute="bottom" constant="5" id="NLQ-dB-6rT"/>
                 <constraint firstItem="hmP-3q-MaI" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="top" constant="10" id="ONd-z9-ORm"/>
+                <constraint firstItem="1h4-B6-2Bs" firstAttribute="top" secondItem="fmw-Da-Jj0" secondAttribute="bottom" constant="10" id="QEE-W6-Jur"/>
                 <constraint firstItem="fmw-Da-Jj0" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="VDR-ld-J24"/>
                 <constraint firstItem="E22-MH-DYK" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="bVa-OR-2Rq"/>
                 <constraint firstAttribute="trailing" secondItem="hmP-3q-MaI" secondAttribute="trailing" constant="10" id="ch5-IJ-7Oh"/>
                 <constraint firstItem="D6o-Yo-v9b" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="eJw-m6-c9P"/>
                 <constraint firstAttribute="trailing" secondItem="fmw-Da-Jj0" secondAttribute="trailing" constant="10" id="ezN-aX-MLy"/>
+                <constraint firstAttribute="trailing" secondItem="1h4-B6-2Bs" secondAttribute="trailing" constant="10" id="grZ-YP-ESn"/>
                 <constraint firstItem="E22-MH-DYK" firstAttribute="top" secondItem="D6o-Yo-v9b" secondAttribute="bottom" constant="5" id="m3s-TD-5m9"/>
                 <constraint firstAttribute="bottom" secondItem="hmP-3q-MaI" secondAttribute="bottom" constant="10" id="meF-kt-jyU"/>
                 <constraint firstItem="z9a-c3-adT" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="top" constant="10" id="sfv-AR-La5"/>
+                <constraint firstItem="1h4-B6-2Bs" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="ujg-Fg-6UL"/>
+                <constraint firstItem="1h4-B6-2Bs" firstAttribute="bottom" secondItem="hmP-3q-MaI" secondAttribute="bottom" constant="10" id="vxS-Ur-TNw"/>
             </constraints>
             <point key="canvasLocation" x="250" y="-402"/>
         </view>

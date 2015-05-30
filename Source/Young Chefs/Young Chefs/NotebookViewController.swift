@@ -26,14 +26,18 @@ protocol NotebookDelegate {
 	func notebookViewControllerWillDismiss(aNotebook: Notebook)
 }
 
-class NotebookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class NotebookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
 	var delegate: NotebookDelegate?
 	
+    @IBOutlet weak var responseTable: UITableView!
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
     @IBOutlet weak var fullscreenImageView: UIImageView!
+    
+    // TEST:
+    var responseDictionary: [String : String] = ["Q1":"A1", "Q2":"A2", "Q3":"A2"]
 	
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -69,6 +73,10 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         notebookPhotoCollectionView.collectionViewLayout = layout
         notebookPhotoCollectionView.registerNib(UINib(nibName: NotebookPhotoCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
         notebookPhotoCollectionView.delegate = self
+        
+        // Table view:
+        self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
@@ -137,5 +145,23 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
                 fatalError("NotebookPhotoCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
             }
     }
+    
+    // MARK: UITableViewDataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.responseDictionary.keys.array.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("You selected cell #\(indexPath.row)!")
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.responseTable.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.responseDictionary.keys.array[indexPath.row]
+        
+        return cell
+    }
+
 
 }
