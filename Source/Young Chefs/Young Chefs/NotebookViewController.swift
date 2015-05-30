@@ -84,7 +84,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         notebookPhotoCollectionView.delegate = self
         
         // Table view:
-        self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "responseCell")
         self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "headerCell")
         
 	}
@@ -167,7 +167,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.responseTable.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        var responseCell = self.responseTable.dequeueReusableCellWithIdentifier("responseCell") as! UITableViewCell
         
         // Get the questionKey (where the HTML form sends its data) for the current section:
         let questionKey = self.keysForQuestionsAnswered[indexPath.section]
@@ -175,9 +175,8 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         // Get the response from that questionKey:
         let responseText = self.responsesForQuestionKeys[questionKey]
         
-        cell.textLabel?.text = responseText
-        
-        return cell
+        responseCell.textLabel?.text = responseText
+        return responseCell
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -192,7 +191,6 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         let questionText = questionTextForQuestionKeys[questionKey]
         
         questionHeaderCell.textLabel?.text = questionText
-        
         return questionHeaderCell
     }
     
