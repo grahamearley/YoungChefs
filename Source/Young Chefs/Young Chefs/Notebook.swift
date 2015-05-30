@@ -21,7 +21,6 @@ import UIKit
 
 @objc class Notebook : NSObject, NSCoding {
 	
-	var scribbleText : String?
 	var scribbleImages : [UIImage]
 	var responses : [String: String]
 	
@@ -33,18 +32,15 @@ import UIKit
 	
 	//MARK: - Save/Load
 	
-	private static let textKey = "text"
 	private static let imagesKey = "images"
 	private static let responsesKey = "key"
 	
 	func encodeWithCoder(encoder: NSCoder) {
-		encoder.encodeObject(self.scribbleText, forKey: Notebook.textKey)
 		encoder.encodeObject(self.scribbleImages, forKey: Notebook.imagesKey)
 		encoder.encodeObject(self.responses, forKey: Notebook.responsesKey)
 	}
 	
 	required init(coder decoder: NSCoder) {
-		self.scribbleText = decoder.decodeObjectForKey(Notebook.textKey) as? String
 		self.scribbleImages = decoder.decodeObjectForKey(Notebook.imagesKey) as! [UIImage]
 		self.responses = decoder.decodeObjectForKey(Notebook.responsesKey) as! [String: String]
 	}

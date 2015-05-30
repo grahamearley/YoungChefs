@@ -26,14 +26,13 @@ protocol NotebookDelegate {
 	func notebookViewControllerWillDismiss(aNotebook: Notebook)
 }
 
-class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class NotebookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
 	var delegate: NotebookDelegate?
 	
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
-	@IBOutlet weak var editText : UITextView!
     @IBOutlet weak var fullscreenImageView: UIImageView!
 	
 	init(notebook: Notebook) {
@@ -60,9 +59,6 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         let recognizer = UITapGestureRecognizer(target: self, action: Selector("hideFullScreenView:"))
         recognizer.numberOfTapsRequired = 1
         self.fullscreenImageView.addGestureRecognizer(recognizer)
-
-		editText.text = notebook.scribbleText
-		editText.delegate = self
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
@@ -102,13 +98,6 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         
 		self.presentViewController(picker, animated: true, completion: nil)
     }
-    
-	//MARK: UITextView Delegate
-	
-	func textViewDidChange(textView: UITextView) {
-		self.notebook.scribbleText = editText.text
-		self.delegate?.notebookContentDidChange(self.notebook)
-	}
     
     //MARK: UICollectionViewDelegate:
     
