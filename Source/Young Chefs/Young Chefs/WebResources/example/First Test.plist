@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AdditionalResources</key>
-	<string></string>
+	<array/>
 	<key>Screens</key>
 	<array>
 		<string>example-0</string>
