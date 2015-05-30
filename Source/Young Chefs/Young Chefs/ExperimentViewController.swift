@@ -107,10 +107,10 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
 	///Binds a given response key to an associated value for use later
 	func bindResponseKey(key: String, toValue value:String) {
-		self.experiment.notebook.responsesForQuestionKey[key] = value
+        self.experiment.notebook.responsesForQuestionKey[key] = value
         
-        // Record that this question has been answered
-        if !contains(self.experiment.notebook.keysForQuestionsAnswered, key) {
+        // If the question key hasn't already been stored AND the key has a corresponding question string (which it should, but we're covering edge cases!), record that this question has been answered
+        if !contains(self.experiment.notebook.keysForQuestionsAnswered, key) && contains(self.experiment.notebook.questionTextForQuestionKey.keys.array, key) {
             self.experiment.notebook.keysForQuestionsAnswered.append(key)
         }
 	}
