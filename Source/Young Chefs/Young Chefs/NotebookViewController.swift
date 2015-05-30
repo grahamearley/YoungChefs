@@ -30,6 +30,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     
     let RESPONSE_TABLE_HEADER_HEIGHT = CGFloat(50)
     let RESPONSE_TABLE_INDENTATION_LEVEL = 2
+    let QUESTION_HEADER_FONT_SIZE = CGFloat(20)
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
@@ -77,6 +78,10 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         // Table view:
         self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "responseCell")
         self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "headerCell")
+        
+        // Set table cells' height to auto-resize if there are long responses / lots of text:
+        self.responseTable.rowHeight = UITableViewAutomaticDimension
+        self.responseTable.estimatedRowHeight = 50
         
 	}
 	
@@ -158,7 +163,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var responseCell = self.responseTable.dequeueReusableCellWithIdentifier("responseCell") as! UITableViewCell
+        let responseCell = self.responseTable.dequeueReusableCellWithIdentifier("responseCell") as! UITableViewCell
         
         // Get the questionKey (where the HTML form sends its data) for the current section:
         let questionKey = self.notebook.keysForQuestionsAnswered[indexPath.section]
@@ -166,15 +171,17 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         // Get the response from that questionKey:
         let responseText = self.notebook.responsesForQuestionKey[questionKey]
         
+        responseCell.textLabel?.numberOfLines = 0 // No line limit
+        
         responseCell.textLabel?.text = responseText
         return responseCell
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var  questionHeaderCell = self.responseTable.dequeueReusableCellWithIdentifier("headerCell") as! UITableViewCell
+        var questionHeaderCell = self.responseTable.dequeueReusableCellWithIdentifier("headerCell") as! UITableViewCell
         
         // Headers are bold, have no line limit, and adjust to fit the frame.
-        questionHeaderCell.textLabel?.font = UIFont.boldSystemFontOfSize(20)
+        questionHeaderCell.textLabel?.font = UIFont.boldSystemFontOfSize(QUESTION_HEADER_FONT_SIZE)
         questionHeaderCell.textLabel?.numberOfLines = 0
         questionHeaderCell.textLabel?.adjustsFontSizeToFitWidth = true
         
@@ -192,6 +199,5 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
         return RESPONSE_TABLE_INDENTATION_LEVEL
     }
-
 
 }
