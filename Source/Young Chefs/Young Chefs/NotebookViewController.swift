@@ -35,17 +35,10 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     var imageSourceType: UIImagePickerControllerSourceType
 	var delegate: NotebookDelegate?
     
-    var keysForQuestionsAnswered : [String]
-	
     @IBOutlet weak var responseTable: UITableView!
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
     @IBOutlet weak var fullscreenImageView: UIImageView!
     
-    // TEST:
-    var questionTextForQuestionKeys: [String : String] = ["question_observations":"What observations did you make?", "question_compareCookies":"How did your second cookie compare to the first? And this is a loooong question!!", "question_Hypothesis":"What hypothesis did you form about all these 🍪s?", "question_dependentVariable":"What is your dependent variable?"]
-    
-    var responsesForQuestionKeys: [String : String] = ["question_observations":"I observed all sorts of stuff and yay I love cookies wow", "question_compareCookies":"Cookies are comparable, and they are delicious", "question_Hypothesis":"I think cookies are good because I like them", "question_dependentVariable":"I depend on cookies to live"]
-	
 	init(notebook: Notebook) {
 		self.notebook = notebook
         if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -54,8 +47,6 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         } else {
             self.imageSourceType = .Camera
         }
-        
-        keysForQuestionsAnswered = ["question_observations", "question_compareCookies", "question_dependentVariable"]
         
 		super.init(nibName: "NotebookView", bundle: nil)
 	}
@@ -163,17 +154,17 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return keysForQuestionsAnswered.count
+        return self.notebook.keysForQuestionsAnswered.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var responseCell = self.responseTable.dequeueReusableCellWithIdentifier("responseCell") as! UITableViewCell
         
         // Get the questionKey (where the HTML form sends its data) for the current section:
-        let questionKey = self.keysForQuestionsAnswered[indexPath.section]
+        let questionKey = self.notebook.keysForQuestionsAnswered[indexPath.section]
         
         // Get the response from that questionKey:
-        let responseText = self.responsesForQuestionKeys[questionKey]
+        let responseText = self.notebook.responsesForQuestionKey[questionKey]
         
         responseCell.textLabel?.text = responseText
         return responseCell
@@ -187,8 +178,8 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         questionHeaderCell.textLabel?.numberOfLines = 0
         questionHeaderCell.textLabel?.adjustsFontSizeToFitWidth = true
         
-        let questionKey = self.keysForQuestionsAnswered[section]
-        let questionText = questionTextForQuestionKeys[questionKey]
+        let questionKey = self.notebook.keysForQuestionsAnswered[section]
+        let questionText = self.notebook.questionTextForQuestionKey[questionKey]
         
         questionHeaderCell.textLabel?.text = questionText
         return questionHeaderCell

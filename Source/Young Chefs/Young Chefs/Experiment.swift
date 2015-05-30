@@ -101,6 +101,10 @@ import Dispatch
 			}
 			WKWebView.copyResourcesIntoTempContext(resURLs)
 		}
+        
+        if let questions = manifest["Questions"] as? [String: String] {
+            self.notebook.questionTextForQuestionKey = questions
+        }
 	}
 	
 	//MARK: - Save/Load
