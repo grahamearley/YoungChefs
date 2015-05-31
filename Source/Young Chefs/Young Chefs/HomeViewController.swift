@@ -120,6 +120,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 			if let experimentPreviewSender = sender as? HomeCollectionViewCell {
 				//init and bind an Experiment to the baby
 				destinationExperimentViewController.experiment = Experiment.experiment(experimentPreviewSender.titleLabel.text!)
+                destinationExperimentViewController.title = experimentPreviewSender.titleLabel.text
 			}
 		}
 	}
