@@ -26,16 +26,20 @@ protocol NotebookDelegate {
 	func notebookViewControllerWillDismiss(aNotebook: Notebook)
 }
 
-class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class NotebookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    let RESPONSE_TABLE_HEADER_HEIGHT = CGFloat(50)
+    let RESPONSE_TABLE_INDENTATION_LEVEL = 2
+    let QUESTION_HEADER_FONT_SIZE = CGFloat(20)
 
 	var notebook: Notebook
     var imageSourceType: UIImagePickerControllerSourceType
 	var delegate: NotebookDelegate?
-	
+    
+    @IBOutlet weak var responseTable: UITableView!
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
-	@IBOutlet weak var editText : UITextView!
     @IBOutlet weak var fullscreenImageView: UIImageView!
-	
+    
 	init(notebook: Notebook) {
 		self.notebook = notebook
         if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -60,9 +64,6 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         let recognizer = UITapGestureRecognizer(target: self, action: Selector("hideFullScreenView:"))
         recognizer.numberOfTapsRequired = 1
         self.fullscreenImageView.addGestureRecognizer(recognizer)
-
-		editText.text = notebook.scribbleText
-		editText.delegate = self
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
@@ -73,6 +74,15 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         notebookPhotoCollectionView.collectionViewLayout = layout
         notebookPhotoCollectionView.registerNib(UINib(nibName: NotebookPhotoCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
         notebookPhotoCollectionView.delegate = self
+        
+        // Table view:
+        self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "responseCell")
+        self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "headerCell")
+        
+        // Set table cells' height to auto-resize if there are long responses / lots of text:
+        self.responseTable.rowHeight = UITableViewAutomaticDimension
+        self.responseTable.estimatedRowHeight = 50
+        
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
@@ -102,13 +112,6 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
         
 		self.presentViewController(picker, animated: true, completion: nil)
     }
-    
-	//MARK: UITextView Delegate
-	
-	func textViewDidChange(textView: UITextView) {
-		self.notebook.scribbleText = editText.text
-		self.delegate?.notebookContentDidChange(self.notebook)
-	}
     
     //MARK: UICollectionViewDelegate:
     
@@ -147,6 +150,54 @@ class NotebookViewController: UIViewController, UITextViewDelegate, UIImagePicke
             } else {
                 fatalError("NotebookPhotoCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
             }
+    }
+    
+    // MARK: UITableView
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // This table's sections correspond to a question (the header) and the response (the body text). Each question has only one response, so each section has only one row.
+        return 1
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return self.notebook.keysForQuestionsAnswered.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let responseCell = self.responseTable.dequeueReusableCellWithIdentifier("responseCell") as! UITableViewCell
+        
+        // Get the questionKey (where the HTML form sends its data) for the current section:
+        let questionKey = self.notebook.keysForQuestionsAnswered[indexPath.section]
+        
+        // Get the response from that questionKey:
+        let responseText = self.notebook.responsesForQuestionKey[questionKey]
+        
+        responseCell.textLabel?.numberOfLines = 0 // No line limit
+        
+        responseCell.textLabel?.text = responseText
+        return responseCell
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var questionHeaderCell = self.responseTable.dequeueReusableCellWithIdentifier("headerCell") as! UITableViewCell
+        
+        // Headers are bold, have no line limit, and adjust to fit the frame.
+        questionHeaderCell.textLabel?.font = UIFont.boldSystemFontOfSize(QUESTION_HEADER_FONT_SIZE)
+        questionHeaderCell.textLabel?.numberOfLines = 0
+        questionHeaderCell.textLabel?.adjustsFontSizeToFitWidth = true
+        
+        let questionKey = self.notebook.keysForQuestionsAnswered[section]
+        let questionText = self.notebook.questionTextForQuestionKey[questionKey]
+        
+        questionHeaderCell.textLabel?.text = questionText
+        return questionHeaderCell
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return RESPONSE_TABLE_HEADER_HEIGHT
+    }
+    
+    func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
+        return RESPONSE_TABLE_INDENTATION_LEVEL
     }
 
 }

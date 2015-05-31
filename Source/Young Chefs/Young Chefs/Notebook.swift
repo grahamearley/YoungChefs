@@ -21,32 +21,38 @@ import UIKit
 
 @objc class Notebook : NSObject, NSCoding {
 	
-	var scribbleText : String?
 	var scribbleImages : [UIImage]
-	var responses : [String: String]
+	var responsesForQuestionKey : [String: String]
+    var questionTextForQuestionKey : [String: String]
+    var keysForQuestionsAnswered : [String]
 	
 	override init() {
 		scribbleImages = [UIImage]()
-		responses = [String: String]()
+		responsesForQuestionKey = [String: String]()
+        questionTextForQuestionKey = [String: String]()
+        keysForQuestionsAnswered = [String]()
 		super.init()
 	}
 	
 	//MARK: - Save/Load
 	
-	private static let textKey = "text"
 	private static let imagesKey = "images"
-	private static let responsesKey = "key"
+	private static let responsesKey = "responses"
+    private static let questionTextKey = "questions"
+    private static let keysForQuestionsAnsweredKey = "keys"
 	
 	func encodeWithCoder(encoder: NSCoder) {
-		encoder.encodeObject(self.scribbleText, forKey: Notebook.textKey)
 		encoder.encodeObject(self.scribbleImages, forKey: Notebook.imagesKey)
-		encoder.encodeObject(self.responses, forKey: Notebook.responsesKey)
+		encoder.encodeObject(self.responsesForQuestionKey, forKey: Notebook.responsesKey)
+        encoder.encodeObject(self.questionTextForQuestionKey, forKey: Notebook.questionTextKey)
+        encoder.encodeObject(self.keysForQuestionsAnswered, forKey: Notebook.keysForQuestionsAnsweredKey)
 	}
 	
 	required init(coder decoder: NSCoder) {
-		self.scribbleText = decoder.decodeObjectForKey(Notebook.textKey) as? String
 		self.scribbleImages = decoder.decodeObjectForKey(Notebook.imagesKey) as! [UIImage]
-		self.responses = decoder.decodeObjectForKey(Notebook.responsesKey) as! [String: String]
+		self.responsesForQuestionKey = decoder.decodeObjectForKey(Notebook.responsesKey) as! [String: String]
+        self.questionTextForQuestionKey = decoder.decodeObjectForKey(Notebook.questionTextKey) as! [String: String]
+        self.keysForQuestionsAnswered = decoder.decodeObjectForKey(Notebook.keysForQuestionsAnsweredKey) as! [String]
 	}
 	
 }
