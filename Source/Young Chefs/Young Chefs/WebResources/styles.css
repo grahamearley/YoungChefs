@@ -59,9 +59,10 @@ th, td {
 	background-color: #ffffff;
 }
 
-.callout :nth-child(1)::before {
+.callout:before {
 	content: "∨";
 	float: right;
+	font-size: 0.8em;
 }
 
 /* Steps (ordered lists) */
