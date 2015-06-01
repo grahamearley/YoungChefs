@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */ = {isa = PBXBuildFile; fileRef = CB16EF731B03D62A00A606A8 /* fastclick.js */; };
-		CB367DB21B14E2760071E103 /* demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB367DB11B14E2760071E103 /* demo.plist */; };
+		CB367DB21B14E2760071E103 /* Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB367DB11B14E2760071E103 /* Demo.plist */; };
 		CB71C2D91B13D6D500E23296 /* WKWebViewTempContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */; };
 		CB77E3AB1B03DCBD00F6A2DF /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */; };
 		CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */; };
@@ -39,7 +39,31 @@
 		CBA951511B09C20E006585CF /* demo-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951491B09C20E006585CF /* demo-5.html */; };
 		CBA951521B09C20E006585CF /* javaswift.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* javaswift.js */; };
 		CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */; };
-		D241D4C51B14D091000039CF /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D241D4BA1B14D091000039CF /* placeholder.jpg */; };
+		CBC374BA1B1BECA60026AA57 /* 1 choc diag.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A21B1BECA60026AA57 /* 1 choc diag.png */; };
+		CBC374BB1B1BECA60026AA57 /* 10 yum.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A31B1BECA60026AA57 /* 10 yum.png */; };
+		CBC374BC1B1BECA60026AA57 /* 11 chocklate.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A41B1BECA60026AA57 /* 11 chocklate.png */; };
+		CBC374BD1B1BECA60026AA57 /* 12 poo.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A51B1BECA60026AA57 /* 12 poo.png */; };
+		CBC374BE1B1BECA60026AA57 /* 13 wipe.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A61B1BECA60026AA57 /* 13 wipe.png */; };
+		CBC374BF1B1BECA60026AA57 /* 14 wash ur hands lol.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A71B1BECA60026AA57 /* 14 wash ur hands lol.png */; };
+		CBC374C01B1BECA60026AA57 /* 15 seriously geez.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A81B1BECA60026AA57 /* 15 seriously geez.png */; };
+		CBC374C11B1BECA60026AA57 /* 2 bowl yay.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A91B1BECA60026AA57 /* 2 bowl yay.png */; };
+		CBC374C21B1BECA60026AA57 /* 3 cutting stuff what.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374AA1B1BECA60026AA57 /* 3 cutting stuff what.png */; };
+		CBC374C31B1BECA60026AA57 /* 4 muddy stuff.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374AB1B1BECA60026AA57 /* 4 muddy stuff.png */; };
+		CBC374C41B1BECA60026AA57 /* 5 muddy handy guu.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374AC1B1BECA60026AA57 /* 5 muddy handy guu.png */; };
+		CBC374C51B1BECA60026AA57 /* 6 is that a bird.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374AD1B1BECA60026AA57 /* 6 is that a bird.png */; };
+		CBC374C61B1BECA60026AA57 /* 7 junebug.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374AE1B1BECA60026AA57 /* 7 junebug.png */; };
+		CBC374C71B1BECA60026AA57 /* 8 pow.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374AF1B1BECA60026AA57 /* 8 pow.png */; };
+		CBC374C81B1BECA60026AA57 /* 9 der.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B01B1BECA60026AA57 /* 9 der.png */; };
+		CBC374C91B1BECA60026AA57 /* Hot Tempered.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B11B1BECA60026AA57 /* Hot Tempered.plist */; };
+		CBC374CA1B1BECA60026AA57 /* hot-temp-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B21B1BECA60026AA57 /* hot-temp-0.html */; };
+		CBC374CB1B1BECA60026AA57 /* hot-temp-1.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B31B1BECA60026AA57 /* hot-temp-1.html */; };
+		CBC374CC1B1BECA60026AA57 /* hot-temp-2.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B41B1BECA60026AA57 /* hot-temp-2.html */; };
+		CBC374CD1B1BECA60026AA57 /* hot-temp-3.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B51B1BECA60026AA57 /* hot-temp-3.html */; };
+		CBC374CE1B1BECA60026AA57 /* hot-temp-4.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B61B1BECA60026AA57 /* hot-temp-4.html */; };
+		CBC374CF1B1BECA60026AA57 /* hot-temp-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B71B1BECA60026AA57 /* hot-temp-5.html */; };
+		CBC374D01B1BECA60026AA57 /* hot-temp-6.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B81B1BECA60026AA57 /* hot-temp-6.html */; };
+		CBC374D11B1BECA60026AA57 /* hot-temp-7.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC374B91B1BECA60026AA57 /* hot-temp-7.html */; };
+		CBC374D41B1BEE270026AA57 /* Hot Tempered.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374D31B1BEE270026AA57 /* Hot Tempered.png */; };
 		D241D4C61B14D091000039CF /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = D241D4BB1B14D091000039CF /* styles.css */; };
 		D241D4C71B14D091000039CF /* The Quest for the Perfect Cookie-0.html in Resources */ = {isa = PBXBuildFile; fileRef = D241D4BC1B14D091000039CF /* The Quest for the Perfect Cookie-0.html */; };
 		D241D4C81B14D091000039CF /* The Quest for the Perfect Cookie-1.html in Resources */ = {isa = PBXBuildFile; fileRef = D241D4BD1B14D091000039CF /* The Quest for the Perfect Cookie-1.html */; };
@@ -58,7 +82,7 @@
 		D279428B1B153B7000CD2CB8 /* sweeter.png in Resources */ = {isa = PBXBuildFile; fileRef = D27942851B153B7000CD2CB8 /* sweeter.png */; };
 		D279428D1B15413800CD2CB8 /* First Test.plist in Resources */ = {isa = PBXBuildFile; fileRef = D279428C1B15413800CD2CB8 /* First Test.plist */; };
 		D279428F1B15419200CD2CB8 /* First Test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D279428E1B15419200CD2CB8 /* First Test.jpg */; };
-		D27942911B1543B700CD2CB8 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D27942901B1543B700CD2CB8 /* demo.jpg */; };
+		D27942911B1543B700CD2CB8 /* Demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D27942901B1543B700CD2CB8 /* Demo.jpg */; };
 		D27FDE0F1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */; };
 		D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */; };
 		D293213A1B0A36BD002D3B0D /* default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D29321391B0A36BD002D3B0D /* default.jpg */; };
@@ -76,15 +100,15 @@
 
 /* Begin PBXFileReference section */
 		CB16EF731B03D62A00A606A8 /* fastclick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fastclick.js; sourceTree = "<group>"; };
-		CB367DB11B14E2760071E103 /* demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demo.plist; sourceTree = "<group>"; };
+		CB367DB11B14E2760071E103 /* Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demo.plist; sourceTree = "<group>"; };
 		CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewTempContextExtension.swift; sourceTree = "<group>"; };
 		CB77E3AA1B03DCBD00F6A2DF /* NotebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
 		CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookView.xib; sourceTree = "<group>"; };
 		CB8463EC1B03F28C002B59FD /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		CB8463EE1B03F532002B59FD /* ScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
 		CB8BB1A91B14ED880050718B /* The Quest for the Perfect Cookie.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "The Quest for the Perfect Cookie.plist"; path = "The Quest for the Perfect Cookie/The Quest for the Perfect Cookie.plist"; sourceTree = "<group>"; };
-		CB932ED21B04069500BC52EC /* example-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-2.html"; sourceTree = "<group>"; };
-		CB932ED41B04096E00BC52EC /* example-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-1.html"; sourceTree = "<group>"; };
+		CB932ED21B04069500BC52EC /* example-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "example-2.html"; path = "../First Test/example-2.html"; sourceTree = "<group>"; };
+		CB932ED41B04096E00BC52EC /* example-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "example-1.html"; path = "../First Test/example-1.html"; sourceTree = "<group>"; };
 		CB932ED61B040D9100BC52EC /* Notebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
 		CBA1261E1B03C368001C2488 /* Young Chefs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Young Chefs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA126221B03C368001C2488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +124,7 @@
 		CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.js"; sourceTree = "<group>"; };
-		CBA126561B03CD42001C2488 /* example-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "example-0.html"; sourceTree = "<group>"; };
+		CBA126561B03CD42001C2488 /* example-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "example-0.html"; path = "../First Test/example-0.html"; sourceTree = "<group>"; };
 		CBA1265D1B03CF62001C2488 /* Experiment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = experimentsDirectory.plist; sourceTree = "<group>"; };
 		CBA951441B09C20E006585CF /* demo-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-0.html"; sourceTree = "<group>"; };
@@ -111,7 +135,31 @@
 		CBA951491B09C20E006585CF /* demo-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-5.html"; sourceTree = "<group>"; };
 		CBA9514A1B09C20E006585CF /* javaswift.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javaswift.js; sourceTree = "<group>"; };
 		CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaSwift.swift; sourceTree = "<group>"; };
-		D241D4BA1B14D091000039CF /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = "The Quest for the Perfect Cookie/placeholder.jpg"; sourceTree = "<group>"; };
+		CBC374A21B1BECA60026AA57 /* 1 choc diag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1 choc diag.png"; sourceTree = "<group>"; };
+		CBC374A31B1BECA60026AA57 /* 10 yum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10 yum.png"; sourceTree = "<group>"; };
+		CBC374A41B1BECA60026AA57 /* 11 chocklate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11 chocklate.png"; sourceTree = "<group>"; };
+		CBC374A51B1BECA60026AA57 /* 12 poo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12 poo.png"; sourceTree = "<group>"; };
+		CBC374A61B1BECA60026AA57 /* 13 wipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13 wipe.png"; sourceTree = "<group>"; };
+		CBC374A71B1BECA60026AA57 /* 14 wash ur hands lol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14 wash ur hands lol.png"; sourceTree = "<group>"; };
+		CBC374A81B1BECA60026AA57 /* 15 seriously geez.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "15 seriously geez.png"; sourceTree = "<group>"; };
+		CBC374A91B1BECA60026AA57 /* 2 bowl yay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2 bowl yay.png"; sourceTree = "<group>"; };
+		CBC374AA1B1BECA60026AA57 /* 3 cutting stuff what.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3 cutting stuff what.png"; sourceTree = "<group>"; };
+		CBC374AB1B1BECA60026AA57 /* 4 muddy stuff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4 muddy stuff.png"; sourceTree = "<group>"; };
+		CBC374AC1B1BECA60026AA57 /* 5 muddy handy guu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5 muddy handy guu.png"; sourceTree = "<group>"; };
+		CBC374AD1B1BECA60026AA57 /* 6 is that a bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6 is that a bird.png"; sourceTree = "<group>"; };
+		CBC374AE1B1BECA60026AA57 /* 7 junebug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7 junebug.png"; sourceTree = "<group>"; };
+		CBC374AF1B1BECA60026AA57 /* 8 pow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8 pow.png"; sourceTree = "<group>"; };
+		CBC374B01B1BECA60026AA57 /* 9 der.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9 der.png"; sourceTree = "<group>"; };
+		CBC374B11B1BECA60026AA57 /* Hot Tempered.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Hot Tempered.plist"; sourceTree = "<group>"; };
+		CBC374B21B1BECA60026AA57 /* hot-temp-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-0.html"; sourceTree = "<group>"; };
+		CBC374B31B1BECA60026AA57 /* hot-temp-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-1.html"; sourceTree = "<group>"; };
+		CBC374B41B1BECA60026AA57 /* hot-temp-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-2.html"; sourceTree = "<group>"; };
+		CBC374B51B1BECA60026AA57 /* hot-temp-3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-3.html"; sourceTree = "<group>"; };
+		CBC374B61B1BECA60026AA57 /* hot-temp-4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-4.html"; sourceTree = "<group>"; };
+		CBC374B71B1BECA60026AA57 /* hot-temp-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-5.html"; sourceTree = "<group>"; };
+		CBC374B81B1BECA60026AA57 /* hot-temp-6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-6.html"; sourceTree = "<group>"; };
+		CBC374B91B1BECA60026AA57 /* hot-temp-7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "hot-temp-7.html"; sourceTree = "<group>"; };
+		CBC374D31B1BEE270026AA57 /* Hot Tempered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hot Tempered.png"; sourceTree = "<group>"; };
 		D241D4BB1B14D091000039CF /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		D241D4BC1B14D091000039CF /* The Quest for the Perfect Cookie-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "The Quest for the Perfect Cookie-0.html"; path = "The Quest for the Perfect Cookie/The Quest for the Perfect Cookie-0.html"; sourceTree = "<group>"; };
 		D241D4BD1B14D091000039CF /* The Quest for the Perfect Cookie-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "The Quest for the Perfect Cookie-1.html"; path = "The Quest for the Perfect Cookie/The Quest for the Perfect Cookie-1.html"; sourceTree = "<group>"; };
@@ -128,9 +176,9 @@
 		D27942831B153B7000CD2CB8 /* flatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flatter.png; path = "The Quest for the Perfect Cookie/flatter.png"; sourceTree = "<group>"; };
 		D27942841B153B7000CD2CB8 /* gooey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gooey.png; path = "The Quest for the Perfect Cookie/gooey.png"; sourceTree = "<group>"; };
 		D27942851B153B7000CD2CB8 /* sweeter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sweeter.png; path = "The Quest for the Perfect Cookie/sweeter.png"; sourceTree = "<group>"; };
-		D279428C1B15413800CD2CB8 /* First Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "First Test.plist"; sourceTree = "<group>"; };
-		D279428E1B15419200CD2CB8 /* First Test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "First Test.jpg"; sourceTree = "<group>"; };
-		D27942901B1543B700CD2CB8 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
+		D279428C1B15413800CD2CB8 /* First Test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "First Test.plist"; path = "../First Test/First Test.plist"; sourceTree = "<group>"; };
+		D279428E1B15419200CD2CB8 /* First Test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "First Test.jpg"; path = "../First Test/First Test.jpg"; sourceTree = "<group>"; };
+		D27942901B1543B700CD2CB8 /* Demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Demo.jpg; sourceTree = "<group>"; };
 		D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotebookPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		D29321391B0A36BD002D3B0D /* default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.jpg; path = WebResources/default.jpg; sourceTree = "<group>"; };
@@ -255,8 +303,9 @@
 				CBA207A51B0546B800440AE7 /* experimentsDirectory.plist */,
 				D241D4BB1B14D091000039CF /* styles.css */,
 				CBA9514A1B09C20E006585CF /* javaswift.js */,
+				CBC374A11B1BECA60026AA57 /* Hot Tempered */,
 				D241D4A31B14D065000039CF /* The Quest for the Perfect Cookie */,
-				CBA951431B09C20E006585CF /* demo */,
+				CBA951431B09C20E006585CF /* Demo */,
 				CBA126541B03CD42001C2488 /* First Test */,
 				CBA1264F1B03CCF1001C2488 /* jquery-2.1.4.js */,
 				CB16EF731B03D62A00A606A8 /* fastclick.js */,
@@ -273,15 +322,14 @@
 				D279428E1B15419200CD2CB8 /* First Test.jpg */,
 				D279428C1B15413800CD2CB8 /* First Test.plist */,
 			);
-			name = "First Test";
-			path = example;
+			path = "First Test";
 			sourceTree = "<group>";
 		};
-		CBA951431B09C20E006585CF /* demo */ = {
+		CBA951431B09C20E006585CF /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				CB367DB11B14E2760071E103 /* demo.plist */,
-				D27942901B1543B700CD2CB8 /* demo.jpg */,
+				CB367DB11B14E2760071E103 /* Demo.plist */,
+				D27942901B1543B700CD2CB8 /* Demo.jpg */,
 				CBA951441B09C20E006585CF /* demo-0.html */,
 				CBA951451B09C20E006585CF /* demo-1.html */,
 				CBA951461B09C20E006585CF /* demo-2.html */,
@@ -289,7 +337,47 @@
 				CBA951481B09C20E006585CF /* demo-4.html */,
 				CBA951491B09C20E006585CF /* demo-5.html */,
 			);
-			path = demo;
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		CBC374A11B1BECA60026AA57 /* Hot Tempered */ = {
+			isa = PBXGroup;
+			children = (
+				CBC374D21B1BEDE60026AA57 /* Hot Tempered Pics */,
+				CBC374B11B1BECA60026AA57 /* Hot Tempered.plist */,
+				CBC374D31B1BEE270026AA57 /* Hot Tempered.png */,
+				CBC374B21B1BECA60026AA57 /* hot-temp-0.html */,
+				CBC374B31B1BECA60026AA57 /* hot-temp-1.html */,
+				CBC374B41B1BECA60026AA57 /* hot-temp-2.html */,
+				CBC374B51B1BECA60026AA57 /* hot-temp-3.html */,
+				CBC374B61B1BECA60026AA57 /* hot-temp-4.html */,
+				CBC374B71B1BECA60026AA57 /* hot-temp-5.html */,
+				CBC374B81B1BECA60026AA57 /* hot-temp-6.html */,
+				CBC374B91B1BECA60026AA57 /* hot-temp-7.html */,
+			);
+			path = "Hot Tempered";
+			sourceTree = "<group>";
+		};
+		CBC374D21B1BEDE60026AA57 /* Hot Tempered Pics */ = {
+			isa = PBXGroup;
+			children = (
+				CBC374A21B1BECA60026AA57 /* 1 choc diag.png */,
+				CBC374A31B1BECA60026AA57 /* 10 yum.png */,
+				CBC374A41B1BECA60026AA57 /* 11 chocklate.png */,
+				CBC374A51B1BECA60026AA57 /* 12 poo.png */,
+				CBC374A61B1BECA60026AA57 /* 13 wipe.png */,
+				CBC374A71B1BECA60026AA57 /* 14 wash ur hands lol.png */,
+				CBC374A81B1BECA60026AA57 /* 15 seriously geez.png */,
+				CBC374A91B1BECA60026AA57 /* 2 bowl yay.png */,
+				CBC374AA1B1BECA60026AA57 /* 3 cutting stuff what.png */,
+				CBC374AB1B1BECA60026AA57 /* 4 muddy stuff.png */,
+				CBC374AC1B1BECA60026AA57 /* 5 muddy handy guu.png */,
+				CBC374AD1B1BECA60026AA57 /* 6 is that a bird.png */,
+				CBC374AE1B1BECA60026AA57 /* 7 junebug.png */,
+				CBC374AF1B1BECA60026AA57 /* 8 pow.png */,
+				CBC374B01B1BECA60026AA57 /* 9 der.png */,
+			);
+			name = "Hot Tempered Pics";
 			sourceTree = "<group>";
 		};
 		D241D4A31B14D065000039CF /* The Quest for the Perfect Cookie */ = {
@@ -297,7 +385,6 @@
 			children = (
 				D279427F1B153B6400CD2CB8 /* CookiePics */,
 				CB8BB1A91B14ED880050718B /* The Quest for the Perfect Cookie.plist */,
-				D241D4BA1B14D091000039CF /* placeholder.jpg */,
 				D241D4BC1B14D091000039CF /* The Quest for the Perfect Cookie-0.html */,
 				D241D4BD1B14D091000039CF /* The Quest for the Perfect Cookie-1.html */,
 				D241D4BE1B14D091000039CF /* The Quest for the Perfect Cookie-2.html */,
@@ -407,43 +494,67 @@
 			files = (
 				CBA951501B09C20E006585CF /* demo-4.html in Resources */,
 				CBA9514F1B09C20E006585CF /* demo-3.html in Resources */,
+				CBC374CF1B1BECA60026AA57 /* hot-temp-5.html in Resources */,
 				D293213A1B0A36BD002D3B0D /* default.jpg in Resources */,
 				D241D4CF1B14D091000039CF /* The Quest for the Perfect Cookie.jpg in Resources */,
 				CBA9514D1B09C20E006585CF /* demo-1.html in Resources */,
 				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
+				CBC374CB1B1BECA60026AA57 /* hot-temp-1.html in Resources */,
 				D241D4CD1B14D091000039CF /* The Quest for the Perfect Cookie-6.html in Resources */,
 				CBA951521B09C20E006585CF /* javaswift.js in Resources */,
+				CBC374BD1B1BECA60026AA57 /* 12 poo.png in Resources */,
+				CBC374CC1B1BECA60026AA57 /* hot-temp-2.html in Resources */,
 				CB8BB1AA1B14ED880050718B /* The Quest for the Perfect Cookie.plist in Resources */,
 				D241D4C81B14D091000039CF /* The Quest for the Perfect Cookie-1.html in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				D27942881B153B7000CD2CB8 /* crispier.png in Resources */,
+				CBC374D01B1BECA60026AA57 /* hot-temp-6.html in Resources */,
 				D241D4CA1B14D091000039CF /* The Quest for the Perfect Cookie-3.html in Resources */,
+				CBC374C01B1BECA60026AA57 /* 15 seriously geez.png in Resources */,
 				D27942861B153B7000CD2CB8 /* browner.png in Resources */,
 				CBA126291B03C368001C2488 /* Main.storyboard in Resources */,
-				CB367DB21B14E2760071E103 /* demo.plist in Resources */,
+				CBC374CA1B1BECA60026AA57 /* hot-temp-0.html in Resources */,
+				CBC374C91B1BECA60026AA57 /* Hot Tempered.plist in Resources */,
+				CB367DB21B14E2760071E103 /* Demo.plist in Resources */,
+				CBC374BE1B1BECA60026AA57 /* 13 wipe.png in Resources */,
+				CBC374C21B1BECA60026AA57 /* 3 cutting stuff what.png in Resources */,
+				CBC374C41B1BECA60026AA57 /* 5 muddy handy guu.png in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
+				CBC374D41B1BEE270026AA57 /* Hot Tempered.png in Resources */,
+				CBC374C51B1BECA60026AA57 /* 6 is that a bird.png in Resources */,
+				CBC374C11B1BECA60026AA57 /* 2 bowl yay.png in Resources */,
 				D241D4CE1B14D091000039CF /* The Quest for the Perfect Cookie-7.html in Resources */,
+				CBC374C31B1BECA60026AA57 /* 4 muddy stuff.png in Resources */,
+				CBC374CD1B1BECA60026AA57 /* hot-temp-3.html in Resources */,
 				D279428A1B153B7000CD2CB8 /* gooey.png in Resources */,
 				CBA126531B03CCF1001C2488 /* jquery-2.1.4.js in Resources */,
 				CBA1262E1B03C368001C2488 /* LaunchScreen.xib in Resources */,
 				CBA1262B1B03C368001C2488 /* Images.xcassets in Resources */,
 				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
 				D241D4C71B14D091000039CF /* The Quest for the Perfect Cookie-0.html in Resources */,
-				D27942911B1543B700CD2CB8 /* demo.jpg in Resources */,
+				D27942911B1543B700CD2CB8 /* Demo.jpg in Resources */,
 				CB932ED51B04096E00BC52EC /* example-1.html in Resources */,
 				D241D4C91B14D091000039CF /* The Quest for the Perfect Cookie-2.html in Resources */,
 				CBA9514C1B09C20E006585CF /* demo-0.html in Resources */,
 				D27942871B153B7000CD2CB8 /* cakey.png in Resources */,
+				CBC374BF1B1BECA60026AA57 /* 14 wash ur hands lol.png in Resources */,
+				CBC374C81B1BECA60026AA57 /* 9 der.png in Resources */,
+				CBC374BB1B1BECA60026AA57 /* 10 yum.png in Resources */,
+				CBC374CE1B1BECA60026AA57 /* hot-temp-4.html in Resources */,
+				CBC374BA1B1BECA60026AA57 /* 1 choc diag.png in Resources */,
 				D279428F1B15419200CD2CB8 /* First Test.jpg in Resources */,
 				CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */,
-				D241D4C51B14D091000039CF /* placeholder.jpg in Resources */,
 				D241D4CB1B14D091000039CF /* The Quest for the Perfect Cookie-4.html in Resources */,
 				D27942891B153B7000CD2CB8 /* flatter.png in Resources */,
 				CBA207A61B0546B800440AE7 /* experimentsDirectory.plist in Resources */,
+				CBC374C61B1BECA60026AA57 /* 7 junebug.png in Resources */,
 				CBA9514E1B09C20E006585CF /* demo-2.html in Resources */,
 				CBA1264A1B03C5DB001C2488 /* HomeCollectionViewCell.xib in Resources */,
 				D241D4C61B14D091000039CF /* styles.css in Resources */,
+				CBC374C71B1BECA60026AA57 /* 8 pow.png in Resources */,
+				CBC374D11B1BECA60026AA57 /* hot-temp-7.html in Resources */,
 				D279428D1B15413800CD2CB8 /* First Test.plist in Resources */,
+				CBC374BC1B1BECA60026AA57 /* 11 chocklate.png in Resources */,
 				D279428B1B153B7000CD2CB8 /* sweeter.png in Resources */,
 				D241D4CC1B14D091000039CF /* The Quest for the Perfect Cookie-5.html in Resources */,
 				CBA126591B03CD42001C2488 /* example-0.html in Resources */,
@@ -609,6 +720,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -621,6 +733,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
