@@ -39,6 +39,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var responseTable: UITableView!
     @IBOutlet weak var notebookPhotoCollectionView: UICollectionView!
     @IBOutlet weak var fullscreenImageView: UIImageView!
+	@IBOutlet weak var closeButton: UIButton!
     
 	init(notebook: Notebook) {
 		self.notebook = notebook
@@ -58,6 +59,11 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		// hide the close button if we're on an iPad
+		if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+			self.closeButton.removeFromSuperview()
+		}
         
         // This image view will be revealed only when the student taps a picture to enlarge it:
         self.fullscreenImageView.alpha = 0.0
@@ -87,6 +93,10 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
 	
 	override func viewWillDisappear(animated: Bool) {
 		self.delegate?.notebookViewControllerWillDismiss(self.notebook)
+	}
+	
+	@IBAction func onCloseButton(sender: UIButton) {
+		self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
     func imagePickerController(picker: UIImagePickerController,
