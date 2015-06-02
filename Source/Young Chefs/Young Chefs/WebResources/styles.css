@@ -59,9 +59,10 @@ th, td {
 	background-color: #ffffff;
 }
 
-.callout :nth-child(1)::before {
+.callout:before {
 	content: "∨";
 	float: right;
+	font-size: 0.8em;
 }
 
 /* Steps (ordered lists) */
@@ -172,6 +173,15 @@ ul li::before {
 }
 
 /* Images */
+
+img.content {
+	width: 100%;
+	max-width: 400px;
+}
+
+img.shadow {
+	box-shadow: 0px 0px 5px;
+}
 
 img.centerPic {
     width: 300px;

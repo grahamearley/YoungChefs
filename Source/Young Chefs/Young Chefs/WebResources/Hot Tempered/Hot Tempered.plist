@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Screens</key>
+	<array>
+		<string>hot-temp-0</string>
+		<string>hot-temp-1</string>
+		<string>hot-temp-2</string>
+		<string>hot-temp-3</string>
+		<string>hot-temp-4</string>
+		<string>hot-temp-5</string>
+		<string>hot-temp-6</string>
+		<string>hot-temp-7</string>
+	</array>
+	<key>AdditionalResources</key>
+	<array>
+		<string>1 choc diag.png</string>
+		<string>2 bowl yay.png</string>
+		<string>3 cutting stuff what.png</string>
+		<string>4 muddy stuff.png</string>
+		<string>5 muddy handy guu.png</string>
+		<string>6 is that a bird.png</string>
+		<string>7 junebug.png</string>
+		<string>8 pow.png</string>
+		<string>9 der.png</string>
+		<string>10 yum.png</string>
+		<string>11 chocklate.png</string>
+		<string>12 poo.png</string>
+		<string>13 wipe.png</string>
+		<string>14 wash ur hands lol.png</string>
+		<string>15 seriously geez.png</string>
+	</array>
+	<key>Questions</key>
+	<dict>
+		<key>question_likeAboutChocolate</key>
+		<string>Things I like about Chocolate</string>
+		<key>question_heatupChocolate</key>
+		<string>Hypothesis</string>
+		<key>question_sampleDifferences</key>
+		<string>Differences Between my Two Samples</string>
+	</dict>
+</dict>
+</plist>

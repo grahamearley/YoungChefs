@@ -45,7 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	func applicationWillTerminate(application: UIApplication) {
-		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:
+		
+		//save the current experiment if one is open
+		if let vc = self.window?.rootViewController as? ExperimentViewController {
+			vc.experiment.saveToFile()
+		}
 	}
 
 
