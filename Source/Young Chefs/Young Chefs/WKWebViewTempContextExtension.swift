@@ -11,7 +11,7 @@
 /**
 
 This extension provides a series of functions helpful in working around the
-`WKWebView` bug preventing content loading from non-server
+`WKWebView` bug preventing content loading from non-server source.
 
 The core principle is to copy web resources into the temporary directory, inside a `www`
 folder, "tricking" `WKWebView` into thinking it is loading from a server.
@@ -27,17 +27,18 @@ import WebKit
 
 extension WKWebView {
 	
-	///Clears out the `temp/www` context entirely.
+	/// Clears out the `temp/www` context entirely.
 	static func clearTempContext() {
 		let fileMgr = NSFileManager.defaultManager()
 		let tempPath = NSTemporaryDirectory().stringByAppendingPathComponent("www")
 		fileMgr.removeItemAtPath(tempPath, error: nil)
 	}
 	
-	///Copies a series of files to the `temp/www` context.
-	///
-	///Recommended use for items related to the HTML, but not loaded directly via a Screen
-	///such as CSS, JS, and image files.
+	/** 
+    Copies a series of files to the `temp/www` context.
+    Recommended use for items related to the HTML, but not loaded directly via a Screen
+	such as CSS, JS, and image files.
+    */
 	static func copyResourcesIntoTempContext(fileURLs: [NSURL?]) {
 		for file in fileURLs {
 			if file != nil {

@@ -39,6 +39,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		}
 		
 		// Ensure constant web resource files are copied into our temp context
+        //  (see WKWebViewTempContextExtension.swift for more explanation)
 		var constantWebRes = [NSURL?]()
 		constantWebRes.append(NSBundle.mainBundle().URLForResource("styles", withExtension: "css"))
 		constantWebRes.append(NSBundle.mainBundle().URLForResource("javaswift", withExtension: "js"))
@@ -117,8 +118,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	func bindResponseKey(key: String, toValue value:String) {
         self.experiment.notebook.responsesForQuestionKey[key] = value
         
-        // If the question key hasn't already been stored AND the key has a corresponding question string (which it should, but we're covering edge cases!), record that this question has been answered
-        if !contains(self.experiment.notebook.keysForQuestionsAnswered, key) && contains(self.experiment.notebook.questionTextForQuestionKey.keys.array, key) {
+        // If the question key hasn't already been stored AND the key has a corresponding question header (which it should, but we're covering edge cases!), record that this question has been answered
+        if !contains(self.experiment.notebook.keysForQuestionsAnswered, key) && contains(self.experiment.notebook.questionHeaderForQuestionKey.keys.array, key) {
             self.experiment.notebook.keysForQuestionsAnswered.append(key)
         }
 	}
