@@ -52,6 +52,7 @@
 		CBB0204D1B1D5DEA00C7D300 /* tofu3.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020471B1D5DEA00C7D300 /* tofu3.png */; };
 		CBB0204E1B1D5DEA00C7D300 /* tofu5.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020481B1D5DEA00C7D300 /* tofu5.png */; };
 		CBB0204F1B1D5DEA00C7D300 /* tofu6.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020491B1D5DEA00C7D300 /* tofu6.png */; };
+		CBB020511B1D5EE900C7D300 /* tofu4.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020501B1D5EE900C7D300 /* tofu4.png */; };
 		CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */; };
 		CBC374BA1B1BECA60026AA57 /* 1 choc diag.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A21B1BECA60026AA57 /* 1 choc diag.png */; };
 		CBC374BB1B1BECA60026AA57 /* 10 yum.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A31B1BECA60026AA57 /* 10 yum.png */; };
@@ -162,6 +163,7 @@
 		CBB020471B1D5DEA00C7D300 /* tofu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu3.png; sourceTree = "<group>"; };
 		CBB020481B1D5DEA00C7D300 /* tofu5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu5.png; sourceTree = "<group>"; };
 		CBB020491B1D5DEA00C7D300 /* tofu6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu6.png; sourceTree = "<group>"; };
+		CBB020501B1D5EE900C7D300 /* tofu4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu4.png; sourceTree = "<group>"; };
 		CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaSwift.swift; sourceTree = "<group>"; };
 		CBC374A21B1BECA60026AA57 /* 1 choc diag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1 choc diag.png"; sourceTree = "<group>"; };
 		CBC374A31B1BECA60026AA57 /* 10 yum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10 yum.png"; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				CBB020451B1D5DE900C7D300 /* tofu2-5.png */,
 				CBB020461B1D5DEA00C7D300 /* tofu2.png */,
 				CBB020471B1D5DEA00C7D300 /* tofu3.png */,
+				CBB020501B1D5EE900C7D300 /* tofu4.png */,
 				CBB020481B1D5DEA00C7D300 /* tofu5.png */,
 				CBB020491B1D5DEA00C7D300 /* tofu6.png */,
 			);
@@ -558,6 +561,7 @@
 				CBA9FE941B1D4AF3005C659A /* Marinating Madness-06.html in Resources */,
 				D241D4CF1B14D091000039CF /* The Quest for the Perfect Cookie.jpg in Resources */,
 				CBA9514D1B09C20E006585CF /* demo-1.html in Resources */,
+				CBB020511B1D5EE900C7D300 /* tofu4.png in Resources */,
 				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
 				CBB0204E1B1D5DEA00C7D300 /* tofu5.png in Resources */,
 				CBC374CB1B1BECA60026AA57 /* hot-temp-1.html in Resources */,
