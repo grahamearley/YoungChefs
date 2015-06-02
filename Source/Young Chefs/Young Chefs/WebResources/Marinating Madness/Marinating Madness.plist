@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AdditionalResources</key>
+	<array/>
+	<key>Questions</key>
+	<dict>
+		<key>question_foodTasteDifs</key>
+		<string>How does the food taste different after it was marinated?</string>
+		<key>question_hypothesis</key>
+		<string>Hypothesis</string>
+		<key>question_whathappenedM</key>
+		<string>What happens when meat is marinated?</string>
+		<key>question_observationsTofu</key>
+		<string>Similarities and Differences between Tofu</string>
+		<key>question_tofuLeftLonger</key>
+		<string>What happened when the tofu was marinating?</string>
+		<key>question_finalStir</key>
+		<string>Observations of First Stir Fry</string>
+		<key>question_observationsTofu2</key>
+		<string>Observations of Second Tofu</string>
+	</dict>
 	<key>Screens</key>
 	<array>
 		<string>Marinating Madness-0</string>
