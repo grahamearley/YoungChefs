@@ -4,6 +4,7 @@
 <dict>
 	<key>MainBundle</key>
 	<array>
+		<string>Marinating Madness</string>
 		<string>First Test</string>
 		<string>The Quest for the Perfect Cookie</string>
 		<string>Demo</string>
