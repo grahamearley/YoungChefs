@@ -3,7 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>AdditionalResources</key>
-	<array/>
+	<array>
+		<string>tofu.png</string>
+		<string>tofu2-5.png</string>
+		<string>tofu2.png</string>
+		<string>tofu3.png</string>
+		<string>tofu4.png</string>
+		<string>tofu5.png</string>
+		<string>tofu6.png</string>
+	</array>
 	<key>Questions</key>
 	<dict>
 		<key>question_foodTasteDifs</key>

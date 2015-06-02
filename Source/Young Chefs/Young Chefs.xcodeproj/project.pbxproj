@@ -38,13 +38,6 @@
 		CBA951501B09C20E006585CF /* demo-4.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951481B09C20E006585CF /* demo-4.html */; };
 		CBA951511B09C20E006585CF /* demo-5.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA951491B09C20E006585CF /* demo-5.html */; };
 		CBA951521B09C20E006585CF /* javaswift.js in Resources */ = {isa = PBXBuildFile; fileRef = CBA9514A1B09C20E006585CF /* javaswift.js */; };
-		CBA9FE871B1D4AF3005C659A /* Picture clipping 2.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE781B1D4AF3005C659A /* Picture clipping 2.pictClipping */; };
-		CBA9FE881B1D4AF3005C659A /* Picture clipping 3.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE791B1D4AF3005C659A /* Picture clipping 3.pictClipping */; };
-		CBA9FE891B1D4AF3005C659A /* Picture clipping 4.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE7A1B1D4AF3005C659A /* Picture clipping 4.pictClipping */; };
-		CBA9FE8A1B1D4AF3005C659A /* Picture clipping 5.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE7B1B1D4AF3005C659A /* Picture clipping 5.pictClipping */; };
-		CBA9FE8B1B1D4AF3005C659A /* Picture clipping 6.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE7C1B1D4AF3005C659A /* Picture clipping 6.pictClipping */; };
-		CBA9FE8C1B1D4AF3005C659A /* Picture clipping 7.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE7D1B1D4AF3005C659A /* Picture clipping 7.pictClipping */; };
-		CBA9FE8D1B1D4AF3005C659A /* Picture clipping.pictClipping in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE7E1B1D4AF3005C659A /* Picture clipping.pictClipping */; };
 		CBA9FE8E1B1D4AF3005C659A /* Marinating Madness-0.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE7F1B1D4AF3005C659A /* Marinating Madness-0.html */; };
 		CBA9FE8F1B1D4AF3005C659A /* Marinating Madness-01.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE801B1D4AF3005C659A /* Marinating Madness-01.html */; };
 		CBA9FE901B1D4AF3005C659A /* Marinating Madness-02.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE811B1D4AF3005C659A /* Marinating Madness-02.html */; };
@@ -53,6 +46,12 @@
 		CBA9FE931B1D4AF3005C659A /* Marinating Madness-05.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE841B1D4AF3005C659A /* Marinating Madness-05.html */; };
 		CBA9FE941B1D4AF3005C659A /* Marinating Madness-06.html in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE851B1D4AF3005C659A /* Marinating Madness-06.html */; };
 		CBA9FE951B1D4AF3005C659A /* Marinating Madness.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBA9FE861B1D4AF3005C659A /* Marinating Madness.plist */; };
+		CBB0204A1B1D5DEA00C7D300 /* tofu.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020441B1D5DE900C7D300 /* tofu.png */; };
+		CBB0204B1B1D5DEA00C7D300 /* tofu2-5.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020451B1D5DE900C7D300 /* tofu2-5.png */; };
+		CBB0204C1B1D5DEA00C7D300 /* tofu2.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020461B1D5DEA00C7D300 /* tofu2.png */; };
+		CBB0204D1B1D5DEA00C7D300 /* tofu3.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020471B1D5DEA00C7D300 /* tofu3.png */; };
+		CBB0204E1B1D5DEA00C7D300 /* tofu5.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020481B1D5DEA00C7D300 /* tofu5.png */; };
+		CBB0204F1B1D5DEA00C7D300 /* tofu6.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB020491B1D5DEA00C7D300 /* tofu6.png */; };
 		CBBB7AC21B0D0ACE00704642 /* JavaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */; };
 		CBC374BA1B1BECA60026AA57 /* 1 choc diag.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A21B1BECA60026AA57 /* 1 choc diag.png */; };
 		CBC374BB1B1BECA60026AA57 /* 10 yum.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC374A31B1BECA60026AA57 /* 10 yum.png */; };
@@ -149,13 +148,6 @@
 		CBA951481B09C20E006585CF /* demo-4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-4.html"; sourceTree = "<group>"; };
 		CBA951491B09C20E006585CF /* demo-5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "demo-5.html"; sourceTree = "<group>"; };
 		CBA9514A1B09C20E006585CF /* javaswift.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = javaswift.js; sourceTree = "<group>"; };
-		CBA9FE781B1D4AF3005C659A /* Picture clipping 2.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping 2.pictClipping"; sourceTree = "<group>"; };
-		CBA9FE791B1D4AF3005C659A /* Picture clipping 3.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping 3.pictClipping"; sourceTree = "<group>"; };
-		CBA9FE7A1B1D4AF3005C659A /* Picture clipping 4.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping 4.pictClipping"; sourceTree = "<group>"; };
-		CBA9FE7B1B1D4AF3005C659A /* Picture clipping 5.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping 5.pictClipping"; sourceTree = "<group>"; };
-		CBA9FE7C1B1D4AF3005C659A /* Picture clipping 6.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping 6.pictClipping"; sourceTree = "<group>"; };
-		CBA9FE7D1B1D4AF3005C659A /* Picture clipping 7.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping 7.pictClipping"; sourceTree = "<group>"; };
-		CBA9FE7E1B1D4AF3005C659A /* Picture clipping.pictClipping */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Picture clipping.pictClipping"; sourceTree = "<group>"; };
 		CBA9FE7F1B1D4AF3005C659A /* Marinating Madness-0.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Marinating Madness-0.html"; sourceTree = "<group>"; };
 		CBA9FE801B1D4AF3005C659A /* Marinating Madness-01.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Marinating Madness-01.html"; sourceTree = "<group>"; };
 		CBA9FE811B1D4AF3005C659A /* Marinating Madness-02.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Marinating Madness-02.html"; sourceTree = "<group>"; };
@@ -164,6 +156,12 @@
 		CBA9FE841B1D4AF3005C659A /* Marinating Madness-05.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Marinating Madness-05.html"; sourceTree = "<group>"; };
 		CBA9FE851B1D4AF3005C659A /* Marinating Madness-06.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Marinating Madness-06.html"; sourceTree = "<group>"; };
 		CBA9FE861B1D4AF3005C659A /* Marinating Madness.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Marinating Madness.plist"; sourceTree = "<group>"; };
+		CBB020441B1D5DE900C7D300 /* tofu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu.png; sourceTree = "<group>"; };
+		CBB020451B1D5DE900C7D300 /* tofu2-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tofu2-5.png"; sourceTree = "<group>"; };
+		CBB020461B1D5DEA00C7D300 /* tofu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu2.png; sourceTree = "<group>"; };
+		CBB020471B1D5DEA00C7D300 /* tofu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu3.png; sourceTree = "<group>"; };
+		CBB020481B1D5DEA00C7D300 /* tofu5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu5.png; sourceTree = "<group>"; };
+		CBB020491B1D5DEA00C7D300 /* tofu6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tofu6.png; sourceTree = "<group>"; };
 		CBBB7AC11B0D0ACE00704642 /* JavaSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaSwift.swift; sourceTree = "<group>"; };
 		CBC374A21B1BECA60026AA57 /* 1 choc diag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1 choc diag.png"; sourceTree = "<group>"; };
 		CBC374A31B1BECA60026AA57 /* 10 yum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10 yum.png"; sourceTree = "<group>"; };
@@ -390,13 +388,12 @@
 		CBA9FE771B1D4AF3005C659A /* MarinadePics */ = {
 			isa = PBXGroup;
 			children = (
-				CBA9FE781B1D4AF3005C659A /* Picture clipping 2.pictClipping */,
-				CBA9FE791B1D4AF3005C659A /* Picture clipping 3.pictClipping */,
-				CBA9FE7A1B1D4AF3005C659A /* Picture clipping 4.pictClipping */,
-				CBA9FE7B1B1D4AF3005C659A /* Picture clipping 5.pictClipping */,
-				CBA9FE7C1B1D4AF3005C659A /* Picture clipping 6.pictClipping */,
-				CBA9FE7D1B1D4AF3005C659A /* Picture clipping 7.pictClipping */,
-				CBA9FE7E1B1D4AF3005C659A /* Picture clipping.pictClipping */,
+				CBB020441B1D5DE900C7D300 /* tofu.png */,
+				CBB020451B1D5DE900C7D300 /* tofu2-5.png */,
+				CBB020461B1D5DEA00C7D300 /* tofu2.png */,
+				CBB020471B1D5DEA00C7D300 /* tofu3.png */,
+				CBB020481B1D5DEA00C7D300 /* tofu5.png */,
+				CBB020491B1D5DEA00C7D300 /* tofu6.png */,
 			);
 			path = MarinadePics;
 			sourceTree = "<group>";
@@ -559,23 +556,22 @@
 				CBC374CF1B1BECA60026AA57 /* hot-temp-5.html in Resources */,
 				D293213A1B0A36BD002D3B0D /* default.jpg in Resources */,
 				CBA9FE941B1D4AF3005C659A /* Marinating Madness-06.html in Resources */,
-				CBA9FE8D1B1D4AF3005C659A /* Picture clipping.pictClipping in Resources */,
 				D241D4CF1B14D091000039CF /* The Quest for the Perfect Cookie.jpg in Resources */,
 				CBA9514D1B09C20E006585CF /* demo-1.html in Resources */,
-				CBA9FE8A1B1D4AF3005C659A /* Picture clipping 5.pictClipping in Resources */,
 				CBA951511B09C20E006585CF /* demo-5.html in Resources */,
+				CBB0204E1B1D5DEA00C7D300 /* tofu5.png in Resources */,
 				CBC374CB1B1BECA60026AA57 /* hot-temp-1.html in Resources */,
 				D241D4CD1B14D091000039CF /* The Quest for the Perfect Cookie-6.html in Resources */,
 				CBA951521B09C20E006585CF /* javaswift.js in Resources */,
 				CBC374BD1B1BECA60026AA57 /* 12 poo.png in Resources */,
 				CBC374CC1B1BECA60026AA57 /* hot-temp-2.html in Resources */,
-				CBA9FE881B1D4AF3005C659A /* Picture clipping 3.pictClipping in Resources */,
 				CB8BB1AA1B14ED880050718B /* The Quest for the Perfect Cookie.plist in Resources */,
 				D241D4C81B14D091000039CF /* The Quest for the Perfect Cookie-1.html in Resources */,
 				D27FDE101B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib in Resources */,
 				D27942881B153B7000CD2CB8 /* crispier.png in Resources */,
 				CBC374D01B1BECA60026AA57 /* hot-temp-6.html in Resources */,
 				CBA9FE8F1B1D4AF3005C659A /* Marinating Madness-01.html in Resources */,
+				CBB0204C1B1D5DEA00C7D300 /* tofu2.png in Resources */,
 				D241D4CA1B14D091000039CF /* The Quest for the Perfect Cookie-3.html in Resources */,
 				CBC374C01B1BECA60026AA57 /* 15 seriously geez.png in Resources */,
 				D27942861B153B7000CD2CB8 /* browner.png in Resources */,
@@ -583,8 +579,8 @@
 				CBC374CA1B1BECA60026AA57 /* hot-temp-0.html in Resources */,
 				CBC374C91B1BECA60026AA57 /* Hot Tempered.plist in Resources */,
 				CB367DB21B14E2760071E103 /* Demo.plist in Resources */,
-				CBA9FE8B1B1D4AF3005C659A /* Picture clipping 6.pictClipping in Resources */,
 				CBC374BE1B1BECA60026AA57 /* 13 wipe.png in Resources */,
+				CBB0204D1B1D5DEA00C7D300 /* tofu3.png in Resources */,
 				CBC374C21B1BECA60026AA57 /* 3 cutting stuff what.png in Resources */,
 				CBC374C41B1BECA60026AA57 /* 5 muddy handy guu.png in Resources */,
 				CB932ED31B04069500BC52EC /* example-2.html in Resources */,
@@ -601,11 +597,10 @@
 				CB16EF741B03D62A00A606A8 /* fastclick.js in Resources */,
 				D241D4C71B14D091000039CF /* The Quest for the Perfect Cookie-0.html in Resources */,
 				D27942911B1543B700CD2CB8 /* Demo.jpg in Resources */,
-				CBA9FE8C1B1D4AF3005C659A /* Picture clipping 7.pictClipping in Resources */,
 				CB932ED51B04096E00BC52EC /* example-1.html in Resources */,
+				CBB0204F1B1D5DEA00C7D300 /* tofu6.png in Resources */,
 				D241D4C91B14D091000039CF /* The Quest for the Perfect Cookie-2.html in Resources */,
 				CBA9514C1B09C20E006585CF /* demo-0.html in Resources */,
-				CBA9FE891B1D4AF3005C659A /* Picture clipping 4.pictClipping in Resources */,
 				D27942871B153B7000CD2CB8 /* cakey.png in Resources */,
 				CBC374BF1B1BECA60026AA57 /* 14 wash ur hands lol.png in Resources */,
 				CBC374C81B1BECA60026AA57 /* 9 der.png in Resources */,
@@ -615,6 +610,7 @@
 				D279428F1B15419200CD2CB8 /* First Test.jpg in Resources */,
 				CB77E3AD1B03DD1C00F6A2DF /* NotebookView.xib in Resources */,
 				CBA9FE931B1D4AF3005C659A /* Marinating Madness-05.html in Resources */,
+				CBB0204B1B1D5DEA00C7D300 /* tofu2-5.png in Resources */,
 				CBA9FE911B1D4AF3005C659A /* Marinating Madness-03.html in Resources */,
 				D241D4CB1B14D091000039CF /* The Quest for the Perfect Cookie-4.html in Resources */,
 				D27942891B153B7000CD2CB8 /* flatter.png in Resources */,
@@ -630,8 +626,8 @@
 				D279428D1B15413800CD2CB8 /* First Test.plist in Resources */,
 				CBA9FE951B1D4AF3005C659A /* Marinating Madness.plist in Resources */,
 				CBC374BC1B1BECA60026AA57 /* 11 chocklate.png in Resources */,
+				CBB0204A1B1D5DEA00C7D300 /* tofu.png in Resources */,
 				D279428B1B153B7000CD2CB8 /* sweeter.png in Resources */,
-				CBA9FE871B1D4AF3005C659A /* Picture clipping 2.pictClipping in Resources */,
 				D241D4CC1B14D091000039CF /* The Quest for the Perfect Cookie-5.html in Resources */,
 				CBA126591B03CD42001C2488 /* example-0.html in Resources */,
 			);
