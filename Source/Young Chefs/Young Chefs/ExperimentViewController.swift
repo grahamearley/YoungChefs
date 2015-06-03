@@ -102,7 +102,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		experiment.asyncSaveToFile()
 	}
 	
-	///Progress to the previous screen in the experiment if it exists
+	/// Progress to the previous screen in the experiment if it exists
 	func previousScreen() {
 		if experiment.progressIndex-1 < 0 {
 			// Cannot go backward
@@ -113,6 +113,15 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		}
 		experiment.asyncSaveToFile()
 	}
+    
+    /// Reset the experiment's stored data (user responses, photos, etc).
+    func resetExperiment() {
+        // TODO: Add alert, warning about losing all this info
+        self.experiment.notebook.images = [UIImage]()
+        self.experiment.notebook.keysForQuestionsAnswered = [String]()
+        self.experiment.notebook.responsesForQuestionKey = [String: String]()
+        self.experiment.progressIndex = 0
+    }
 	
 	/// Binds a given response key to an associated value for use later
 	func bindResponseKey(key: String, toValue value:String) {
@@ -145,6 +154,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 					onContentReady()
 				case .BindResponseKey:
 					self.bindResponseKey(sentData)
+                case .ResetExperiment:
+                    self.resetExperiment()
 				}
 			} else {
 				println("Err: command string '\(commandString)' not recognized.")
