@@ -114,13 +114,30 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		experiment.asyncSaveToFile()
 	}
     
-    /// Reset the experiment's stored data (user responses, photos, etc).
+    /// Reset the experiment's stored data (user responses, photos, etc), and go back to the first screen.
     func resetExperiment() {
-        // TODO: Add alert, warning about losing all this info
-        self.experiment.notebook.images = [UIImage]()
-        self.experiment.notebook.keysForQuestionsAnswered = [String]()
-        self.experiment.notebook.responsesForQuestionKey = [String: String]()
-        self.experiment.progressIndex = 0
+        let alertController = UIAlertController(title: "Are you sure", message: "Resetting will erase your responses and photos within this experiment. Do you want to continue?", preferredStyle: .Alert)
+        
+        let yesAction = UIAlertAction(title: "Reset", style: .Destructive) { (action) in
+            self.experiment.notebook.images = [UIImage]()
+            self.experiment.notebook.keysForQuestionsAnswered = [String]()
+            self.experiment.notebook.responsesForQuestionKey = [String: String]()
+            self.experiment.progressIndex = 0
+            
+            // Save the reset changes:
+            self.experiment.asyncSaveToFile()
+            
+            // Now reload the screen (to go to the first page):
+            self.screenView.loadScreen(self.experiment.currentScreen)
+        }
+        alertController.addAction(yesAction)
+        
+        let noAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // If the user cancels, don't do anything!
+        }
+        alertController.addAction(noAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 	
 	/// Binds a given response key to an associated value for use later
