@@ -153,6 +153,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	//MARK: - JavaSwift
 	
 	/** 
+    Parse a command from the HTML/Javascript, and execute a corresponding command in Swift.
+    
     Called whenever js posts a message to 'javaSwift'.
     Explicitly whenever js runs:
     'window.webkit.messageHandlers.javaSwift.postMessage(<message : NSDictionary>)'
