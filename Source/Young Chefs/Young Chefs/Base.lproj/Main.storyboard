@@ -32,12 +32,25 @@
                                     <outlet property="delegate" destination="PdW-xH-R2O" id="yN9-lI-Wj2"/>
                                 </connections>
                             </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIp-8f-ftc">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="About" id="zMJ-j5-Rft">
+                                        <connections>
+                                            <segue destination="TZD-S1-E1d" kind="show" id="2Rf-ex-6FC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZIp-8f-ftc" firstAttribute="trailing" secondItem="N8A-LN-Pmj" secondAttribute="trailing" id="A7U-fW-V0x"/>
                             <constraint firstItem="N8A-LN-Pmj" firstAttribute="leading" secondItem="bZd-L8-Sda" secondAttribute="leading" id="N7V-zT-ICT"/>
                             <constraint firstItem="N8A-LN-Pmj" firstAttribute="bottom" secondItem="rZu-ia-Zbc" secondAttribute="top" id="Tos-gO-85B"/>
+                            <constraint firstItem="ZIp-8f-ftc" firstAttribute="leading" secondItem="N8A-LN-Pmj" secondAttribute="leading" id="dKL-Va-lYa"/>
                             <constraint firstItem="N8A-LN-Pmj" firstAttribute="top" secondItem="efG-MP-0FI" secondAttribute="bottom" constant="-64" id="eCp-mo-FbV"/>
+                            <constraint firstItem="ZIp-8f-ftc" firstAttribute="bottom" secondItem="N8A-LN-Pmj" secondAttribute="bottom" id="xce-ir-eHL"/>
                             <constraint firstAttribute="trailing" secondItem="N8A-LN-Pmj" secondAttribute="trailing" id="zV5-rK-aCK"/>
                         </constraints>
                     </view>
@@ -50,6 +63,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5X-hL-a3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-397" y="353"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wf8-4i-QnN">
+            <objects>
+                <viewController id="TZD-S1-E1d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BqN-LY-OOa"/>
+                        <viewControllerLayoutGuide type="bottom" id="AtX-Yg-vYg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9qf-Q4-oj6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yc_logo" translatesAutoresizingMaskIntoConstraints="NO" id="e0h-aZ-bnh">
+                                <rect key="frame" x="26" y="74" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3RX-wZ-oIz"/>
+                                    <constraint firstAttribute="width" constant="250" id="ax4-qE-cPT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Young Chefs for iPad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyx-6b-0MS">
+                                <rect key="frame" x="286" y="185" width="288" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="yI8-Bg-MuR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxn-nW-4qc">
+                                <rect key="frame" x="26" y="349" width="548" height="61"/>
+                                <string key="text">Created by Charlie Imhoff, Graham Earley, and Julia Bindler for The Young Chefs Program. All experiments written by The Young Chefs Program.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iyx-6b-0MS" firstAttribute="leading" secondItem="e0h-aZ-bnh" secondAttribute="trailing" constant="10" id="4rz-Ql-3va"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iyx-6b-0MS" secondAttribute="trailing" constant="10" id="9QP-ha-Re5"/>
+                            <constraint firstItem="uxn-nW-4qc" firstAttribute="top" secondItem="e0h-aZ-bnh" secondAttribute="bottom" constant="25" id="D20-Cp-adV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uxn-nW-4qc" secondAttribute="trailing" constant="10" id="TFU-eo-y8T"/>
+                            <constraint firstItem="e0h-aZ-bnh" firstAttribute="top" secondItem="BqN-LY-OOa" secondAttribute="bottom" constant="10" id="kJH-CC-7N4"/>
+                            <constraint firstItem="iyx-6b-0MS" firstAttribute="centerY" secondItem="e0h-aZ-bnh" secondAttribute="centerY" constant="23.5" id="lOV-GA-kWU"/>
+                            <constraint firstItem="e0h-aZ-bnh" firstAttribute="leading" secondItem="9qf-Q4-oj6" secondAttribute="leadingMargin" constant="10" id="sgu-WA-VrI"/>
+                            <constraint firstItem="uxn-nW-4qc" firstAttribute="leading" secondItem="9qf-Q4-oj6" secondAttribute="leadingMargin" constant="10" id="yWl-gN-k6k"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqU-gO-M4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="1133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rPE-6X-eVd">
@@ -111,5 +177,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="yc_logo" width="404" height="405"/>
+    </resources>
     <color key="tintColor" red="0.62012705176767668" green="0.16372938047760552" blue="0.024356332760064599" alpha="1" colorSpace="calibratedRGB"/>
 </document>
