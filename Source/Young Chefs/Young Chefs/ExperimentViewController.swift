@@ -65,17 +65,33 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
     /// Present the notebook popover
 	@IBAction func onNotebookButton(sender: UIButton) {
-		let popoverViewController = NotebookViewController(notebook: experiment.notebook)
-		popoverViewController.delegate = self
-		popoverViewController.modalPresentationStyle = .Popover
-		let popover =  UIPopoverController(contentViewController: popoverViewController)
-		
-		// Set the size and present it
-		let popWidth = self.view.frame.size.width * notebookPopoverScreenRatios.0
-		let popHeight = self.view.frame.size.height * notebookPopoverScreenRatios.1
-		popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
-		let popRect = sender.frame
-		popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+		let device = UIDevice.currentDevice().userInterfaceIdiom
+		if device == .Pad {
+			//device is iPad, present notebook as a popover
+			let popoverViewController = NotebookViewController(notebook: experiment.notebook)
+			popoverViewController.delegate = self
+			popoverViewController.modalPresentationStyle = .Popover
+			let popover =  UIPopoverController(contentViewController: popoverViewController)
+			
+			//set the size and present it
+			let popWidth = self.view.frame.size.width * notebookPopoverScreenRatios.0
+			let popHeight = self.view.frame.size.height * notebookPopoverScreenRatios.1
+			popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
+			let popRect = sender.frame
+			popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+			
+			//set the opacity a tad lower for some nice transparency
+			popoverViewController.view.backgroundColor = UIColor(white: 1, alpha: 0.20)
+			
+		} else if device == .Phone {
+			//device is iPhone or iPod Touch, present notebook modally
+			let modalViewController = NotebookViewController(notebook: experiment.notebook)
+			modalViewController.delegate = self
+			modalViewController.modalPresentationStyle = .CurrentContext
+			modalViewController.modalTransitionStyle = .CoverVertical
+			self.presentViewController(modalViewController, animated: true, completion: nil)
+			return
+		}
 	}
 	
 	//MARK: - Experiment Interaction

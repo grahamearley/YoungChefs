@@ -33,10 +33,22 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
 		
         // Set up the collection view
-        let padding = CGFloat(40)
+		let padding : CGFloat
+		let itemSize : CGSize
+		switch UIDevice.currentDevice().userInterfaceIdiom {
+		case .Pad:
+			padding = 40
+			itemSize = HomeCollectionViewCell.defaultSize
+		case .Phone:
+			padding = 0
+			itemSize = CGSize(width: self.view.frame.size.width, height: HomeCollectionViewCell.defaultSize.height)
+		default:
+			padding = 20
+			itemSize = HomeCollectionViewCell.defaultSize
+		}
 		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 		layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-		layout.itemSize = HomeCollectionViewCell.defaultSize
+		layout.itemSize = itemSize
 		layout.minimumInteritemSpacing = padding
         layout.minimumLineSpacing = padding
 		
