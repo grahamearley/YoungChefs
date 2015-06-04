@@ -8,6 +8,7 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
+
 /**
 
 This extension provides a series of functions helpful in working around the
@@ -34,10 +35,10 @@ extension WKWebView {
 		fileMgr.removeItemAtPath(tempPath, error: nil)
 	}
 	
-	/** 
-    Copies a series of files to the `temp/www` context.
-    Recommended use for items related to the HTML, but not loaded directly via a Screen
-	such as CSS, JS, and image files.
+	/**
+	Copies a series of files to the `temp/www` context.
+	Recommended use for items related to the HTML, but not loaded directly via
+	a Screen such as CSS, JS, and image files.
     */
 	static func copyResourcesIntoTempContext(fileURLs: [NSURL?]) {
 		for file in fileURLs {
@@ -53,7 +54,7 @@ extension WKWebView {
 	In actuality, it *copies* the file into a temp directory and then loads it from there,
 	tricking `WKWebView` into thinking it's loading from a www server.
 	
-	:para: fileURL a URL in any context intended for copying to a `temp/www` context.
+	:param: fileURL a URL in any context intended for copying to a `temp/www` context.
 	:returns: the file as a URL in a `temp/www` context, loadable in a `WKWebView`
 	*/
 	static func convertURLToBugCompatibleURL(fileURL: NSURL) -> NSURL? {
@@ -75,7 +76,7 @@ extension WKWebView {
 	Source courtesy of nacho4d via StackOverflow:
 	http://stackoverflow.com/a/28676439
 	
-	:para: filePath a path in any context intended for copying to a `temp/www` context.
+	:param: filePath a path in any context intended for copying to a `temp/www` context.
 	:returns: the file as a path in a `temp/www` context, loadable in a `WKWebView`
 	*/
 	static func convertPathToBugCompatiblePath(filePath: String) -> String? {
