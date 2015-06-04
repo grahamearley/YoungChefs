@@ -41,7 +41,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 			itemSize = HomeCollectionViewCell.defaultSize
 		case .Phone:
 			padding = 0
-			itemSize = CGSize(width: self.view.frame.size.width, height: HomeCollectionViewCell.defaultSize.height)
+			itemSize = CGSize(width: self.view.frame.size.width, height: HomeCollectionViewCell.defaultSize.height + 50)
 		default:
 			padding = 20
 			itemSize = HomeCollectionViewCell.defaultSize
