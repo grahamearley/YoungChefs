@@ -36,6 +36,11 @@ $(document).ready(function() {
 		var commandMessage = {"command":"backButton"};
 		window.webkit.messageHandlers.javaSwift.postMessage(commandMessage);
 	});
+                  
+    $(".reset").click(function() {
+        var commandMessage = {"command":"resetButton"};
+        window.webkit.messageHandlers.javaSwift.postMessage(commandMessage);
+    });
 		
 	$(".input").bind("input propertychange", function() {
 		var field = $(this);
