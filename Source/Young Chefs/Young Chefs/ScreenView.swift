@@ -2,24 +2,19 @@
 //  ScreenView.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/13/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/**
-
-A subclass of WKWebView for rendering and interacting with Screens.
-
-Experiment pages are stored as HTML files, and this class presents them in a subview of the experiment view (in a smaller section).
-
-*/
 //
 
 import WebKit
 import UIKit
 
+/**
+ScreenView is a subclass of WKWebView for rendering and interacting with Screens.
+
+Experiment pages are stored as HTML files, and this class presents them in a subview of the experiment view (in a smaller section).
+*/
 class ScreenView : WKWebView {
 	
 	//MARK: - Screen Content

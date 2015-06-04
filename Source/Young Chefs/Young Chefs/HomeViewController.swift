@@ -2,22 +2,18 @@
 //  HomeViewController.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/13/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/**  
-
-This class controls the main homepage, which displays a collection of experiments the student can try.
-It loads experiments from the disk and sends the experiment's information to the Experiment view when an experiment is selected.
-
-*/
 //
 
 import UIKit
 
+/**
+HomeViewController controls the main homepage, which displays a collection of experiments the student can try.
+It loads experiments from the disk and sends the experiment's information to the
+Experiment view when an experiment is selected.
+*/
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
 	@IBOutlet var collectionView : UICollectionView!

@@ -1,3 +1,12 @@
+//
+//  javaswift.js
+//  Young Chefs
+//
+//  Julia Bindler
+//  Graham Earley
+//  Charlie Imhoff
+//
+
 /*
 // Enhancement Functionality
 */

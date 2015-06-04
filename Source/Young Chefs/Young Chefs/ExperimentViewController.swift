@@ -2,22 +2,19 @@
 //  ExperimentViewController.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/13/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/**
-
-This class controls the experiment view. It interacts with the experiment's webview screens and their Javascript ("javaSwift"). It also provides navigation controls by letting students move on to the next screen and by presenting the Notebook popover.
-
-*/
 //
 
 import UIKit
 import WebKit
 
+/**
+ExperimentViewController controls the experiment view. It interacts with the experiment's WKWebView Screens
+and their Javascript ("javaSwift"). It also provides navigation controls by letting students move 
+on to the next screen and by presenting the Notebook popover.
+*/
 class ExperimentViewController: UIViewController, WKScriptMessageHandler, NotebookDelegate {
 	
 	var experiment : Experiment!	//must be set externally before the storyboard presents this view

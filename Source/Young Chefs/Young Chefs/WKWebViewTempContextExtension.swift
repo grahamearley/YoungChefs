@@ -2,15 +2,17 @@
 //  WKWebViewTempContextExtension.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/25/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
+//
+//	Additional Credit :	nacho4d via StackOverflow
+//
+
+import Foundation
+import WebKit
 
 /**
-
 This extension provides a series of functions helpful in working around the
 `WKWebView` bug preventing content loading from non-server source.
 
@@ -19,13 +21,8 @@ folder, "tricking" `WKWebView` into thinking it is loading from a server.
 
 Documented Radar Post:		http://www.openradar.me/18039024
 Credit for Workaround:		nacho4d via StackOverflow:
-							http://stackoverflow.com/a/28676439
+http://stackoverflow.com/a/28676439
 */
-//
-
-import Foundation
-import WebKit
-
 extension WKWebView {
 	
 	/// Clears out the `temp/www` context entirely.

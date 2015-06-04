@@ -231,11 +231,11 @@
 		CB8463F21B03FECF002B59FD /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
 				CB8463EE1B03F532002B59FD /* ScreenView.swift */,
 				CB71C2D81B13D6D500E23296 /* WKWebViewTempContextExtension.swift */,
 				CBA126471B03C5DB001C2488 /* HomeCollectionViewCell.swift */,
 				CBA126481B03C5DB001C2488 /* HomeCollectionViewCell.xib */,
-				CB77E3AC1B03DD1C00F6A2DF /* NotebookView.xib */,
 				D27FDE0D1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.swift */,
 				D27FDE0E1B0789BA009C70E8 /* NotebookPhotoCollectionViewCell.xib */,
 			);

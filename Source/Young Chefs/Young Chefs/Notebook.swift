@@ -2,24 +2,18 @@
 //  Notebook.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/13/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/**
-
-The Notebook holds the information that is displayed in the notebook popover (photos, question responses, question headers).
-The notebook state is stored so that the student doesn't lose notes or responses after leaving the experiment.
-
-Not to be confused with NotebookView and NotebookViewController, which handle the display of this object's contents.
-
-*/
 //
 
 import UIKit
 
+/**
+Notebook holds the information that is displayed in the notebook popover (photos, question responses, question headers).
+
+Not to be confused with NotebookView and NotebookViewController, which handle the display of this object's contents.
+*/
 @objc class Notebook : NSObject, NSCoding {
 	
 	var images : [UIImage]

@@ -2,23 +2,13 @@
 //  NotebookViewController.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/13/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/**
-
-This class allows the student to take a picture (or load from gallery, if there is no camera), and it stores responses to questions asked throughout the experiment. It also presents the student's photos in a CollectionView.
-
-Notebook data is stored in the Notebook class.
-
-*/
-//
 
 import UIKit
 
+///Protocol for Notebooks to submit callbacks to other ViewControllers on events
 protocol NotebookDelegate {
 	
 	func notebookContentDidChange(aNotebook: Notebook)
@@ -26,6 +16,13 @@ protocol NotebookDelegate {
 	func notebookViewControllerWillDismiss(aNotebook: Notebook)
 }
 
+/**
+NotebookViewController allows the user to take a picture (or load from gallery, if there is no camera),
+and store responses to questions asked throughout the Experiment. NotebookViewController also presents
+the student's photos in a CollectionView.
+
+Not to be confused with Notebook, which stores the data.
+*/
 class NotebookViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     let RESPONSE_TABLE_HEADER_HEIGHT = CGFloat(50)

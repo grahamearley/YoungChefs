@@ -2,26 +2,21 @@
 //  Experiment.swift
 //  Young Chefs
 //
-//  Created by Charlie Imhoff on 5/13/15.
-//  Copyright (c) 2015 Young Chefs. All rights reserved.
-//
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/**
-
-This class initializes a new experiment by pulling html files from the main bundle and converting them into screens.
-
-All resource references are eventually copied to the temp/www context, so searching is not an option.
-All required resources must be defined in the Experiment's manifest .plist file.
-
-*/
 //
 
 import UIKit
 import WebKit
 import Dispatch
 
+/**
+Experiment pulls html files from the main bundle and converts them into Screens.
+Experiments also store various user data (some directly) other indirectly through the Notebook.
+
+All required resources must be defined in the Experiment's manifest .plist file.
+*/
 @objc class Experiment : NSObject, NSCoding {
 	
 	//MARK: - Fields
