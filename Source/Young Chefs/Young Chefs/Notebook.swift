@@ -50,10 +50,11 @@ import UIKit
 	}
 	
 	required init(coder decoder: NSCoder) {
-		self.images = decoder.decodeObjectForKey(Notebook.imagesKey) as! [UIImage]
-		self.responsesForQuestionKey = decoder.decodeObjectForKey(Notebook.responsesKey) as! [String: String]
-        self.questionHeaderForQuestionKey = decoder.decodeObjectForKey(Notebook.questionHeaderKey) as! [String: String]
-        self.keysForQuestionsAnswered = decoder.decodeObjectForKey(Notebook.keysForQuestionsAnsweredKey) as! [String]
+		//try to grab the values from coder requests, else init blank ones
+		self.images = decoder.decodeObjectForKey(Notebook.imagesKey) as? [UIImage] ?? [UIImage]()
+		self.responsesForQuestionKey = decoder.decodeObjectForKey(Notebook.responsesKey) as? [String: String] ?? [String: String]()
+		self.questionHeaderForQuestionKey = decoder.decodeObjectForKey(Notebook.questionHeaderKey) as? [String: String] ?? [String: String]()
+		self.keysForQuestionsAnswered = decoder.decodeObjectForKey(Notebook.keysForQuestionsAnsweredKey) as? [String] ?? [String]()
 	}
 	
 }

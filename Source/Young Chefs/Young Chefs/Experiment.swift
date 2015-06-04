@@ -137,8 +137,9 @@ import Dispatch
 	/// Decodes an Experiment with stored information, and synthesizes the [Screen] array
 	required init(coder decoder: NSCoder) {
 		self.name = decoder.decodeObjectForKey(Experiment.nameKey) as! String
-		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as! Notebook
-		self.progressIndex = decoder.decodeObjectForKey(Experiment.progressIndexKey) as! Int
+		self.notebook = decoder.decodeObjectForKey(Experiment.notebookKey) as? Notebook ?? Notebook()	//try to grab the value from coder, else init a fresh one
+		self.progressIndex = decoder.decodeObjectForKey(Experiment.progressIndexKey) as? Int ?? 0
+		
 		super.init()
 		self.loadResourcesFromManifest(manifestName: self.name)
 	}
