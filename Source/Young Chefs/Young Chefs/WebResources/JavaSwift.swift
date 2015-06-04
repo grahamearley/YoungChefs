@@ -20,5 +20,6 @@ enum JSCommand : NSString {
 	case PreviousScreen = "backButton"
 	case ContentReadyNotification = "contentIsReady"
 	case BindResponseKey = "bindResponseKey"
+    case ResetExperiment = "resetButton"
 
 }

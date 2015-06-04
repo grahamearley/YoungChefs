@@ -104,6 +104,16 @@ ol.steps p {
 	float: right;
 }
 
+.reset {
+    background-color: #9d0000;
+    color: #FFFFFF;
+    margin-top: 10pt;
+    padding: 10pt;
+    text-align: right;
+    width: 48%;
+    float: right;
+}
+
 .back {
 	background-color: #808080;
 	color: #FFFFFF;

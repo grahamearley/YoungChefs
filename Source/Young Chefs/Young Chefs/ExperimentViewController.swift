@@ -118,7 +118,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		experiment.asyncSaveToFile()
 	}
 	
-	///Progress to the previous screen in the experiment if it exists
+	/// Progress to the previous screen in the experiment if it exists
 	func previousScreen() {
 		if experiment.progressIndex-1 < 0 {
 			// Cannot go backward
@@ -129,6 +129,32 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		}
 		experiment.asyncSaveToFile()
 	}
+    
+    /// Reset the experiment's stored data (user responses, photos, etc), and go back to the first screen.
+    func resetExperiment() {
+        let alertController = UIAlertController(title: "Are you sure", message: "Resetting will erase your responses and photos within this experiment. Do you want to continue?", preferredStyle: .Alert)
+        
+        let yesAction = UIAlertAction(title: "Reset", style: .Destructive) { (action) in
+            self.experiment.notebook.images = [UIImage]()
+            self.experiment.notebook.keysForQuestionsAnswered = [String]()
+            self.experiment.notebook.responsesForQuestionKey = [String: String]()
+            self.experiment.progressIndex = 0
+            
+            // Save the reset changes:
+            self.experiment.asyncSaveToFile()
+            
+            // Now reload the screen (to go to the first page):
+            self.screenView.loadScreen(self.experiment.currentScreen)
+        }
+        alertController.addAction(yesAction)
+        
+        let noAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // If the user cancels, don't do anything!
+        }
+        alertController.addAction(noAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 	
 	/// Binds a given response key to an associated value for use later
 	func bindResponseKey(key: String, toValue value:String) {
@@ -143,6 +169,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	//MARK: - JavaSwift
 	
 	/** 
+    Parse a command from the HTML/Javascript, and execute a corresponding command in Swift.
+    
     Called whenever js posts a message to 'javaSwift'.
     Explicitly whenever js runs:
     'window.webkit.messageHandlers.javaSwift.postMessage(<message : NSDictionary>)'
@@ -161,6 +189,8 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 					onContentReady()
 				case .BindResponseKey:
 					self.bindResponseKey(sentData)
+                case .ResetExperiment:
+                    self.resetExperiment()
 				}
 			} else {
 				println("Err: command string '\(commandString)' not recognized.")
