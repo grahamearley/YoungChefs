@@ -8,9 +8,9 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/*
+/**
 
-This class allows the student to take notes and/or take a picture (or load from gallery, if there is no camera). It also presents the student's photos in a CollectionView.
+This class allows the student to take a picture (or load from gallery, if there is no camera), and it stores responses to questions asked throughout the experiment. It also presents the student's photos in a CollectionView.
 
 Notebook data is stored in the Notebook class.
 
@@ -71,17 +71,21 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         recognizer.numberOfTapsRequired = 1
         self.fullscreenImageView.addGestureRecognizer(recognizer)
         
+        // Set up the notebook photos collection view:
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
+        
+        let horizontalPadding = CGFloat(5)
+        let verticalPadding = CGFloat(2)
+
+        layout.sectionInset = UIEdgeInsets(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
         layout.itemSize = NotebookPhotoCollectionViewCell.defaultSize
         layout.scrollDirection = .Horizontal
-        layout.minimumInteritemSpacing = 0
         
         notebookPhotoCollectionView.collectionViewLayout = layout
         notebookPhotoCollectionView.registerNib(UINib(nibName: NotebookPhotoCollectionViewCell.xibName, bundle: nil), forCellWithReuseIdentifier: NotebookPhotoCollectionViewCell.REUSE_ID)
         notebookPhotoCollectionView.delegate = self
         
-        // Table view:
+        // Table view (for storing responses to questions):
         self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "responseCell")
         self.responseTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "headerCell")
         
@@ -102,11 +106,11 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let chosenImage: AnyObject? = info[UIImagePickerControllerOriginalImage]
-        self.notebook.scribbleImages.append(chosenImage as! UIImage)
+        self.notebook.images.append(chosenImage as! UIImage)
+        
         notebookPhotoCollectionView.reloadData()
 		self.delegate?.notebookContentDidChange(self.notebook)
         
-        // TODO: Test on physical device, see how this performs with Camera as the imageSource
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -120,13 +124,14 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         picker.allowsEditing = false
         picker.sourceType = self.imageSourceType
         
+        // This is a built-in view for picking/taking a photo
 		self.presentViewController(picker, animated: true, completion: nil)
     }
     
-    //MARK: UICollectionViewDelegate:
+    //MARK: - UICollectionViewDelegate:
     
+    /// When a student taps an image in their notebook, expand the image.
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // When a student taps an image in their notebook, expand the image.
         if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? NotebookPhotoCollectionViewCell {
             let selectedImage = selectedCell.imageView.image!
             self.fullscreenImageView.image = selectedImage
@@ -134,35 +139,38 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+    /// Fade the fullscreen image out if it's visible.
     func hideFullScreenView(sender: AnyObject) {
-        // Fade the fullscreen image out if it's visible.
         if self.fullscreenImageView.alpha == 1 {
             UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {self.fullscreenImageView.alpha = 0.0}, completion: nil)
         }
     }
     
-    //MARK: UICollectionViewDataSource:
+    //MARK: - UICollectionViewDataSource (for images):
     
     func collectionView(collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-            return self.notebook.scribbleImages.count
+            return self.notebook.images.count
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
+    /// Set up the image collection view cells
     func collectionView(collectionView: UICollectionView,
         cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
             if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(NotebookPhotoCollectionViewCell.REUSE_ID, forIndexPath: indexPath) as? NotebookPhotoCollectionViewCell {
-                cell.imageView.image = self.notebook.scribbleImages[indexPath.row]
+                // Fill the cell with its image
+                cell.imageView.image = self.notebook.images[indexPath.row]
                 return cell
             } else {
                 fatalError("NotebookPhotoCollectionViewCell failed to load from xib. Check REUSE_ID and Xib name in both code and IB.")
             }
     }
     
-    // MARK: UITableView
+    // MARK: - UITableView
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // This table's sections correspond to a question (the header) and the response (the body text). Each question has only one response, so each section has only one row.
         return 1
@@ -172,6 +180,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         return self.notebook.keysForQuestionsAnswered.count
     }
     
+    /// Set up the table cells
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let responseCell = self.responseTable.dequeueReusableCellWithIdentifier("responseCell") as! UITableViewCell
         
@@ -187,6 +196,7 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         return responseCell
     }
     
+    /// Add headers to the table (headers are the questions, whereas regular cells are the responses)
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var questionHeaderCell = self.responseTable.dequeueReusableCellWithIdentifier("headerCell") as! UITableViewCell
         
@@ -196,9 +206,9 @@ class NotebookViewController: UIViewController, UIImagePickerControllerDelegate,
         questionHeaderCell.textLabel?.adjustsFontSizeToFitWidth = true
         
         let questionKey = self.notebook.keysForQuestionsAnswered[section]
-        let questionText = self.notebook.questionTextForQuestionKey[questionKey]
+        let questionHeader = self.notebook.questionHeaderForQuestionKey[questionKey]
         
-        questionHeaderCell.textLabel?.text = questionText
+        questionHeaderCell.textLabel?.text = questionHeader
         return questionHeaderCell
     }
     

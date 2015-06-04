@@ -8,7 +8,7 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/*
+/**
 
 A collection view cell for the homepage. It stores the collection item's title and thumbnail image.
 

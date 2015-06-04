@@ -8,7 +8,7 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/*
+/**
 
 A simple class for holding an HTML screen for an experiment.
 

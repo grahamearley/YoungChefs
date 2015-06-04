@@ -8,7 +8,7 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/*
+/**
 
 A subclass of WKWebView for rendering and interacting with Screens.
 
@@ -22,10 +22,9 @@ import UIKit
 
 class ScreenView : WKWebView {
 	
-	//MARK:- Screen Content
+	//MARK: - Screen Content
 	
-	/// The currently displayed screen
-	/// (read-only)
+	/// The currently displayed screen (read-only)
 	private(set) var currentScreen : Screen
 	
 	/// Inits a new ScreenView with the specified frame, configuration, and screen
@@ -46,11 +45,12 @@ class ScreenView : WKWebView {
 		}
 	}
 	
-	//MARK:-JavaSwift
+	//MARK: - JavaSwift
 	
-	///Runs through the file and calls 'fillKeyedHTMLWithValue()' for each key in the responseKeys dictionary passed into it.
-	///
-	///This basically fills question boxes with previously answered values (such a situation exists on say,
+	/**
+    Runs through the file and calls 'fillKeyedHTMLWithValue()' for each key in the responseKeys dictionary passed into it.
+	This basically fills question boxes with previously answered values.
+    */
 	func fillKeyedHTMLWithValues(keysAndValues : [String:String]) {
 		for key in keysAndValues.keys {
 			if let value = keysAndValues[key] {
@@ -59,8 +59,7 @@ class ScreenView : WKWebView {
 		}
 	}
 	
-	/// Shorthand for evaluating a JavaScript string with no return value.
-	/// Prints errors to console.
+	/// Shorthand for evaluating a JavaScript string with no return value. Prints errors to console.
 	func evaluateJavaScriptNoReturn(javascript: String) {
 		self.evaluateJavaScript(javascript, completionHandler: { (returnedVal:AnyObject!, error:NSError?) -> Void in
 			if error != nil {

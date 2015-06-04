@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdditionalResources</key>
+	<array>
+		<string>tofu.png</string>
+		<string>tofu2-5.png</string>
+		<string>tofu2.png</string>
+		<string>tofu3.png</string>
+		<string>tofu4.png</string>
+		<string>tofu5.png</string>
+		<string>tofu6.png</string>
+	</array>
+	<key>Questions</key>
+	<dict>
+		<key>question_foodTasteDifs</key>
+		<string>How does the food taste different after it was marinated?</string>
+		<key>question_hypothesis</key>
+		<string>Hypothesis</string>
+		<key>question_whathappenedM</key>
+		<string>What happens when meat is marinated?</string>
+		<key>question_observationsTofu</key>
+		<string>Similarities and Differences between Tofu</string>
+		<key>question_tofuLeftLonger</key>
+		<string>What happened when the tofu was marinating?</string>
+		<key>question_finalStir</key>
+		<string>Observations of First Stir Fry</string>
+		<key>question_observationsTofu2</key>
+		<string>Observations of Second Tofu</string>
+	</dict>
+	<key>Screens</key>
+	<array>
+		<string>Marinating Madness-0</string>
+		<string>Marinating Madness-01</string>
+		<string>Marinating Madness-02</string>
+		<string>Marinating Madness-03</string>
+		<string>Marinating Madness-04</string>
+		<string>Marinating Madness-05</string>
+		<string>Marinating Madness-06</string>
+	</array>
+</dict>
+</plist>

@@ -8,7 +8,7 @@
 //  Julia Bindler
 //  Graham Earley
 //  Charlie Imhoff
-/*
+/**
 
 A collection view cell for the notebook popover view. It shows an image that the user has taken.
 

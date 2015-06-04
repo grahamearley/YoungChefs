@@ -1,15 +1,18 @@
-# Young Chefs for iPad #
+    __  __                           ________         ____
+    \ \/ /___  __  ______  ____ _   / ____/ /_  ___  / __/____
+     \  / __ \/ / / / __ \/ __ `/  / /   / __ \/ _ \/ /_/ ___/
+     / / /_/ / /_/ / / / / /_/ /  / /___/ / / /  __/ __(__  )
+    /_/\____/\__,_/_/ /_/\__, /   \____/_/ /_/\___/_/ /____/
+                        /____/
 
-A project for Carleton College's CS 342 Mobile App Development course, creating an iPad app for the [Young Chefs program](http://youngchefsprogram.org/). This repository contains source code, test code, and documents relevant to the project.
+**The Client:** Vayu Maini Rekdal and [Young Chefs](http://youngchefsprogram.org/)
 
-Currently, the app features two example experiments created by the developers. Actual classroom experiments are coming soon!
+**The Team:** Julia Bindler, Charlie Imhoff, Graham Earley
+
+This repository contains the Young Chefs iPad app, a project for Carleton College's CS 342 Mobile App Development course. Young Chefs is an after school program designed to teach students science through cooking experiments. Currently, the program is confined to the classroom. The goal of this app is to expand the program and increase the accessibility of the experiments. The app is also designed so that experiments can be loaded in easily and independent of Swift code (to do this, we utilize HTML and JavaScript). The app contains experiments written by Vayu Maini Rekdal. In the future, experiments could be pulled from the server, creating a sort of platform for science education through cooking.
 
 ## Running the source code:
 Load the `Source/YoungChefs` directory in Xcode.
 
-##### Created by:
-Julia Bindler
-
-Charlie Imhoff
-
-Graham Earley
+## For future developers:
+(Notes coming soon)
