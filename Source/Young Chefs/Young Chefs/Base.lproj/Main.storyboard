@@ -119,7 +119,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ISu-nO-GNG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.62012705180000005" green="0.16372938049999999" blue="0.024356332759999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VWI-Pm-2df">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.62012705176767668" green="0.16372938047760552" blue="0.024356332760064599" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="PdW-xH-R2O" kind="relationship" relationship="rootViewController" id="dV9-am-2fN"/>
                     </connections>

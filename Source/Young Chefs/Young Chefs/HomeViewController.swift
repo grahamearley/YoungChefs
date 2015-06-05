@@ -30,20 +30,24 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 		
         // Set up the collection view
 		let padding : CGFloat
+		let bottomPadding : CGFloat	//bottom needs extra padding to avoid clipping into toolbar
 		let itemSize : CGSize
 		switch UIDevice.currentDevice().userInterfaceIdiom {
 		case .Pad:
 			padding = 40
+			bottomPadding = 20
 			itemSize = HomeCollectionViewCell.defaultSize
 		case .Phone:
 			padding = 0
+			bottomPadding = 35
 			itemSize = CGSize(width: self.view.frame.size.width, height: HomeCollectionViewCell.defaultSize.height + 50)
 		default:
 			padding = 20
+			bottomPadding = 20
 			itemSize = HomeCollectionViewCell.defaultSize
 		}
 		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-		layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+		layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: bottomPadding, right: padding)
 		layout.itemSize = itemSize
 		layout.minimumInteritemSpacing = padding
         layout.minimumLineSpacing = padding

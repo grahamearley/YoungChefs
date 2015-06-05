@@ -49,7 +49,12 @@ class ScreenView : WKWebView {
 	func fillKeyedHTMLWithValues(keysAndValues : [String:String]) {
 		for key in keysAndValues.keys {
 			if let value = keysAndValues[key] {
-				self.evaluateJavaScriptNoReturn("fillKeyedHTMLWithValue(\"\(key)\",\"\(value)\");")
+				
+				//you have to escape newline characters twice, because they feed through the Swift (1 time)
+				//and then into the js (2ed time)
+				let cleanedVal = value.stringByReplacingOccurrencesOfString("\n", withString: "\\n", options: nil, range: nil)
+				
+				self.evaluateJavaScriptNoReturn("fillKeyedHTMLWithValue(\"\(key)\",\"\(cleanedVal)\");")
 			}
 		}
 	}
