@@ -6,39 +6,43 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="-19" width="480" height="562"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAW-GF-0mL">
-                    <rect key="frame" x="0.0" y="518" width="480" height="44"/>
-                    <items>
-                        <barButtonItem title="About" id="Lg6-DH-g03"/>
-                    </items>
-                    <color key="tintColor" red="0.62012705180000005" green="0.16372938049999999" blue="0.024356332759999998" alpha="1" colorSpace="calibratedRGB"/>
-                </toolbar>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWZ-kd-XA4">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
-                    <textAttributes key="titleTextAttributes">
-                        <color key="textColor" red="0.43931361610000003" green="0.11282017599999999" blue="0.01311680623" alpha="1" colorSpace="calibratedRGB"/>
-                    </textAttributes>
-                    <items>
-                        <navigationItem title="Young Chefs Experiments" id="1lS-I6-dhx"/>
-                    </items>
-                </navigationBar>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="qWZ-kd-XA4" secondAttribute="trailing" id="0UU-db-BRm"/>
-                <constraint firstItem="qWZ-kd-XA4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EMK-yO-6L3"/>
-                <constraint firstItem="qWZ-kd-XA4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ntk-MY-Dq3"/>
-                <constraint firstAttribute="bottom" secondItem="xAW-GF-0mL" secondAttribute="bottom" id="ZN4-rC-JHI"/>
-                <constraint firstItem="xAW-GF-0mL" firstAttribute="leading" secondItem="qWZ-kd-XA4" secondAttribute="leading" id="ibh-hC-OWQ"/>
-                <constraint firstItem="qWZ-kd-XA4" firstAttribute="trailing" secondItem="xAW-GF-0mL" secondAttribute="trailing" id="jDv-PD-IZv"/>
-            </constraints>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="414"/>
-        </view>
+        <navigationController id="Yva-ms-4RP">
+            <navigationBar key="navigationBar" contentMode="scaleToFill" id="jOV-uQ-3cC">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <textAttributes key="titleTextAttributes">
+                    <color key="textColor" red="0.62012705180000005" green="0.16372938049999999" blue="0.024356332759999998" alpha="1" colorSpace="calibratedRGB"/>
+                </textAttributes>
+            </navigationBar>
+            <viewControllers>
+                <viewController id="ay9-xI-bJR">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OQY-pZ-ZoX"/>
+                        <viewControllerLayoutGuide type="bottom" id="grM-Da-j83"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lum-Wf-gZg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-QQ-GKR">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="About" id="TiI-qc-2SW"/>
+                                </items>
+                                <color key="tintColor" red="0.62012705180000005" green="0.16372938049999999" blue="0.024356332759999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Yl-QQ-GKR" firstAttribute="bottom" secondItem="grM-Da-j83" secondAttribute="top" id="KQs-JV-6NX"/>
+                            <constraint firstItem="0Yl-QQ-GKR" firstAttribute="leading" secondItem="Lum-Wf-gZg" secondAttribute="leading" id="aj9-zv-n2Y"/>
+                            <constraint firstAttribute="trailing" secondItem="0Yl-QQ-GKR" secondAttribute="trailing" id="lay-7e-qFF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Young Chefs Experiments" id="hE8-qm-W5F"/>
+                </viewController>
+            </viewControllers>
+            <point key="canvasLocation" x="411" y="47"/>
+        </navigationController>
     </objects>
 </document>
