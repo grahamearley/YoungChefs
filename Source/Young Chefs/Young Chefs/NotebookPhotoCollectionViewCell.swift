@@ -17,6 +17,6 @@ class NotebookPhotoCollectionViewCell: UICollectionViewCell {
 	static let xibName = "NotebookPhotoCollectionViewCell"
 	static let defaultSize = CGSize(width: 140, height: 140)
 
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
 }

@@ -19,7 +19,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
 	var experiment : Experiment!	//must be set externally before the storyboard presents this view
 	
-	@IBOutlet var placeholderViewForWebview : UIView!
+	@IBOutlet weak var placeholderViewForWebview : UIView!
 	var screenView : ScreenView!
 	
 	//MARK: - Init

@@ -16,7 +16,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
 	static let xibName = "HomeCollectionViewCell"
 	static let defaultSize = CGSize(width: 200, height: 200)
 
-	@IBOutlet var titleLabel : UILabel!
-	@IBOutlet var imageView : UIImageView!
+	@IBOutlet weak var titleLabel : UILabel!
+	@IBOutlet weak var imageView : UIImageView!
 	
 }

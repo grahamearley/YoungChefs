@@ -16,7 +16,7 @@ Experiment view when an experiment is selected.
 */
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-	@IBOutlet var collectionView : UICollectionView!
+	@IBOutlet weak var collectionView : UICollectionView!
 	
 	/* 
     We dont want to actually initialize all the experiments for preview, because that could be a lot of screens, notebooks, and open file ports. Instead we load into memory just the names of all the possible experiments from our 'experimentsDirectory.plist' file. When a user actually selects an Experiment, we init it from the name before presenting the ExperimentViewController.
