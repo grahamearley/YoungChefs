@@ -19,7 +19,9 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
 	var experiment : Experiment!	//must be set externally before the storyboard presents this view
 	
-	@IBOutlet var placeholderViewForWebview : UIView!
+	@IBOutlet weak var placeholderViewForWebview : UIView!
+	@IBOutlet weak var notebookButton : UIBarButtonItem!
+	
 	var screenView : ScreenView!
 	
 	//MARK: - Init
@@ -57,11 +59,19 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
 	//MARK: - IBActions
 	
+	@IBAction func onNotebookButton(sender: UIBarButtonItem) {
+		self.presentNotebook()
+	}
+	
+	@IBAction func onShareButton(sender: UIBarButtonItem) {
+		self.presentSharesheet()
+	}
+	
 	/// The ratio of the space that the notebook should take up when it's displayed on screen
 	private let notebookPopoverScreenRatios = (CGFloat(0.8), CGFloat(0.75))
 	
-    /// Present the notebook popover
-	@IBAction func onNotebookButton(sender: UIButton) {
+	/// Present the Notebook popover
+	private func presentNotebook() {
 		let device = UIDevice.currentDevice().userInterfaceIdiom
 		if device == .Pad {
 			//device is iPad, present notebook as a popover
@@ -74,7 +84,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 			let popWidth = self.view.frame.size.width * notebookPopoverScreenRatios.0
 			let popHeight = self.view.frame.size.height * notebookPopoverScreenRatios.1
 			popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
-			let popRect = sender.frame
+			let popRect = (notebookButton.valueForKey("view") as! UIView).frame
 			popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
 			
 			//set the opacity a tad lower for some nice transparency
@@ -89,6 +99,35 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 			self.presentViewController(modalViewController, animated: true, completion: nil)
 			return
 		}
+	}
+	
+	/// Presents a share sheet for sharing the experiment
+	private func presentSharesheet() {
+		var sharingItems = [AnyObject]()
+		
+		//set our default share text
+		let text = "'\(self.experiment.name)' via Young Chefs"
+		sharingItems.append(text)
+		
+		//Get an image representation of the current Screen ---
+		//start an image capture of the screen at the device resolution
+		UIGraphicsBeginImageContextWithOptions(self.screenView.frame.size, true, 0.0)
+		
+		//render the screenView into the capture buffer
+		screenView.layer.renderInContext(UIGraphicsGetCurrentContext())
+		
+		//save the capture buffer and add it to the share
+		let image = UIGraphicsGetImageFromCurrentImageContext()
+		sharingItems.append(image)
+		
+		//close the context
+		UIGraphicsEndImageContext()
+		//---
+		
+		//present the share
+		let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+		activityViewController.excludedActivityTypes = [UIActivityTypeAssignToContact, UIActivityTypeAirDrop]
+		self.presentViewController(activityViewController, animated: true, completion: nil)
 	}
 	
 	//MARK: - Experiment Interaction

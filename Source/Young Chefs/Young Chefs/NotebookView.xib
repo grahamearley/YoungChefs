@@ -74,7 +74,7 @@
                     <gestureRecognizers/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ8-Vo-3E7">
-                    <rect key="frame" x="549" y="23" width="43" height="22"/>
+                    <rect key="frame" x="549" y="27" width="43" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="43" id="HwK-89-8eY"/>
                         <constraint firstAttribute="height" constant="22" id="Ssm-W6-t9q"/>
@@ -103,7 +103,7 @@
                 <constraint firstItem="lZ8-Vo-3E7" firstAttribute="trailing" secondItem="lK3-w9-8Mo" secondAttribute="trailingMargin" id="h61-jz-uov"/>
                 <constraint firstAttribute="bottom" secondItem="hmP-3q-MaI" secondAttribute="bottom" constant="10" id="meF-kt-jyU"/>
                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="I2m-Ur-Tqd" secondAttribute="trailing" constant="10" id="ndt-cF-2un"/>
-                <constraint firstItem="lZ8-Vo-3E7" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="topMargin" constant="15" id="pkU-8U-6MJ"/>
+                <constraint firstItem="lZ8-Vo-3E7" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="topMargin" constant="19" id="pkU-8U-6MJ"/>
                 <constraint firstItem="I2m-Ur-Tqd" firstAttribute="top" secondItem="fmw-Da-Jj0" secondAttribute="bottom" constant="10" id="rB1-K8-xcc"/>
                 <constraint firstItem="z9a-c3-adT" firstAttribute="top" secondItem="lK3-w9-8Mo" secondAttribute="top" constant="23" id="sfv-AR-La5"/>
                 <constraint firstItem="1h4-B6-2Bs" firstAttribute="leading" secondItem="lK3-w9-8Mo" secondAttribute="leading" constant="10" id="ujg-Fg-6UL"/>

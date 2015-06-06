@@ -148,30 +148,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxc-Ob-xyV" userLabel="WebView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-d0-Zcl">
-                                <rect key="frame" x="16" y="562" width="68" height="30"/>
-                                <state key="normal" title="Notebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onNotebookButton:" destination="daV-KR-Jzk" eventType="touchUpInside" id="b0G-4l-GQ1"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exM-6f-MFY">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Notebook" id="nK9-rd-yk4">
+                                        <connections>
+                                            <action selector="onNotebookButton:" destination="daV-KR-Jzk" id="2fL-B8-X2e"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="SLf-5B-6rd"/>
+                                    <barButtonItem systemItem="action" id="73n-Bm-54z">
+                                        <connections>
+                                            <action selector="onShareButton:" destination="daV-KR-Jzk" id="dzx-dQ-9Ye"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="wxc-Ob-xyV" secondAttribute="centerX" id="2Fz-VP-79M"/>
-                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="46" id="Fb0-jG-stZ"/>
+                            <constraint firstItem="exM-6f-MFY" firstAttribute="leading" secondItem="wxc-Ob-xyV" secondAttribute="leading" id="CCc-rt-6Hb"/>
+                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="wxc-Ob-xyV" secondAttribute="bottom" constant="44" id="Fb0-jG-stZ"/>
+                            <constraint firstItem="exM-6f-MFY" firstAttribute="bottom" secondItem="B1y-gN-AWb" secondAttribute="top" id="Jn7-mC-Eo8"/>
                             <constraint firstItem="wxc-Ob-xyV" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leading" id="MyV-b7-FjP"/>
+                            <constraint firstItem="exM-6f-MFY" firstAttribute="trailing" secondItem="wxc-Ob-xyV" secondAttribute="trailing" id="far-F1-aSZ"/>
                             <constraint firstItem="wxc-Ob-xyV" firstAttribute="top" secondItem="Ek6-by-B5E" secondAttribute="bottom" constant="-64" id="hDG-DV-apK"/>
-                            <constraint firstItem="u6E-d0-Zcl" firstAttribute="leading" secondItem="XvE-QF-jld" secondAttribute="leadingMargin" id="kFk-57-LTf"/>
-                            <constraint firstItem="B1y-gN-AWb" firstAttribute="top" secondItem="u6E-d0-Zcl" secondAttribute="bottom" constant="8" id="spL-HF-VkQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="notebookButton" destination="nK9-rd-yk4" id="8Qf-Q8-TCD"/>
                         <outlet property="placeholderViewForWebview" destination="wxc-Ob-xyV" id="rhf-XO-ll9"/>
                     </connections>
                 </viewController>
