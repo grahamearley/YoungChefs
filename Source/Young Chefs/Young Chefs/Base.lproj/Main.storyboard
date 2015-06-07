@@ -182,6 +182,7 @@
                     <connections>
                         <outlet property="notebookButton" destination="nK9-rd-yk4" id="8Qf-Q8-TCD"/>
                         <outlet property="placeholderViewForWebview" destination="wxc-Ob-xyV" id="rhf-XO-ll9"/>
+                        <outlet property="shareButton" destination="73n-Bm-54z" id="h1K-Zl-zQB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgd-gt-LTs" sceneMemberID="firstResponder"/>
