@@ -21,6 +21,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
 	@IBOutlet weak var placeholderViewForWebview : UIView!
 	@IBOutlet weak var notebookButton : UIBarButtonItem!
+	@IBOutlet weak var shareButton : UIBarButtonItem!
 	
 	var screenView : ScreenView!
 	
@@ -85,7 +86,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 			let popHeight = self.view.frame.size.height * notebookPopoverScreenRatios.1
 			popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
 			let popRect = (notebookButton.valueForKey("view") as! UIView).frame
-			popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+			popover.presentPopoverFromBarButtonItem(self.notebookButton, permittedArrowDirections: UIPopoverArrowDirection.Down, animated: true)
 			
 			// Set the opacity a tad lower for some nice transparency
 			popoverViewController.view.backgroundColor = UIColor(white: 1, alpha: 0.20)
@@ -126,6 +127,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 		
 		//present the share
 		let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+		activityViewController.popoverPresentationController?.barButtonItem = self.shareButton
 		activityViewController.excludedActivityTypes = [UIActivityTypeAssignToContact, UIActivityTypeAirDrop]
 		self.presentViewController(activityViewController, animated: true, completion: nil)
 	}
