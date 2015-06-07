@@ -1,4 +1,4 @@
-    __  __                           ________         ____
+__  __                           ________         ____
     \ \/ /___  __  ______  ____ _   / ____/ /_  ___  / __/____
      \  / __ \/ / / / __ \/ __ `/  / /   / __ \/ _ \/ /_/ ___/
      / / /_/ / /_/ / / / / /_/ /  / /___/ / / /  __/ __(__  )
@@ -19,3 +19,4 @@ Load the `Source/YoungChefs` directory in Xcode.
 ## For future developers:
 - All the features we aimed to implement are successfully implemented and functional in the app.
 - There is room in the code for server integration (pulling experiments from a server), and this is a feature that would be great to have before release.
+- See this repository's Issues tracker for stretch goals / enhancements /tasks that we brainstormed but didn't finish or start.
