@@ -11,8 +11,7 @@ import UIKit
 
 /**
 HomeViewController controls the main homepage, which displays a collection of experiments the student can try.
-It loads experiments from the disk and sends the experiment's information to the
-Experiment view when an experiment is selected.
+It loads experiments from the disk and sends the experiment's information to the Experiment view when an experiment is selected.
 */
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -30,7 +29,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 		
         // Set up the collection view
 		let padding : CGFloat
-		let bottomPadding : CGFloat	//bottom needs extra padding to avoid clipping into toolbar
+		let bottomPadding : CGFloat	// bottom needs extra padding to avoid clipping into toolbar
 		let itemSize : CGSize
 		switch UIDevice.currentDevice().userInterfaceIdiom {
 		case .Pad:
@@ -109,7 +108,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 			
             cell.titleLabel.text = experimentName
 			
-            // The experiment's icon image must be either .jpg or .png. Otherwise, use the default image.
+            // The experiment's icon image must be either .jpg or .png. Otherwise, use the default image (default.jpg).
             cell.imageView.image = UIImage(named: experimentName + ".jpg", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: experimentName + ".png", inBundle: nil, compatibleWithTraitCollection: nil) ?? UIImage(named: "default.jpg", inBundle: nil, compatibleWithTraitCollection: nil)
             
             // Adjust text to fit experiments with larger names:

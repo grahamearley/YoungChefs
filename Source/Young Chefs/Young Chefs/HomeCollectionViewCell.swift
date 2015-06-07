@@ -9,7 +9,7 @@
 
 import UIKit
 
-///HomeCollectionViewCell is collection view cell for the display of options on the app homepage.
+/// HomeCollectionViewCell is collection view cell for the display of options on the app homepage.
 class HomeCollectionViewCell: UICollectionViewCell {
 	
 	static let REUSE_ID = "HomeCell"

@@ -9,8 +9,7 @@
 
 import UIKit
 
-///NotebookPhotoCollectionViewCell is collection view cell for the display
-///of UIImage objects within the NotebookViewController.
+/// NotebookPhotoCollectionViewCell is collection view cell for the display of UIImage objects within the NotebookViewController.
 class NotebookPhotoCollectionViewCell: UICollectionViewCell {
     
     static let REUSE_ID = "NotebookPhotoCell"

@@ -11,7 +11,7 @@ import UIKit
 import WebKit
 
 
-///Screens are responsible for holding an HTML reference which point to Experiment sections.
+/// Screens are responsible for holding an HTML reference which point to Experiment sections.
 class Screen {
 	
 	let htmlURL : NSURL

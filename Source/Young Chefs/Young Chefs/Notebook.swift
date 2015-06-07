@@ -44,7 +44,7 @@ Not to be confused with NotebookView and NotebookViewController, which handle th
 	}
 	
 	required init(coder decoder: NSCoder) {
-		//try to grab the values from coder requests, else init blank ones
+		// try to grab the values from coder requests, else init blank ones
 		self.images = decoder.decodeObjectForKey(Notebook.imagesKey) as? [UIImage] ?? [UIImage]()
 		self.responsesForQuestionKey = decoder.decodeObjectForKey(Notebook.responsesKey) as? [String: String] ?? [String: String]()
 		self.questionHeaderForQuestionKey = decoder.decodeObjectForKey(Notebook.questionHeaderKey) as? [String: String] ?? [String: String]()

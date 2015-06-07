@@ -23,11 +23,11 @@ All required resources must be defined in the Experiment's manifest .plist file.
 	
 	var name : String
 	var notebook : Notebook
-	var screens = [Screen]()	//synthesized
+	var screens = [Screen]()	// synthesized
 	
 	/** 
     Keeps track of where the user is in the experiment.
-	Stored here as aposed to in the ViewController because the progress
+	Stored here as opposed to in the ViewController because the progress
 	in the experiment should be persistent across launches
     */
 	var progressIndex : Int
@@ -108,7 +108,7 @@ All required resources must be defined in the Experiment's manifest .plist file.
         
             e.g. for a question that asks "What is your hypothesis?" from a
                  form with id "question_Hypothesis", this dictionary might
-                 map "question_Hypothesis" to "Hypothesis"
+                 map "question_Hypothesis" to the header "Your hypothesis"
         */
         if let questions = manifest["Questions"] as? [String: String] {
             self.notebook.questionHeaderForQuestionKey = questions
@@ -162,8 +162,8 @@ All required resources must be defined in the Experiment's manifest .plist file.
 		} else {
 			self.currentlySavingAsync = true
 			dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)) {
-				self.saveToFile()				//do the save... (this call is synced to this task)
-				self.currentlySavingAsync = false	//allow upcoming saves
+				self.saveToFile()				// do the save... (this call is synced to this task)
+				self.currentlySavingAsync = false	// allow upcoming saves
 			}
 		}
 	}

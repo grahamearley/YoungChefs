@@ -8,7 +8,7 @@
 
 import UIKit
 
-///Protocol for Notebooks to submit callbacks to other ViewControllers on events
+/// Protocol for Notebooks to submit callbacks to other ViewControllers on events
 protocol NotebookDelegate {
 	
 	func notebookContentDidChange(aNotebook: Notebook)

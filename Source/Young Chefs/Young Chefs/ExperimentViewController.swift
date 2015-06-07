@@ -17,7 +17,7 @@ on to the next screen and by presenting the Notebook popover.
 */
 class ExperimentViewController: UIViewController, WKScriptMessageHandler, NotebookDelegate {
 	
-	var experiment : Experiment!	//must be set externally before the storyboard presents this view
+	var experiment : Experiment!	// must be set externally before the storyboard presents this view
 	
 	@IBOutlet weak var placeholderViewForWebview : UIView!
 	@IBOutlet weak var notebookButton : UIBarButtonItem!
@@ -74,24 +74,24 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	private func presentNotebook() {
 		let device = UIDevice.currentDevice().userInterfaceIdiom
 		if device == .Pad {
-			//device is iPad, present notebook as a popover
+			// Device is iPad, present notebook as a popover
 			let popoverViewController = NotebookViewController(notebook: experiment.notebook)
 			popoverViewController.delegate = self
 			popoverViewController.modalPresentationStyle = .Popover
 			let popover =  UIPopoverController(contentViewController: popoverViewController)
 			
-			//set the size and present it
+			// Set the size and present it
 			let popWidth = self.view.frame.size.width * notebookPopoverScreenRatios.0
 			let popHeight = self.view.frame.size.height * notebookPopoverScreenRatios.1
 			popover.popoverContentSize = CGSize(width: popWidth, height: popHeight)
 			let popRect = (notebookButton.valueForKey("view") as! UIView).frame
 			popover.presentPopoverFromRect(popRect, inView: view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
 			
-			//set the opacity a tad lower for some nice transparency
+			// Set the opacity a tad lower for some nice transparency
 			popoverViewController.view.backgroundColor = UIColor(white: 1, alpha: 0.20)
 			
 		} else if device == .Phone {
-			//device is iPhone or iPod Touch, present notebook modally
+			// Device is iPhone or iPod Touch, present notebook modally
 			let modalViewController = NotebookViewController(notebook: experiment.notebook)
 			modalViewController.delegate = self
 			modalViewController.modalPresentationStyle = .CurrentContext
@@ -134,7 +134,7 @@ class ExperimentViewController: UIViewController, WKScriptMessageHandler, Notebo
 	
     /// Called whenever Notebook is edited, should not be used for saving to disk
 	func notebookContentDidChange(aNotebook: Notebook) {
-		// Do not respond
+		// Do not respond. This may get called a lot of times and very quickly.
 	}
 	
 	/// Used as a callback to save contents
