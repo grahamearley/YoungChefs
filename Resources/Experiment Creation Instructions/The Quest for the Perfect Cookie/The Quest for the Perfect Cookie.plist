@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<dict>
+		<key>question_observations</key>
+		<string>Final observations</string>
+		<key>question_compareCookies</key>
+		<string>Comparison between cookies</string>
+		<key>question_hypothesis</key>
+		<string>Hypothesis for second batch</string>
+		<key>question_dependentVariable</key>
+		<string>Dependent variable</string>
+		<key>question_independentVariable</key>
+		<string>Independent variable</string>
+		<key>question_howdWeDo</key>
+		<string>First cookie results</string>
+		<key>question_favoriteKindOfCookie</key>
+		<string>Favorite kind of cookie</string>
+		<key>question_reasonForTaste</key>
+		<string>Causes for different cookie tastes</string>
+	</dict>
+	<key>Screens</key>
+	<array>
+		<string>The Quest for the Perfect Cookie-0</string>
+		<string>The Quest for the Perfect Cookie-1</string>
+		<string>The Quest for the Perfect Cookie-2</string>
+		<string>The Quest for the Perfect Cookie-3</string>
+		<string>The Quest for the Perfect Cookie-4</string>
+		<string>The Quest for the Perfect Cookie-5</string>
+		<string>The Quest for the Perfect Cookie-6</string>
+		<string>The Quest for the Perfect Cookie-7</string>
+	</array>
+	<key>AdditionalResources</key>
+	<array>
+		<string>gooey.png</string>
+		<string>sweeter.png</string>
+		<string>crispier.png</string>
+		<string>flatter.png</string>
+		<string>cakey.png</string>
+		<string>browner.png</string>
+	</array>
+</dict>
+</plist>
