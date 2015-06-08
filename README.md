@@ -5,6 +5,8 @@
     /_/\____/\__,_/_/ /_/\__, /   \____/_/ /_/\___/_/ /____/
                         /____/
 
+This app began as a project for Carleton College's CS342 Mobile App Development course.
+
 **The Client:** Vayu Maini Rekdal and [Young Chefs](http://youngchefsprogram.org/)
 
 **The Team:** Julia Bindler, Charlie Imhoff, Graham Earley
