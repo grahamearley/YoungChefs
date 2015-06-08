@@ -19,4 +19,5 @@ Load the `Source/YoungChefs` directory in Xcode.
 ## For future developers:
 - All the features we aimed to implement are successfully implemented and functional in the app.
 - There is room in the code for server integration (pulling experiments from a server), and this is a feature that would be great to have before release. Currently, resources such as experiments are all loaded from the read-only Main Bundle, but care has been put into providing early code for reading from the Library folder as well, which is where downloaded experiments would reside.
+- While the project's core functionality works on both iPad and iPhone, the app (notably the web content) is currently more visually optimized for larger sized devices.
 - See this repository's Issues tracker for stretch goals / enhancements /tasks that we brainstormed but didn't finish or start. These are listed with the status of 'on hold'.
