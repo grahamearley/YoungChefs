@@ -469,7 +469,6 @@
 				TargetAttributes = {
 					CBA1261D1B03C368001C2488 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = WNZEWX34Q6;
 					};
 					CBA126321B03C368001C2488 = {
 						CreatedOnToolsVersion = 6.3.1;
